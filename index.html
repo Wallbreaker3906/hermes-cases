@@ -1,185 +1,185 @@
-     1|<!DOCTYPE html>
-     2|<html lang="zh-CN">
-     3|<head>
-     4|<meta charset="UTF-8">
-     5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|<title>Hermes 每日应用案例</title>
-     7|<style>
-     8|  :root {
-     9|    --bg: #0a0e14;
-    10|    --card-bg: #141b22;
-    11|    --border: #1e293b;
-    12|    --text: #c9d1d9;
-    13|    --text-muted: #8b949e;
-    14|    --accent: #58a6ff;
-    15|    --accent2: #f78166;
-    16|    --accent3: #7ee787;
-    17|    --tag-bg: #1a2332;
-    18|    --tag-text: #79c0ff;
-    19|    --divider: #1c2534;
-    20|    --step-bg: #0f1724;
-    21|  }
-    22|  * { margin: 0; padding: 0; box-sizing: border-box; }
-    23|  body {
-    24|    background: var(--bg);
-    25|    color: var(--text);
-    26|    font-family: -apple-system, 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    27|    line-height: 1.7; min-height: 100vh;
-    28|  }
-    29|  body::before {
-    30|    content: '';
-    31|    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    32|    background: radial-gradient(ellipse at 20% 0%, rgba(88,166,255,0.04) 0%, transparent 50%),
-    33|                radial-gradient(ellipse at 80% 100%, rgba(88,166,255,0.02) 0%, transparent 50%);
-    34|    pointer-events: none; z-index: 0;
-    35|  }
-    36|  header {
-    37|    padding: 3rem 2rem 2rem; text-align: center;
-    38|    border-bottom: 1px solid var(--divider);
-    39|    position: relative; z-index: 1;
-    40|  }
-    41|  header h1 {
-    42|    font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;
-    43|    background: linear-gradient(135deg, #e6edf3 0%, var(--accent) 100%);
-    44|    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    45|    background-clip: text;
-    46|  }
-    47|  header p { margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem; }
-    48|  header .stats {
-    49|    margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
-    50|  }
-    51|  header .stats span {
-    52|    font-size: 0.8rem; color: var(--text-muted);
-    53|    background: var(--tag-bg); padding: 0.3rem 0.9rem; border-radius: 999px;
-    54|  }
-    55|  header .stats span strong { color: var(--accent); }
-    56|  main { max-width: 920px; margin: 0 auto; padding: 2rem; position: relative; z-index: 1; display: flex; flex-direction: column-reverse; }
-    57|  .day-section { margin-bottom: 3rem; }
-    58|  .day-header {
-    59|    display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
-    60|  }
-    61|  .day-header .dot {
-    62|    width: 8px; height: 8px; background: var(--accent);
-    63|    border-radius: 50%; box-shadow: 0 0 10px rgba(88,166,255,0.5);
-    64|  }
-    65|  .day-header h2 { font-size: 1.1rem; font-weight: 600; color: #e6edf3; }
-    66|  .day-header .date-badge {
-    67|    font-size: 0.78rem; color: var(--text-muted);
-    68|    background: var(--tag-bg); padding: 0.2rem 0.7rem; border-radius: 999px;
-    69|  }
-    70|  .cases-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-    71|
-    72|  /* === Case Card (clickable) === */
-    73|  .case-card {
-    74|    background: var(--card-bg); border: 1px solid var(--border);
-    75|    border-radius: 14px; overflow: hidden;
-    76|    transition: border-color 0.2s, box-shadow 0.2s;
-    77|    cursor: pointer; position: relative;
-    78|  }
-    79|  .case-card:hover {
-    80|    border-color: rgba(88,166,255,0.3);
-    81|    box-shadow: 0 4px 24px rgba(88,166,255,0.06);
-    82|  }
-    83|  .case-card.active {
-    84|    border-color: rgba(88,166,255,0.5);
-    85|    box-shadow: 0 0 32px rgba(88,166,255,0.1);
-    86|  }
-    87|  .case-card-inner { padding: 1.5rem; }
-    88|  .case-card .emoji { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    89|  .case-title { font-size: 1rem; font-weight: 600; color: #e6edf3; line-height: 1.4; margin-bottom: 0.3rem; }
-    90|  .case-subtitle { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-    91|  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
-    92|  .tag { font-size: 0.72rem; padding: 0.15rem 0.6rem; border-radius: 999px; background: var(--tag-bg); color: var(--tag-text); }
-    93|  .tag.industry { color: var(--accent2); }
-    94|  .tag.role { color: var(--accent3); }
-    95|  .case-section { margin-bottom: 0.75rem; }
-    96|  .case-section h4 {
-    97|    font-size: 0.75rem; font-weight: 600; color: var(--accent);
-    98|    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem;
-    99|  }
-   100|  .case-section p { font-size: 0.84rem; color: var(--text-muted); }
-   101|  .click-hint {
-   102|    font-size: 0.75rem; color: var(--text-muted);
-   103|    display: flex; align-items: center; gap: 0.35rem;
-   104|    padding: 0.4rem 0 0;
-   105|    border-top: 1px solid var(--divider);
-   106|    margin-top: 0.75rem; opacity: 0.7; transition: opacity 0.2s;
-   107|  }
-   108|  .case-card:hover .click-hint, .case-card.active .click-hint { opacity: 1; }
-   109|  .click-hint .arrow {
-   110|    display: inline-block; transition: transform 0.3s;
-   111|    font-size: 0.7rem;
-   112|  }
-   113|  .case-card.active .click-hint .arrow { transform: rotate(180deg); }
-   114|
-   115|  /* === Detail Panel (expandable) === */
-   116|  .case-detail {
-   117|    max-height: 0; overflow: hidden;
-   118|    transition: max-height 0.45s ease, padding 0.45s ease, opacity 0.25s ease;
-   119|    background: #0d1520; border-top: 1px solid transparent;
-   120|    opacity: 0;
-   121|  }
-   122|  .case-card.active .case-detail {
-   123|    max-height: 3000px;
-   124|    border-top-color: rgba(88,166,255,0.15);
-   125|    opacity: 1;
-   126|  }
-   127|  .case-detail-inner { padding: 1.5rem; }
-   128|  .case-detail-inner h3 {
-   129|    font-size: 0.88rem; color: #e6edf3; margin-bottom: 1.25rem;
-   130|    display: flex; align-items: center; gap: 0.5rem;
-   131|  }
-   132|  .case-detail-inner h3::after {
-   133|    content: '';
-   134|    flex: 1; height: 1px; background: var(--divider);
-   135|  }
-   136|  .step-block {
-   137|    background: var(--step-bg);
-   138|    border: 1px solid var(--border);
-   139|    border-radius: 10px;
-   140|    padding: 1rem 1.2rem;
-   141|    margin-bottom: 0.75rem;
-   142|    border-left: 3px solid var(--accent);
-   143|    transition: border-color 0.2s;
-   144|  }
-   145|  .step-block:hover { border-color: rgba(88,166,255,0.4); }
-   146|  .step-header {
-   147|    font-size: 0.82rem; font-weight: 600; color: #e6edf3;
-   148|    margin-bottom: 0.35rem;
-   149|  }
-   150|  .step-number {
-   151|    display: inline-block;
-   152|    background: rgba(88,166,255,0.15); color: var(--accent);
-   153|    font-size: 0.7rem; font-weight: 700;
-   154|    padding: 0.1rem 0.45rem; border-radius: 4px;
-   155|    margin-right: 0.5rem;
-   156|  }
-   157|  .step-body {
-   158|    font-size: 0.8rem; color: var(--text-muted);
-   159|    line-height: 1.65;
-   160|  }
-   161|  .step-body code {
-   162|    background: rgba(88,166,255,0.1); color: #a5d8ff;
-   163|    padding: 0.1rem 0.4rem; border-radius: 4px;
-   164|    font-size: 0.78rem;
-   165|  }
-   166|  .highlight-box {
-   167|    background: rgba(88,166,255,0.07); border: 1px solid rgba(88,166,255,0.12);
-   168|    border-radius: 8px; padding: 0.65rem 0.9rem; font-size: 0.8rem; color: #a5d8ff;
-   169|    margin-top: 0.5rem;
-   170|  }
-   171|  footer {
-   172|    text-align: center; padding: 3rem 2rem; color: var(--text-muted);
-   173|    font-size: 0.78rem; border-top: 1px solid var(--divider); margin-top: 2rem;
-   174|    position: relative; z-index: 1;
-   175|  }
-   176|  @media (max-width: 600px) {
-   177|    main { padding: 1rem; }
-   178|    header h1 { font-size: 1.5rem; }
-   179|    .case-card-inner { padding: 1.1rem; }
-   180|    .case-detail-inner { padding: 1.1rem; }
-   181|  }
-   182|
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes 每日应用案例</title>
+<style>
+  :root {
+    --bg: #0a0e14;
+    --card-bg: #141b22;
+    --border: #1e293b;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --accent: #58a6ff;
+    --accent2: #f78166;
+    --accent3: #7ee787;
+    --tag-bg: #1a2332;
+    --tag-text: #79c0ff;
+    --divider: #1c2534;
+    --step-bg: #0f1724;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.7; min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 20% 0%, rgba(88,166,255,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(88,166,255,0.02) 0%, transparent 50%);
+    pointer-events: none; z-index: 0;
+  }
+  header {
+    padding: 3rem 2rem 2rem; text-align: center;
+    border-bottom: 1px solid var(--divider);
+    position: relative; z-index: 1;
+  }
+  header h1 {
+    font-size: 2rem; font-weight: 700; letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #e6edf3 0%, var(--accent) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  header p { margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem; }
+  header .stats {
+    margin-top: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;
+  }
+  header .stats span {
+    font-size: 0.8rem; color: var(--text-muted);
+    background: var(--tag-bg); padding: 0.3rem 0.9rem; border-radius: 999px;
+  }
+  header .stats span strong { color: var(--accent); }
+  main { max-width: 920px; margin: 0 auto; padding: 2rem; position: relative; z-index: 1; display: flex; flex-direction: column-reverse; }
+  .day-section { margin-bottom: 3rem; }
+  .day-header {
+    display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;
+  }
+  .day-header .dot {
+    width: 8px; height: 8px; background: var(--accent);
+    border-radius: 50%; box-shadow: 0 0 10px rgba(88,166,255,0.5);
+  }
+  .day-header h2 { font-size: 1.1rem; font-weight: 600; color: #e6edf3; }
+  .day-header .date-badge {
+    font-size: 0.78rem; color: var(--text-muted);
+    background: var(--tag-bg); padding: 0.2rem 0.7rem; border-radius: 999px;
+  }
+  .cases-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+
+  /* === Case Card (clickable) === */
+  .case-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer; position: relative;
+  }
+  .case-card:hover {
+    border-color: rgba(88,166,255,0.3);
+    box-shadow: 0 4px 24px rgba(88,166,255,0.06);
+  }
+  .case-card.active {
+    border-color: rgba(88,166,255,0.5);
+    box-shadow: 0 0 32px rgba(88,166,255,0.1);
+  }
+  .case-card-inner { padding: 1.5rem; }
+  .case-card .emoji { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .case-title { font-size: 1rem; font-weight: 600; color: #e6edf3; line-height: 1.4; margin-bottom: 0.3rem; }
+  .case-subtitle { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+  .tag { font-size: 0.72rem; padding: 0.15rem 0.6rem; border-radius: 999px; background: var(--tag-bg); color: var(--tag-text); }
+  .tag.industry { color: var(--accent2); }
+  .tag.role { color: var(--accent3); }
+  .case-section { margin-bottom: 0.75rem; }
+  .case-section h4 {
+    font-size: 0.75rem; font-weight: 600; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem;
+  }
+  .case-section p { font-size: 0.84rem; color: var(--text-muted); }
+  .click-hint {
+    font-size: 0.75rem; color: var(--text-muted);
+    display: flex; align-items: center; gap: 0.35rem;
+    padding: 0.4rem 0 0;
+    border-top: 1px solid var(--divider);
+    margin-top: 0.75rem; opacity: 0.7; transition: opacity 0.2s;
+  }
+  .case-card:hover .click-hint, .case-card.active .click-hint { opacity: 1; }
+  .click-hint .arrow {
+    display: inline-block; transition: transform 0.3s;
+    font-size: 0.7rem;
+  }
+  .case-card.active .click-hint .arrow { transform: rotate(180deg); }
+
+  /* === Detail Panel (expandable) === */
+  .case-detail {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.45s ease, opacity 0.25s ease;
+    background: #0d1520; border-top: 1px solid transparent;
+    opacity: 0;
+  }
+  .case-card.active .case-detail {
+    max-height: 3000px;
+    border-top-color: rgba(88,166,255,0.15);
+    opacity: 1;
+  }
+  .case-detail-inner { padding: 1.5rem; }
+  .case-detail-inner h3 {
+    font-size: 0.88rem; color: #e6edf3; margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .case-detail-inner h3::after {
+    content: '';
+    flex: 1; height: 1px; background: var(--divider);
+  }
+  .step-block {
+    background: var(--step-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--accent);
+    transition: border-color 0.2s;
+  }
+  .step-block:hover { border-color: rgba(88,166,255,0.4); }
+  .step-header {
+    font-size: 0.82rem; font-weight: 600; color: #e6edf3;
+    margin-bottom: 0.35rem;
+  }
+  .step-number {
+    display: inline-block;
+    background: rgba(88,166,255,0.15); color: var(--accent);
+    font-size: 0.7rem; font-weight: 700;
+    padding: 0.1rem 0.45rem; border-radius: 4px;
+    margin-right: 0.5rem;
+  }
+  .step-body {
+    font-size: 0.8rem; color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .step-body code {
+    background: rgba(88,166,255,0.1); color: #a5d8ff;
+    padding: 0.1rem 0.4rem; border-radius: 4px;
+    font-size: 0.78rem;
+  }
+  .highlight-box {
+    background: rgba(88,166,255,0.07); border: 1px solid rgba(88,166,255,0.12);
+    border-radius: 8px; padding: 0.65rem 0.9rem; font-size: 0.8rem; color: #a5d8ff;
+    margin-top: 0.5rem;
+  }
+  footer {
+    text-align: center; padding: 3rem 2rem; color: var(--text-muted);
+    font-size: 0.78rem; border-top: 1px solid var(--divider); margin-top: 2rem;
+    position: relative; z-index: 1;
+  }
+  @media (max-width: 600px) {
+    main { padding: 1rem; }
+    header h1 { font-size: 1.5rem; }
+    .case-card-inner { padding: 1.1rem; }
+    .case-detail-inner { padding: 1.1rem; }
+  }
+
   /* === Dropdown & Filter Styles === */
   .stats { position: relative; }
   .stat-btn {
@@ -201,7 +201,6 @@
     text-align: left; border-radius: 6px; cursor: pointer; white-space: nowrap;
   }
   .dropdown-item:hover { background: rgba(88,166,255,0.1); color: var(--accent); }
-  .dropdown-item.active { background: rgba(88,166,255,0.15); color: var(--accent); }
 
   /* Filter bar */
   .filter-bar {
@@ -216,452 +215,447 @@
     font-size: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 999px;
     background: rgba(88,166,255,0.12); color: var(--accent);
     border: 1px solid rgba(88,166,255,0.2);
-    display: inline-flex; align-items: center; gap: 0.3rem;
   }
-  .clear-filter {
+  .clear-filter-btn {
     font-size: 0.72rem; padding: 0.2rem 0.7rem; border-radius: 999px;
     background: transparent; border: 1px solid var(--border); color: var(--text-muted);
     cursor: pointer; margin-left: auto;
   }
-  .clear-filter:hover { border-color: var(--accent2); color: var(--accent2); }
+  .clear-filter-btn:hover { border-color: var(--accent2); color: var(--accent2); }
 
   /* Filtered states */
-  .case-card.filtered-out { opacity: 0.2; pointer-events: none; }
+  .case-card.filtered-out { opacity: 0.15; pointer-events: none; }
   .day-section.filtered-empty { display: none; }
 
   /* Clickable tags */
   .case-card .tag { cursor: pointer; transition: background 0.15s; }
   .case-card .tag:hover { background: rgba(88,166,255,0.2); }
   .case-card .tag.tag-active { background: rgba(88,166,255,0.25); color: #fff; border: 1px solid rgba(88,166,255,0.4); }
-
 </style>
-   183|</head>
-   184|<body>
-   185|<header>
-   186|  <h1>⚡ Hermes 每日应用案例</h1>
-   187|  <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
-   188|  <div class="stats">
-   189|    <span>📅 累计 <strong>2</strong> 天</span>
-   190|    <span>📋 累计 <strong>6</strong> 个案例</span>
-   191|    <span>🏭 覆盖 <strong>6</strong> 个行业</span>
-   192|  </div>
-   193|</header>
-   194|
+</head>
+<body>
+<header>
+  <h1>⚡ Hermes 每日应用案例</h1>
+  <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
+  <div class="stats">
+    <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">2</strong> 天 <span class="arrow-down">▾</span></span>
+    <span>📋 累计 <strong>6</strong> 个案例</span>
+    <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">6</strong> 个行业 <span class="arrow-down">▾</span></span>
+  </div>
+  <!-- Dropdowns -->
+  <div class="dropdown" id="days-dropdown"></div>
+  <div class="dropdown" id="industry-dropdown"></div>
+</header>
 <!-- Filter bar -->
 <div class="filter-bar" id="filter-bar">
   <span class="filter-label">🔍 筛选：</span>
   <span class="filter-tag" id="active-filter-tag"></span>
-  <button class="clear-filter" id="clear-filter">✕ 清除筛选</button>
+  <button class="clear-filter-btn" id="clear-filter">✕ 清除筛选</button>
 </div>
-
 <main>
-   195|<!-- DAILY_CASES_START -->
-   196|
-   197|<!-- ======================================== -->
-   198|<!-- 📅 2026-05-28 (Day 1) -->
-   199|<!-- ======================================== -->
-   200|<div class="day-section" id="day-1">
-   201|  <div class="day-header">
-   202|    <div class="dot"></div>
-   203|    <h2>Day 1</h2>
-   204|    <span class="date-badge">2026.05.28</span>
-   205|  </div>
-   206|  <div class="cases-row">
-   207|
-   208|    <!-- Case 1: 教育 -->
-   209|    <div class="case-card" onclick="this.classList.toggle('active')">
-   210|      <div class="case-card-inner">
-   211|        <div class="emoji">📘</div>
-   212|        <div class="case-title">「一节课备出一部纪录片」— 语文老师用 AI 把《红楼梦》讲活了</div>
-   213|        <div class="case-subtitle">高中语文教师用 Hermes 在 30 分钟内完成一整套多媒体公开课教案</div>
-   214|        <div class="tags">
-   215|          <span class="tag industry">教育</span>
-   216|          <span class="tag role">教师</span>
-   217|          <span class="tag">多媒体备课</span>
-   218|        </div>
-   219|        <div class="case-section">
-   220|          <h4>📖 场景</h4>
-   221|          <p>张老师下周要上《红楼梦》公开课。以前手工备一节公开课需要两三天——查资料、画关系图、做 PPT、出练习题。现在她把整个需求用自然语言告诉 Hermes，所有材料在半小时内并行生成完成。</p>
-   222|        </div>
-   223|        <div class="click-hint">
-   224|          <span class="arrow">▶</span> 点击展开详细操作流程
-   225|        </div>
-   226|      </div>
-   227|      <div class="case-detail">
-   228|        <div class="case-detail-inner">
-   229|          <h3>🔍 详细操作流程</h3>
-   230|          <div class="step-block">
-   231|            <div class="step-header"><span class="step-number">1</span> 搜索资料，自动生成知识库</div>
-   232|            <div class="step-body">
-   233|              在 Hermes 终端输入：<code>帮我搜索《红楼梦》核心人物关系资料，生成一份 Markdown 知识库文件，保存到 ~/Desktop/红楼梦备课/</code>。Hermes 会调用 Web 搜索功能，抓取高质量的红学研究资料，自动整理成结构化的知识库文件。
-   234|            </div>
-   235|          </div>
-   236|          <div class="step-block">
-   237|            <div class="step-header"><span class="step-number">2</span> 用漫画技能绘制教学漫画</div>
-   238|            <div class="step-body">
-   239|              输入：<code>/baoyu-comic 用四格漫画形式展示宝黛钗三角关系，风格清新，适合高中生阅读</code>。Hermes 调用内置漫画技能，自动生成带对话气泡的知识漫画，学生看一眼就理解人物关系。
-   240|            </div>
-   241|          </div>
-   242|          <div class="step-block">
-   243|            <div class="step-header"><span class="step-number">3</span> 生成信息图（人物关系谱）</div>
-   244|            <div class="step-body">
-   245|              输入：<code>/baoyu-infographic 生成贾府四大家族谱系图，深色主题，横向布局，适合投屏展示</code>。Hermes 从 21 种布局和 21 种视觉风格中自动选择最佳组合，生成可直接用于投影的信息图。
-   246|            </div>
-   247|          </div>
-   248|          <div class="step-block">
-   249|            <div class="step-header"><span class="step-number">4</span> 一键生成 PPT</div>
-   250|            <div class="step-body">
-   251|              输入：<code>/powerpoint 根据刚才的知识库文件，自动排版为 15 页公开课 PPT，包含标题页、人物介绍、关系图解、课堂讨论题</code>。Hermes 读取知识库内容，自动提取要点并排版，生成可直接使用的 .pptx 文件。
-   252|            </div>
-   253|          </div>
-   254|          <div class="step-block">
-   255|            <div class="step-header"><span class="step-number">5</span> 自动出随堂练习题并导出 PDF</div>
-   256|            <div class="step-body">
-   257|              输入：<code>根据教案自动出一套 10 道选择题加 2 道简答题，保存为 PDF</code>。Hermes 调用 <code>/nano-pdf</code> 技能格式化输出，一份可打印的试卷 PDF 就生成了。
-   258|            </div>
-   259|          </div>
-   260|          <div class="highlight-box">
-   261|            💡 <strong>效果：</strong>2 天的备课压缩到 30 分钟。漫画和信息图学生特别爱看，课堂互动率明显提高。
-   262|          </div>
-   263|        </div>
-   264|      </div>
-   265|    </div>
-   266|
-   267|    <!-- Case 2: 医疗 -->
-   268|    <div class="case-card" onclick="this.classList.toggle('active')">
-   269|      <div class="case-card-inner">
-   270|        <div class="emoji">🩺</div>
-   271|        <div class="case-title">「老病号的私人健康管家」— 社区医生用 AI 做慢病全年管理</div>
-   272|        <div class="case-subtitle">为 200 位糖尿病患者批量生成个性化饮食运动方案</div>
-   273|        <div class="tags">
-   274|          <span class="tag industry">医疗健康</span>
-   275|          <span class="tag role">医生</span>
-   276|          <span class="tag">慢病管理</span>
-   277|        </div>
-   278|        <div class="case-section">
-   279|          <h4>📖 场景</h4>
-   280|          <p>王医生在社区卫生服务中心负责 200 多位糖尿病患者管理。每位患者需要个性化饮食建议、运动方案和宣教材料，以前每人要花 40 分钟手动做。现在用 Hermes 批量处理，3 分钟完成一个人的方案。</p>
-   281|        </div>
-   282|        <div class="click-hint">
-   283|          <span class="arrow">▶</span> 点击展开详细操作流程
-   284|        </div>
-   285|      </div>
-   286|      <div class="case-detail">
-   287|        <div class="case-detail-inner">
-   288|          <h3>🔍 详细操作流程</h3>
-   289|          <div class="step-block">
-   290|            <div class="step-header"><span class="step-number">1</span> 检索最新医学指南</div>
-   291|            <div class="step-body">
-   292|              输入：<code>搜索 2025-2026 年糖尿病管理的 AACE/ADA 最新临床指南，摘取核心建议，翻译为中文摘要保存到 ~/Desktop/糖尿病管理/</code>。Hermes 会自动联网抓取专业文献，提取要点并翻译成可读的中文摘要。
-   293|            </div>
-   294|          </div>
-   295|          <div class="step-block">
-   296|            <div class="step-header"><span class="step-number">2</span> 批量分析患者数据</div>
-   297|            <div class="step-body">
-   298|              输入：<code>读取 ~/Desktop/patients.xlsx，对每个患者根据 BMI、空腹血糖、年龄、病程计算风险等级，在原表新增"风险评级"列并保存</code>。Hermes 在终端里跑 Python 脚本，自动处理 200 条患者数据。
-   299|            </div>
-   300|          </div>
-   301|          <div class="step-block">
-   302|            <div class="step-header"><span class="step-number">3</span> 生成个性化饮食方案</div>
-   303|            <div class="step-body">
-   304|              输入：<code>/fitness-nutrition 根据 patients.xlsx 中每位患者的数据（身高/体重/年龄/血糖），从 38 万种食物数据中自动搭配一周个性化食谱，输出为每人一页的 Word 文件</code>。利用技能内置的代谢计算模型和海量食物数据库。
-   305|            </div>
-   306|          </div>
-   307|          <div class="step-block">
-   308|            <div class="step-header"><span class="step-number">4</span> 制作患者宣教材料</div>
-   309|            <div class="step-body">
-   310|              输入：<code>/baoyu-infographic 生成"糖尿病饮食红绿灯"信息图，通俗易懂、A4 双面排版，适合彩色打印分发给患者</code>。一张图就让患者看懂什么能吃、什么要控制。
-   311|            </div>
-   312|          </div>
-   313|          <div class="step-block">
-   314|            <div class="step-header"><span class="step-number">5</span> 设定自动随访提醒</div>
-   315|            <div class="step-body">
-   316|              输入：<code>/cron 每月 1 号自动生成"本月应随访患者名单"，筛选出距上次随访超过 30 天的患者，推送到我的 QQ 上</code>。Hermes 的定时任务系统会在每月 1 号自动执行。
-   317|            </div>
-   318|          </div>
-   319|          <div class="highlight-box">
-   320|            💡 <strong>效果：</strong>每人处理时间从 40 分钟降到 3 分钟。随访提醒让慢病管理达标率从 60% 提高到 85%。
-   321|          </div>
-   322|        </div>
-   323|      </div>
-   324|    </div>
-   325|
-   326|    <!-- Case 3: 电商 -->
-   327|    <div class="case-card" onclick="this.classList.toggle('active')">
-   328|      <div class="case-card-inner">
-   329|        <div class="emoji">🛍️</div>
-   330|        <div class="case-title">「一个人的电商团队」— 独立创业者用 AI 撑起全链路运营</div>
-   331|        <div class="case-subtitle">从商品上架到社交媒体推广，AI 当 24 小时运营助手</div>
-   332|        <div class="tags">
-   333|          <span class="tag industry">电商</span>
-   334|          <span class="tag role">创业者</span>
-   335|          <span class="tag">店铺运营</span>
-   336|        </div>
-   337|        <div class="case-section">
-   338|          <h4>📖 场景</h4>
-   339|          <p>小李独立经营一个设计家居品牌，在 Shopify 上开店。以前上架一款新品要忙一整天——写商品描述（还要中英双语）、做产品场景图、在各平台发推广。现在 Hermes 帮她自动化了大部分运营流程。</p>
-   340|        </div>
-   341|        <div class="click-hint">
-   342|          <span class="arrow">▶</span> 点击展开详细操作流程
-   343|        </div>
-   344|      </div>
-   345|      <div class="case-detail">
-   346|        <div class="case-detail-inner">
-   347|          <h3>🔍 详细操作流程</h3>
-   348|          <div class="step-block">
-   349|            <div class="step-header"><span class="step-number">1</span> 连接店铺 API，批量上架新品</div>
-   350|            <div class="step-body">
-   351|              输入：<code>连接我的 Shopify 店铺，一次性创建 8 款新品：产品名、描述、SKU、价格、库存都在这个 CSV 文件里（~/Desktop/new-products.csv）</code>。Hermes 通过 Shopify GraphQL API 自动将数据写入店铺后台。
-   352|            </div>
-   353|          </div>
-   354|          <div class="step-block">
-   355|            <div class="step-header"><span class="step-number">2</span> 生成多语言商品文案</div>
-   356|            <div class="step-body">
-   357|              输入：<code>为每款新品生成中英双语描述（各 150 字），中文要自然不做作、英文要地道，然后用 /humanizer 去 AI 味，最后用 image_gen 为每款产品生成一张北欧风格的使用场景图</code>。文案经过人性化润色，读起来像真人写的。
-   358|            </div>
-   359|          </div>
-   360|          <div class="step-block">
-   361|            <div class="step-header"><span class="step-number">3</span> 设计推广海报和落地页</div>
-   362|            <div class="step-body">
-   363|              输入：<code>/baoyu-infographic "春季家居搭配指南" 信息图，浅色主题 + /sketch 出 3 版促销落地页设计稿让我挑选</code>。信息图有 28 种布局可选，草图技能能快速出多版对比。
-   364|            </div>
-   365|          </div>
-   366|          <div class="step-block">
-   367|            <div class="step-header"><span class="step-number">4</span> 设置定时社交营销</div>
-   368|            <div class="step-body">
-   369|              输入：<code>/xurl 用我的账号写 5 条关于新品的推文（英文），每条 200 字以内。然后 /cron 每天早上 9 点、中午 12 点、晚上 8 点各自动发一条到 X/Twitter</code>。定时任务自动运行，不用天天惦记发内容。
-   370|            </div>
-   371|          </div>
-   372|          <div class="step-block">
-   373|            <div class="step-header"><span class="step-number">5</span> 自动生成每日数据简报</div>
-   374|            <div class="step-body">
-   375|              输入：<code>/cron 每天早上 8 点自动拉取昨天店铺的订单数、访客数、转化率、Top 商品，汇总成一句话简报推送到我的 QQ 上</code>。起床就能看到昨天的运营数据。
-   376|            </div>
-   377|          </div>
-   378|          <div class="highlight-box">
-   379|            💡 <strong>效果：</strong>上架一款新品从 1 天缩短到 20 分钟。定时营销 + 自动简报让首月 GMV 涨了 40%。
-   380|          </div>
-   381|        </div>
-   382|      </div>
-   383|    </div>
-   384|
-   385|  </div>
-   386|</div>
-   387|<!-- END Day 1 -->
-   388|
-   389|<!-- ======================================== -->
-   390|<!-- 📅 2026-05-29 (Day 2) -->
-   391|<!-- ======================================== -->
-   392|<div class="day-section" id="day-2">
-   393|  <div class="day-header">
-   394|    <div class="dot"></div>
-   395|    <h2>Day 2</h2>
-   396|    <span class="date-badge">2026.05.29</span>
-   397|  </div>
-   398|  <div class="cases-row">
-   399|
-   400|    <!-- Case 4: 法律 -->
-   401|    <div class="case-card" onclick="this.classList.toggle('active')">
-   402|      <div class="case-card-inner">
-   403|        <div class="emoji">⚖️</div>
-   404|        <div class="case-title">「一天审完三百页合同」— 律师助理用 AI 把案件准备工作压缩到一小时</div>
-   405|        <div class="case-subtitle">律所新人小陈用 Hermes 自动完成判例检索、合同审阅和文书起草</div>
-   406|        <div class="tags">
-   407|          <span class="tag industry">法律</span>
-   408|          <span class="tag role">律师助理</span>
-   409|          <span class="tag">案件准备</span>
-   410|        </div>
-   411|        <div class="case-section">
-   412|          <h4>📖 场景</h4>
-   413|          <p>小陈在一家中型律所做律师助理，常被同时分配多个案件的资料准备工作。一个劳动争议案通常需要查 50+ 判例、审阅几十页劳动合同、起草起诉状和证据清单，手工做至少要两天。现在他把重复性工作交给 Hermes，自己专注法律分析和策略。</p>
-   414|        </div>
-   415|        <div class="click-hint">
-   416|          <span class="arrow">▶</span> 点击展开详细操作流程
-   417|        </div>
-   418|      </div>
-   419|      <div class="case-detail">
-   420|        <div class="case-detail-inner">
-   421|          <h3>🔍 详细操作流程</h3>
-   422|          <div class="step-block">
-   423|            <div class="step-header"><span class="step-number">1</span> 联网检索同类判例与法条</div>
-   424|            <div class="step-body">
-   425|              输入：<code>帮我搜索近三年北京地区劳动争议中关于"违法解除劳动合同"的判例，提取判决要点和赔偿计算方式，按案由分类整理成 Markdown，保存到 ~/Documents/案件/2026-劳动争议/判例库/</code>。Hermes 自动联网检索法院公开文书和法律数据库，按案由梳理出 30+ 相关判例的裁判要旨。
-   426|            </div>
-   427|          </div>
-   428|          <div class="step-block">
-   429|            <div class="step-header"><span class="step-number">2</span> 批量审阅合同，标注风险条款</div>
-   430|            <div class="step-body">
-   431|              输入：<code>读取 ~/Documents/案件/2026-劳动争议/劳动合同.pdf，逐条审阅，对比《劳动合同法》标记出不合法或不合理的条款，生成一份风险点清单（含条款原文 + 法律依据 + 修改建议），保存为 Word</code>。Hermes 用 OCR 提取 PDF 文本后逐条比对法律条文，输出带法律依据的审阅意见。
-   432|            </div>
-   433|          </div>
-   434|          <div class="step-block">
-   435|            <div class="step-header"><span class="step-number">3</span> 自动起草法律文书初稿</div>
-   436|            <div class="step-body">
-   437|              输入：<code>根据刚才整理的判例库和合同审阅结果，为我起草一份劳动仲裁申请书：列明申请人信息、被申请人信息、仲裁请求（含赔偿金计算过程）、事实与理由部分引用的法条。保存为 ~/Documents/案件/2026-劳动争议/仲裁申请书.docx</code>。Hermes 自动整合前面的分析结果，生成格式规范的文书，引用法条和判例编号完整准确。
-   438|            </div>
-   439|          </div>
-   440|          <div class="step-block">
-   441|            <div class="step-header"><span class="step-number">4</span> 生成案件时间线可视化</div>
-   442|            <div class="step-body">
-   443|              输入：<code>/baoyu-infographic 把本案关键事件按时间线做成信息图：入职时间→调岗→降薪→解除合同→协商过程→申请仲裁，深色主题，用于向客户解释案件进展</code>。一张图让客户秒懂案件来龙去脉，比口头解释高效得多。
-   444|            </div>
-   445|          </div>
-   446|          <div class="step-block">
-   447|            <div class="step-header"><span class="step-number">5</span> 设置关键日期自动提醒</div>
-   448|            <div class="step-body">
-   449|              输入：<code>/cron 每周一早上自动检查我所有案件目录中的开庭日期、举证期限、上诉截止日，列出未来 7 天内即将到期的所有事项，推送到我的 QQ 和 Telegram</code>。从此再也不用翻日历手动核对日期。
-   450|            </div>
-   451|          </div>
-   452|          <div class="highlight-box">
-   453|            💡 <strong>效果：</strong>原来两天的工作压缩到一小时。合同审阅从一页一页翻变成自动标注风险点。案件到期提醒让 deadline 再也没漏过。
-   454|          </div>
-   455|        </div>
-   456|      </div>
-   457|    </div>
-   458|
-   459|    <!-- Case 5: 金融 -->
-   460|    <div class="case-card" onclick="this.classList.toggle('active')">
-   461|      <div class="case-card-inner">
-   462|        <div class="emoji">💰</div>
-   463|        <div class="case-title">「每个客户都有一份专属投资体检报告」— 理财顾问用 AI 做千人千面资产分析</div>
-   464|        <div class="case-subtitle">为 50 位高净值客户每周自动生成个性化资产配置建议和市场简报</div>
-   465|        <div class="tags">
-   466|          <span class="tag industry">金融</span>
-   467|          <span class="tag role">理财顾问</span>
-   468|          <span class="tag">资产配置</span>
-   469|        </div>
-   470|        <div class="case-section">
-   471|          <h4>📖 场景</h4>
-   472|          <p>林顾问在一家财富管理公司服务 50 位高净值客户。每周要手动做三件事：汇总当周市场动态、分析每位客户持仓表现、写个性化调仓建议。以前每周要花 20+ 小时，现在用 Hermes 并行处理，全部自动化。</p>
-   473|        </div>
-   474|        <div class="click-hint">
-   475|          <span class="arrow">▶</span> 点击展开详细操作流程
-   476|        </div>
-   477|      </div>
-   478|      <div class="case-detail">
-   479|        <div class="case-detail-inner">
-   480|          <h3>🔍 详细操作流程</h3>
-   481|          <div class="step-block">
-   482|            <div class="step-header"><span class="step-number">1</span> 一键抓取本周市场数据</div>
-   483|            <div class="step-body">
-   484|              输入：<code>搜索本周 A 股、港股和美股三大指数的涨跌幅、成交量、资金流向、行业板块轮动情况，再查最新的央行政策动态和美联储会议纪要摘要，汇总成一份"本周市场综述" Markdown 保存到 ~/Documents/投研/周报/</code>。Hermes 自动抓取多个数据源，整理成结构化市场简报。
-   485|            </div>
-   486|          </div>
-   487|          <div class="step-block">
-   488|            <div class="step-header"><span class="step-number">2</span> 批量跑客户持仓诊断</div>
-   489|            <div class="step-body">
-   490|              输入：<code>读取 ~/Documents/投研/client-portfolios.xlsx，对每位客户根据年龄、风险等级、持仓集中度、近三个月收益率计算"持仓健康度"评分（满分 100），标记低于 60 分的红色、60-80 黄色、80+ 绿色，在原表新增三列并保存</code>。Hermes 在终端运行 Python 分析脚本，50 份诊断 3 分钟跑完。
-   491|            </div>
-   492|          </div>
-   493|          <div class="step-block">
-   494|            <div class="step-header"><span class="step-number">3</span> 生成个性化调仓建议</div>
-   495|            <div class="step-body">
-   496|              输入：<code>根据每位客户的持仓健康度评分和市场综述，为评分低于 80 的客户自动生成一份调仓建议：减仓哪些、加仓哪些、理由是什么（控制每份建议在 200 字以内），保存为一人一页的 PDF</code>。Hermes 结合市场综述和客户画像自动推理，建议合理且措辞专业。
-   497|            </div>
-   498|          </div>
-   499|          <div class="step-block">
-   500|            <div class="step-header"><span class="step-number">4</span> 制作客户沟通 PPT</div>
-   501|            <div class="step-body">
-   502|              输入：<code>/powerpoint 根据本周市场综述，自动生成一份 12 页的"本周市场展望"PPT：包含封面、宏观经济、A 股走势、港股走势、美股走势、行业轮动、本周关注事件、配置建议，深蓝色商务风格模板</code>。一键出 PPT，周会材料不用再花半天做。
-   503|            </div>
-   504|          </div>
-   505|          <div class="step-block">
-   506|            <div class="step-header"><span class="step-number">5</span> 设置市场异动实时推送</div>
-   507|            <div class="step-body">
-   508|              输入：<code>/cron 每个交易日收盘后 30 分钟，自动抓取当日涨跌幅超过 7% 的个股、单日成交量突然放大 3 倍以上的标的，以及重大政策公告，汇总推送到我的 Telegram</code>。不用盯盘也能第一时间知道市场发生了什么事。
-   509|            </div>
-   510|          </div>
-   511|          <div class="highlight-box">
-   512|            💡 <strong>效果：</strong>周报工作从 20 小时降到 2 小时。客户反馈"你们的研究报告越来越及时了"。收盘异动推送让调仓决策快人一步。
-   513|          </div>
-   514|        </div>
-   515|      </div>
-   516|    </div>
-   517|
-   518|    <!-- Case 6: 旅游 -->
-   519|    <div class="case-card" onclick="this.classList.toggle('active')">
-   520|      <div class="case-card-inner">
-   521|        <div class="emoji">🏡</div>
-   522|        <div class="case-title">「一个人管五间民宿，还不累」— 民宿老板用 AI 搞定全栈运营</div>
-   523|        <div class="case-subtitle">从预订管理到多语言客服到社交媒体营销，AI 当 24 小时管家</div>
-   524|        <div class="tags">
-   525|          <span class="tag industry">旅游</span>
-   526|          <span class="tag role">民宿老板</span>
-   527|          <span class="tag">综合运营</span>
-   528|        </div>
-   529|        <div class="case-section">
-   530|          <h4>📖 场景</h4>
-   531|          <p>阿文在云南大理和丽江经营 5 间民宿，分布在三个平台（Airbnb、携程、美团民宿）。一个人要处理咨询回复、入住指南、多语言沟通、社交媒体推广、账务对账……旺季每天工作 14 小时。用 Hermes 后，重复性工作自动化，终于有时间和客人喝茶聊天。</p>
-   532|        </div>
-   533|        <div class="click-hint">
-   534|          <span class="arrow">▶</span> 点击展开详细操作流程
-   535|        </div>
-   536|      </div>
-   537|      <div class="case-detail">
-   538|        <div class="case-detail-inner">
-   539|          <h3>🔍 详细操作流程</h3>
-   540|          <div class="step-block">
-   541|            <div class="step-header"><span class="step-number">1</span> 自动整理多平台预订数据</div>
-   542|            <div class="step-body">
-   543|              输入：<code>读取 ~/Documents/民宿/今日预订.csv（从各平台导出合并），按民宿名称分组、按入住时间排序，检查有无日期重叠或漏填的订单，生成一份"今日入住清单"和"本周入住一览表"，保存并推送给我</code>。Hermes 自动检测数据异常并汇总，不用手动一个平台一个平台翻。
-   544|            </div>
-   545|          </div>
-   546|          <div class="step-block">
-   547|            <div class="step-header"><span class="step-number">2</span> 自动生成多语言入住指南</div>
-   548|            <div class="step-body">
-   549|              输入：<code>为大理"洱语小筑"民宿制作一份入住指南 PDF，包含：从大理机场/火车站的交通方式、民宿 Wi-Fi 密码、周边餐厅推荐、景点攻略、退房注意事项。中文之后，再翻译成英文和日文版本分别保存</code>。Hermes 根据民宿位置自动搜索交通方式和周边信息，生成三语版指南，外国客人也能自助入住。
-   550|            </div>
-   551|          </div>
-   552|          <div class="step-block">
-   553|            <div class="step-header"><span class="step-number">3</span> 批量生成社交媒体内容</div>
-   554|            <div class="step-body">
-   555|              输入：<code>根据我民宿的照片文件夹（~/Pictures/民宿/），用 /image_gen 为每间民宿生成 3 张不同季节的展示图，然后 /humanizer 写 10 条小红书风格的中文种草文案和 5 条 Instagram 英文文案，全部保存到 ~/Documents/民宿/营销素材/</code>。AI 生成的图片比手机随手拍专业，文案经过人性化润色完全不像机器写的。
-   556|            </div>
-   557|          </div>
-   558|          <div class="step-block">
-   559|            <div class="step-header"><span class="step-number">4</span> 自动管理每日账务</div>
-   560|            <div class="step-body">
-   561|              输入：<code>读取 ~/Documents/民宿/每日收支.csv，自动统计各民宿当日收入、支出、净利润，对比上周同日数据计算增长率，生成"今日经营看板"信息图 /baoyu-infographic 并推送给我</code>。睡前看一眼手机就知道今天赚了多少。
-   562|            </div>
-   563|          </div>
-   564|          <div class="step-block">
-   565|            <div class="step-header"><span class="step-number">5</span> 设置节假日价格策略提醒</div>
-   566|            <div class="step-body">
-   567|              输入：<code>/cron 每周五自动搜索未来 30 天内大理和丽江的节假日、大型活动、演唱会等事件，结合往年同期入住率，给我推送一份"建议调价清单"：哪些日期该涨价、涨多少、理由是什么</code>。旺季涨价不手软、淡季降价不心慌，数据帮你做决策。
-   568|            </div>
-   569|          </div>
-   570|          <div class="highlight-box">
-   571|            💡 <strong>效果：</strong>日常运营时间从 14 小时降到 4 小时。多语言指南让外国客人好评率翻倍。节假日调价策略让旺季收入多赚了 30%。
-   572|          </div>
-   573|        </div>
-   574|      </div>
-   575|    </div>
-   576|
-   577|  </div>
-   578|</div>
-   579|<!-- END Day 2 -->
-   580|
-   581|<!-- DAILY_CASES_END -->
-   582|</main>
-   583|<footer>
-   584|  Powered by Hermes Agent · 每天自动更新 · 点击任意案例卡片展开查看详细操作
-   585|</footer>
-   586|
+<!-- DAILY_CASES_START -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-05-28 (Day 1) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-1">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 1</h2>
+    <span class="date-badge">2026.05.28</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 1: 教育 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📘</div>
+        <div class="case-title">「一节课备出一部纪录片」— 语文老师用 AI 把《红楼梦》讲活了</div>
+        <div class="case-subtitle">高中语文教师用 Hermes 在 30 分钟内完成一整套多媒体公开课教案</div>
+        <div class="tags">
+          <span class="tag industry">教育</span>
+          <span class="tag role">教师</span>
+          <span class="tag">多媒体备课</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>张老师下周要上《红楼梦》公开课。以前手工备一节公开课需要两三天——查资料、画关系图、做 PPT、出练习题。现在她把整个需求用自然语言告诉 Hermes，所有材料在半小时内并行生成完成。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 搜索资料，自动生成知识库</div>
+            <div class="step-body">
+              在 Hermes 终端输入：<code>帮我搜索《红楼梦》核心人物关系资料，生成一份 Markdown 知识库文件，保存到 ~/Desktop/红楼梦备课/</code>。Hermes 会调用 Web 搜索功能，抓取高质量的红学研究资料，自动整理成结构化的知识库文件。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 用漫画技能绘制教学漫画</div>
+            <div class="step-body">
+              输入：<code>/baoyu-comic 用四格漫画形式展示宝黛钗三角关系，风格清新，适合高中生阅读</code>。Hermes 调用内置漫画技能，自动生成带对话气泡的知识漫画，学生看一眼就理解人物关系。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成信息图（人物关系谱）</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 生成贾府四大家族谱系图，深色主题，横向布局，适合投屏展示</code>。Hermes 从 21 种布局和 21 种视觉风格中自动选择最佳组合，生成可直接用于投影的信息图。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 一键生成 PPT</div>
+            <div class="step-body">
+              输入：<code>/powerpoint 根据刚才的知识库文件，自动排版为 15 页公开课 PPT，包含标题页、人物介绍、关系图解、课堂讨论题</code>。Hermes 读取知识库内容，自动提取要点并排版，生成可直接使用的 .pptx 文件。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 自动出随堂练习题并导出 PDF</div>
+            <div class="step-body">
+              输入：<code>根据教案自动出一套 10 道选择题加 2 道简答题，保存为 PDF</code>。Hermes 调用 <code>/nano-pdf</code> 技能格式化输出，一份可打印的试卷 PDF 就生成了。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>2 天的备课压缩到 30 分钟。漫画和信息图学生特别爱看，课堂互动率明显提高。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: 医疗 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🩺</div>
+        <div class="case-title">「老病号的私人健康管家」— 社区医生用 AI 做慢病全年管理</div>
+        <div class="case-subtitle">为 200 位糖尿病患者批量生成个性化饮食运动方案</div>
+        <div class="tags">
+          <span class="tag industry">医疗健康</span>
+          <span class="tag role">医生</span>
+          <span class="tag">慢病管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>王医生在社区卫生服务中心负责 200 多位糖尿病患者管理。每位患者需要个性化饮食建议、运动方案和宣教材料，以前每人要花 40 分钟手动做。现在用 Hermes 批量处理，3 分钟完成一个人的方案。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 检索最新医学指南</div>
+            <div class="step-body">
+              输入：<code>搜索 2025-2026 年糖尿病管理的 AACE/ADA 最新临床指南，摘取核心建议，翻译为中文摘要保存到 ~/Desktop/糖尿病管理/</code>。Hermes 会自动联网抓取专业文献，提取要点并翻译成可读的中文摘要。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量分析患者数据</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/patients.xlsx，对每个患者根据 BMI、空腹血糖、年龄、病程计算风险等级，在原表新增"风险评级"列并保存</code>。Hermes 在终端里跑 Python 脚本，自动处理 200 条患者数据。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成个性化饮食方案</div>
+            <div class="step-body">
+              输入：<code>/fitness-nutrition 根据 patients.xlsx 中每位患者的数据（身高/体重/年龄/血糖），从 38 万种食物数据中自动搭配一周个性化食谱，输出为每人一页的 Word 文件</code>。利用技能内置的代谢计算模型和海量食物数据库。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 制作患者宣教材料</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 生成"糖尿病饮食红绿灯"信息图，通俗易懂、A4 双面排版，适合彩色打印分发给患者</code>。一张图就让患者看懂什么能吃、什么要控制。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设定自动随访提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每月 1 号自动生成"本月应随访患者名单"，筛选出距上次随访超过 30 天的患者，推送到我的 QQ 上</code>。Hermes 的定时任务系统会在每月 1 号自动执行。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>每人处理时间从 40 分钟降到 3 分钟。随访提醒让慢病管理达标率从 60% 提高到 85%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: 电商 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛍️</div>
+        <div class="case-title">「一个人的电商团队」— 独立创业者用 AI 撑起全链路运营</div>
+        <div class="case-subtitle">从商品上架到社交媒体推广，AI 当 24 小时运营助手</div>
+        <div class="tags">
+          <span class="tag industry">电商</span>
+          <span class="tag role">创业者</span>
+          <span class="tag">店铺运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小李独立经营一个设计家居品牌，在 Shopify 上开店。以前上架一款新品要忙一整天——写商品描述（还要中英双语）、做产品场景图、在各平台发推广。现在 Hermes 帮她自动化了大部分运营流程。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 连接店铺 API，批量上架新品</div>
+            <div class="step-body">
+              输入：<code>连接我的 Shopify 店铺，一次性创建 8 款新品：产品名、描述、SKU、价格、库存都在这个 CSV 文件里（~/Desktop/new-products.csv）</code>。Hermes 通过 Shopify GraphQL API 自动将数据写入店铺后台。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 生成多语言商品文案</div>
+            <div class="step-body">
+              输入：<code>为每款新品生成中英双语描述（各 150 字），中文要自然不做作、英文要地道，然后用 /humanizer 去 AI 味，最后用 image_gen 为每款产品生成一张北欧风格的使用场景图</code>。文案经过人性化润色，读起来像真人写的。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 设计推广海报和落地页</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic "春季家居搭配指南" 信息图，浅色主题 + /sketch 出 3 版促销落地页设计稿让我挑选</code>。信息图有 28 种布局可选，草图技能能快速出多版对比。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 设置定时社交营销</div>
+            <div class="step-body">
+              输入：<code>/xurl 用我的账号写 5 条关于新品的推文（英文），每条 200 字以内。然后 /cron 每天早上 9 点、中午 12 点、晚上 8 点各自动发一条到 X/Twitter</code>。定时任务自动运行，不用天天惦记发内容。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 自动生成每日数据简报</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 8 点自动拉取昨天店铺的订单数、访客数、转化率、Top 商品，汇总成一句话简报推送到我的 QQ 上</code>。起床就能看到昨天的运营数据。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>上架一款新品从 1 天缩短到 20 分钟。定时营销 + 自动简报让首月 GMV 涨了 40%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 1 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-05-29 (Day 2) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-2">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 2</h2>
+    <span class="date-badge">2026.05.29</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 4: 法律 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚖️</div>
+        <div class="case-title">「一天审完三百页合同」— 律师助理用 AI 把案件准备工作压缩到一小时</div>
+        <div class="case-subtitle">律所新人小陈用 Hermes 自动完成判例检索、合同审阅和文书起草</div>
+        <div class="tags">
+          <span class="tag industry">法律</span>
+          <span class="tag role">律师助理</span>
+          <span class="tag">案件准备</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小陈在一家中型律所做律师助理，常被同时分配多个案件的资料准备工作。一个劳动争议案通常需要查 50+ 判例、审阅几十页劳动合同、起草起诉状和证据清单，手工做至少要两天。现在他把重复性工作交给 Hermes，自己专注法律分析和策略。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 联网检索同类判例与法条</div>
+            <div class="step-body">
+              输入：<code>帮我搜索近三年北京地区劳动争议中关于"违法解除劳动合同"的判例，提取判决要点和赔偿计算方式，按案由分类整理成 Markdown，保存到 ~/Documents/案件/2026-劳动争议/判例库/</code>。Hermes 自动联网检索法院公开文书和法律数据库，按案由梳理出 30+ 相关判例的裁判要旨。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量审阅合同，标注风险条款</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/案件/2026-劳动争议/劳动合同.pdf，逐条审阅，对比《劳动合同法》标记出不合法或不合理的条款，生成一份风险点清单（含条款原文 + 法律依据 + 修改建议），保存为 Word</code>。Hermes 用 OCR 提取 PDF 文本后逐条比对法律条文，输出带法律依据的审阅意见。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动起草法律文书初稿</div>
+            <div class="step-body">
+              输入：<code>根据刚才整理的判例库和合同审阅结果，为我起草一份劳动仲裁申请书：列明申请人信息、被申请人信息、仲裁请求（含赔偿金计算过程）、事实与理由部分引用的法条。保存为 ~/Documents/案件/2026-劳动争议/仲裁申请书.docx</code>。Hermes 自动整合前面的分析结果，生成格式规范的文书，引用法条和判例编号完整准确。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 生成案件时间线可视化</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 把本案关键事件按时间线做成信息图：入职时间→调岗→降薪→解除合同→协商过程→申请仲裁，深色主题，用于向客户解释案件进展</code>。一张图让客户秒懂案件来龙去脉，比口头解释高效得多。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置关键日期自动提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每周一早上自动检查我所有案件目录中的开庭日期、举证期限、上诉截止日，列出未来 7 天内即将到期的所有事项，推送到我的 QQ 和 Telegram</code>。从此再也不用翻日历手动核对日期。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>原来两天的工作压缩到一小时。合同审阅从一页一页翻变成自动标注风险点。案件到期提醒让 deadline 再也没漏过。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 5: 金融 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💰</div>
+        <div class="case-title">「每个客户都有一份专属投资体检报告」— 理财顾问用 AI 做千人千面资产分析</div>
+        <div class="case-subtitle">为 50 位高净值客户每周自动生成个性化资产配置建议和市场简报</div>
+        <div class="tags">
+          <span class="tag industry">金融</span>
+          <span class="tag role">理财顾问</span>
+          <span class="tag">资产配置</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>林顾问在一家财富管理公司服务 50 位高净值客户。每周要手动做三件事：汇总当周市场动态、分析每位客户持仓表现、写个性化调仓建议。以前每周要花 20+ 小时，现在用 Hermes 并行处理，全部自动化。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 一键抓取本周市场数据</div>
+            <div class="step-body">
+              输入：<code>搜索本周 A 股、港股和美股三大指数的涨跌幅、成交量、资金流向、行业板块轮动情况，再查最新的央行政策动态和美联储会议纪要摘要，汇总成一份"本周市场综述" Markdown 保存到 ~/Documents/投研/周报/</code>。Hermes 自动抓取多个数据源，整理成结构化市场简报。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量跑客户持仓诊断</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/投研/client-portfolios.xlsx，对每位客户根据年龄、风险等级、持仓集中度、近三个月收益率计算"持仓健康度"评分（满分 100），标记低于 60 分的红色、60-80 黄色、80+ 绿色，在原表新增三列并保存</code>。Hermes 在终端运行 Python 分析脚本，50 份诊断 3 分钟跑完。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成个性化调仓建议</div>
+            <div class="step-body">
+              输入：<code>根据每位客户的持仓健康度评分和市场综述，为评分低于 80 的客户自动生成一份调仓建议：减仓哪些、加仓哪些、理由是什么（控制每份建议在 200 字以内），保存为一人一页的 PDF</code>。Hermes 结合市场综述和客户画像自动推理，建议合理且措辞专业。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 制作客户沟通 PPT</div>
+            <div class="step-body">
+              输入：<code>/powerpoint 根据本周市场综述，自动生成一份 12 页的"本周市场展望"PPT：包含封面、宏观经济、A 股走势、港股走势、美股走势、行业轮动、本周关注事件、配置建议，深蓝色商务风格模板</code>。一键出 PPT，周会材料不用再花半天做。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置市场异动实时推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每个交易日收盘后 30 分钟，自动抓取当日涨跌幅超过 7% 的个股、单日成交量突然放大 3 倍以上的标的，以及重大政策公告，汇总推送到我的 Telegram</code>。不用盯盘也能第一时间知道市场发生了什么事。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>周报工作从 20 小时降到 2 小时。客户反馈"你们的研究报告越来越及时了"。收盘异动推送让调仓决策快人一步。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 6: 旅游 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏡</div>
+        <div class="case-title">「一个人管五间民宿，还不累」— 民宿老板用 AI 搞定全栈运营</div>
+        <div class="case-subtitle">从预订管理到多语言客服到社交媒体营销，AI 当 24 小时管家</div>
+        <div class="tags">
+          <span class="tag industry">旅游</span>
+          <span class="tag role">民宿老板</span>
+          <span class="tag">综合运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>阿文在云南大理和丽江经营 5 间民宿，分布在三个平台（Airbnb、携程、美团民宿）。一个人要处理咨询回复、入住指南、多语言沟通、社交媒体推广、账务对账……旺季每天工作 14 小时。用 Hermes 后，重复性工作自动化，终于有时间和客人喝茶聊天。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 自动整理多平台预订数据</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/民宿/今日预订.csv（从各平台导出合并），按民宿名称分组、按入住时间排序，检查有无日期重叠或漏填的订单，生成一份"今日入住清单"和"本周入住一览表"，保存并推送给我</code>。Hermes 自动检测数据异常并汇总，不用手动一个平台一个平台翻。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 自动生成多语言入住指南</div>
+            <div class="step-body">
+              输入：<code>为大理"洱语小筑"民宿制作一份入住指南 PDF，包含：从大理机场/火车站的交通方式、民宿 Wi-Fi 密码、周边餐厅推荐、景点攻略、退房注意事项。中文之后，再翻译成英文和日文版本分别保存</code>。Hermes 根据民宿位置自动搜索交通方式和周边信息，生成三语版指南，外国客人也能自助入住。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 批量生成社交媒体内容</div>
+            <div class="step-body">
+              输入：<code>根据我民宿的照片文件夹（~/Pictures/民宿/），用 /image_gen 为每间民宿生成 3 张不同季节的展示图，然后 /humanizer 写 10 条小红书风格的中文种草文案和 5 条 Instagram 英文文案，全部保存到 ~/Documents/民宿/营销素材/</code>。AI 生成的图片比手机随手拍专业，文案经过人性化润色完全不像机器写的。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动管理每日账务</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/民宿/每日收支.csv，自动统计各民宿当日收入、支出、净利润，对比上周同日数据计算增长率，生成"今日经营看板"信息图 /baoyu-infographic 并推送给我</code>。睡前看一眼手机就知道今天赚了多少。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置节假日价格策略提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每周五自动搜索未来 30 天内大理和丽江的节假日、大型活动、演唱会等事件，结合往年同期入住率，给我推送一份"建议调价清单"：哪些日期该涨价、涨多少、理由是什么</code>。旺季涨价不手软、淡季降价不心慌，数据帮你做决策。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>日常运营时间从 14 小时降到 4 小时。多语言指南让外国客人好评率翻倍。节假日调价策略让旺季收入多赚了 30%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 2 -->
+
+<!-- DAILY_CASES_END -->
+</main>
+<footer>
+  Powered by Hermes Agent · 每天自动更新 · 点击任意案例卡片展开查看详细操作
+</footer>
 <script>
 (function() {
   var activeFilter = null;
 
-  // ── Collect all day-sections & tags ──
   var daySections = document.querySelectorAll('.day-section');
   var allCaseCards = document.querySelectorAll('.case-card');
-  var allTags = new Set();
   var industryTags = new Set();
 
+  // Collect all industry tags
   allCaseCards.forEach(function(card) {
-    card.querySelectorAll('.tag').forEach(function(tag) {
-      var t = tag.textContent.trim();
-      allTags.add(t);
-      if (tag.classList.contains('industry')) industryTags.add(t);
+    card.querySelectorAll('.tag.industry').forEach(function(tag) {
+      industryTags.add(tag.textContent.trim());
     });
   });
 
@@ -716,34 +710,21 @@
   // ── Filter function ──
   function applyFilter(tag) {
     activeFilter = tag;
-    var filterBar = document.getElementById('filter-bar');
-    var filterTag = document.getElementById('active-filter-tag');
-
-    filterTag.textContent = tag;
-    filterBar.classList.add('show');
+    document.getElementById('filter-bar').classList.add('show');
+    document.getElementById('active-filter-tag').textContent = tag;
 
     allCaseCards.forEach(function(card) {
       var hasTag = false;
       card.querySelectorAll('.tag').forEach(function(t) {
-        if (t.textContent.trim() === tag) hasTag = true;
         t.classList.remove('tag-active');
-        if (t.textContent.trim() === tag) t.classList.add('tag-active');
+        if (t.textContent.trim() === tag) { hasTag = true; t.classList.add('tag-active'); }
       });
-      if (hasTag) {
-        card.classList.remove('filtered-out');
-      } else {
-        card.classList.add('filtered-out');
-      }
+      card.classList.toggle('filtered-out', !hasTag);
     });
 
-    // Hide empty day sections
     daySections.forEach(function(section) {
-      var visibleCards = section.querySelectorAll('.case-card:not(.filtered-out)');
-      if (visibleCards.length === 0) {
-        section.classList.add('filtered-empty');
-      } else {
-        section.classList.remove('filtered-empty');
-      }
+      var visible = section.querySelectorAll('.case-card:not(.filtered-out)');
+      section.classList.toggle('filtered-empty', visible.length === 0);
     });
   }
 
@@ -752,9 +733,7 @@
     document.getElementById('filter-bar').classList.remove('show');
     allCaseCards.forEach(function(card) {
       card.classList.remove('filtered-out');
-      card.querySelectorAll('.tag').forEach(function(t) {
-        t.classList.remove('tag-active');
-      });
+      card.querySelectorAll('.tag').forEach(function(t) { t.classList.remove('tag-active'); });
     });
     daySections.forEach(function(s) { s.classList.remove('filtered-empty'); });
   }
@@ -767,21 +746,16 @@
       tag.addEventListener('click', function(e) {
         e.stopPropagation();
         var tagText = this.textContent.trim();
-        if (activeFilter === tagText) {
-          clearFilter();
-        } else {
-          applyFilter(tagText);
-        }
+        if (activeFilter === tagText) { clearFilter(); }
+        else { applyFilter(tagText); }
       });
     });
   });
 
   // Update stats with actual counts
-  document.getElementById('days-count').textContent = '2';
+  document.getElementById('days-count').textContent = String(daySections.length);
   document.getElementById('industry-count').textContent = String(industryTags.size);
 })();
 </script>
-
 </body>
-   587|</html>
-   588|
+</html>
