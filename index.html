@@ -232,6 +232,32 @@
   .case-card .tag { cursor: pointer; transition: background 0.15s; }
   .case-card .tag:hover { background: rgba(88,166,255,0.2); }
   .case-card .tag.tag-active { background: rgba(88,166,255,0.25); color: #fff; border: 1px solid rgba(88,166,255,0.4); }
+
+  /* === Search Box === */
+  .search-wrap {
+    max-width: 920px; margin: 0 auto; padding: 0 2rem 1rem;
+    position: relative; z-index: 5;
+  }
+  .search-box {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.5rem 1rem;
+    transition: border-color 0.2s;
+  }
+  .search-box:focus-within { border-color: rgba(88,166,255,0.4); }
+  .search-box .search-icon { color: var(--text-muted); font-size: 0.9rem; }
+  .search-box input {
+    flex: 1; border: none; outline: none; background: transparent;
+    color: var(--text); font-size: 0.85rem; font-family: inherit;
+  }
+  .search-box input::placeholder { color: var(--text-muted); }
+  .search-box .search-clear {
+    background: none; border: none; color: var(--text-muted);
+    cursor: pointer; font-size: 0.9rem; display: none; padding: 0 0.2rem;
+  }
+  .search-box .search-clear.visible { display: block; }
+  .search-box .search-count { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+  .case-card.search-hidden { display: none; }
 </style>
 </head>
 <body>
@@ -250,6 +276,15 @@
     </span>
   </div>
 </header>
+<!-- Search -->
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="搜索案例标题、描述、标签…">
+    <button class="search-clear" id="search-clear">✕</button>
+    <span class="search-count" id="search-count"></span>
+  </div>
+</div>
 <!-- Filter bar -->
 <div class="filter-bar" id="filter-bar">
   <span class="filter-label">🔍 筛选：</span>
@@ -759,6 +794,42 @@
   // Update stats with actual counts
   document.getElementById('days-count').textContent = String(daySections.length);
   document.getElementById('industry-count').textContent = String(industryTags.size);
+
+  // ── Search ──
+  var searchInput = document.getElementById('search-input');
+  var searchClear = document.getElementById('search-clear');
+  var searchCount = document.getElementById('search-count');
+
+  searchInput.addEventListener('input', function() {
+    var query = this.value.trim().toLowerCase();
+    if (query) {
+      searchClear.classList.add('visible');
+    } else {
+      searchClear.classList.remove('visible');
+    }
+    var matchCount = 0;
+    allCaseCards.forEach(function(card) {
+      var text = card.textContent.toLowerCase();
+      if (text.indexOf(query) !== -1) {
+        card.classList.remove('search-hidden');
+        matchCount++;
+      } else {
+        card.classList.add('search-hidden');
+      }
+    });
+    searchCount.textContent = query ? matchCount + '/' + allCaseCards.length : '';
+    // Hide empty day sections
+    daySections.forEach(function(section) {
+      var visible = section.querySelectorAll('.case-card:not(.search-hidden)');
+      section.classList.toggle('filtered-empty', visible.length === 0);
+    });
+  });
+
+  searchClear.addEventListener('click', function() {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input'));
+    searchInput.focus();
+  });
 })();
 </script>
 </body>
