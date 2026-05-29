@@ -186,9 +186,9 @@
   <h1>⚡ Hermes 每日应用案例</h1>
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
-    <span>📅 累计 <strong>1</strong> 天</span>
-    <span>📋 累计 <strong>3</strong> 个案例</span>
-    <span>🏭 覆盖 <strong>3</strong> 个行业</span>
+    <span>📅 累计 <strong>2</strong> 天</span>
+    <span>📋 累计 <strong>6</strong> 个案例</span>
+    <span>🏭 覆盖 <strong>6</strong> 个行业</span>
   </div>
 </header>
 <main>
@@ -385,6 +385,198 @@
   </div>
 </div>
 <!-- END Day 1 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-05-29 (Day 2) -->
+<!-- ======================================== -->
+<div class="day-section">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 2</h2>
+    <span class="date-badge">2026.05.29</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 4: 法律 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚖️</div>
+        <div class="case-title">「一天审完三百页合同」— 律师助理用 AI 把案件准备工作压缩到一小时</div>
+        <div class="case-subtitle">律所新人小陈用 Hermes 自动完成判例检索、合同审阅和文书起草</div>
+        <div class="tags">
+          <span class="tag industry">法律</span>
+          <span class="tag role">律师助理</span>
+          <span class="tag">案件准备</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小陈在一家中型律所做律师助理，常被同时分配多个案件的资料准备工作。一个劳动争议案通常需要查 50+ 判例、审阅几十页劳动合同、起草起诉状和证据清单，手工做至少要两天。现在他把重复性工作交给 Hermes，自己专注法律分析和策略。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 联网检索同类判例与法条</div>
+            <div class="step-body">
+              输入：<code>帮我搜索近三年北京地区劳动争议中关于"违法解除劳动合同"的判例，提取判决要点和赔偿计算方式，按案由分类整理成 Markdown，保存到 ~/Documents/案件/2026-劳动争议/判例库/</code>。Hermes 自动联网检索法院公开文书和法律数据库，按案由梳理出 30+ 相关判例的裁判要旨。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量审阅合同，标注风险条款</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/案件/2026-劳动争议/劳动合同.pdf，逐条审阅，对比《劳动合同法》标记出不合法或不合理的条款，生成一份风险点清单（含条款原文 + 法律依据 + 修改建议），保存为 Word</code>。Hermes 用 OCR 提取 PDF 文本后逐条比对法律条文，输出带法律依据的审阅意见。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动起草法律文书初稿</div>
+            <div class="step-body">
+              输入：<code>根据刚才整理的判例库和合同审阅结果，为我起草一份劳动仲裁申请书：列明申请人信息、被申请人信息、仲裁请求（含赔偿金计算过程）、事实与理由部分引用的法条。保存为 ~/Documents/案件/2026-劳动争议/仲裁申请书.docx</code>。Hermes 自动整合前面的分析结果，生成格式规范的文书，引用法条和判例编号完整准确。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 生成案件时间线可视化</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 把本案关键事件按时间线做成信息图：入职时间→调岗→降薪→解除合同→协商过程→申请仲裁，深色主题，用于向客户解释案件进展</code>。一张图让客户秒懂案件来龙去脉，比口头解释高效得多。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置关键日期自动提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每周一早上自动检查我所有案件目录中的开庭日期、举证期限、上诉截止日，列出未来 7 天内即将到期的所有事项，推送到我的 QQ 和 Telegram</code>。从此再也不用翻日历手动核对日期。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>原来两天的工作压缩到一小时。合同审阅从一页一页翻变成自动标注风险点。案件到期提醒让 deadline 再也没漏过。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 5: 金融 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💰</div>
+        <div class="case-title">「每个客户都有一份专属投资体检报告」— 理财顾问用 AI 做千人千面资产分析</div>
+        <div class="case-subtitle">为 50 位高净值客户每周自动生成个性化资产配置建议和市场简报</div>
+        <div class="tags">
+          <span class="tag industry">金融</span>
+          <span class="tag role">理财顾问</span>
+          <span class="tag">资产配置</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>林顾问在一家财富管理公司服务 50 位高净值客户。每周要手动做三件事：汇总当周市场动态、分析每位客户持仓表现、写个性化调仓建议。以前每周要花 20+ 小时，现在用 Hermes 并行处理，全部自动化。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 一键抓取本周市场数据</div>
+            <div class="step-body">
+              输入：<code>搜索本周 A 股、港股和美股三大指数的涨跌幅、成交量、资金流向、行业板块轮动情况，再查最新的央行政策动态和美联储会议纪要摘要，汇总成一份"本周市场综述" Markdown 保存到 ~/Documents/投研/周报/</code>。Hermes 自动抓取多个数据源，整理成结构化市场简报。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量跑客户持仓诊断</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/投研/client-portfolios.xlsx，对每位客户根据年龄、风险等级、持仓集中度、近三个月收益率计算"持仓健康度"评分（满分 100），标记低于 60 分的红色、60-80 黄色、80+ 绿色，在原表新增三列并保存</code>。Hermes 在终端运行 Python 分析脚本，50 份诊断 3 分钟跑完。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成个性化调仓建议</div>
+            <div class="step-body">
+              输入：<code>根据每位客户的持仓健康度评分和市场综述，为评分低于 80 的客户自动生成一份调仓建议：减仓哪些、加仓哪些、理由是什么（控制每份建议在 200 字以内），保存为一人一页的 PDF</code>。Hermes 结合市场综述和客户画像自动推理，建议合理且措辞专业。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 制作客户沟通 PPT</div>
+            <div class="step-body">
+              输入：<code>/powerpoint 根据本周市场综述，自动生成一份 12 页的"本周市场展望"PPT：包含封面、宏观经济、A 股走势、港股走势、美股走势、行业轮动、本周关注事件、配置建议，深蓝色商务风格模板</code>。一键出 PPT，周会材料不用再花半天做。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置市场异动实时推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每个交易日收盘后 30 分钟，自动抓取当日涨跌幅超过 7% 的个股、单日成交量突然放大 3 倍以上的标的，以及重大政策公告，汇总推送到我的 Telegram</code>。不用盯盘也能第一时间知道市场发生了什么事。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>周报工作从 20 小时降到 2 小时。客户反馈"你们的研究报告越来越及时了"。收盘异动推送让调仓决策快人一步。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 6: 旅游 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏡</div>
+        <div class="case-title">「一个人管五间民宿，还不累」— 民宿老板用 AI 搞定全栈运营</div>
+        <div class="case-subtitle">从预订管理到多语言客服到社交媒体营销，AI 当 24 小时管家</div>
+        <div class="tags">
+          <span class="tag industry">旅游</span>
+          <span class="tag role">民宿老板</span>
+          <span class="tag">综合运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>阿文在云南大理和丽江经营 5 间民宿，分布在三个平台（Airbnb、携程、美团民宿）。一个人要处理咨询回复、入住指南、多语言沟通、社交媒体推广、账务对账……旺季每天工作 14 小时。用 Hermes 后，重复性工作自动化，终于有时间和客人喝茶聊天。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 自动整理多平台预订数据</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/民宿/今日预订.csv（从各平台导出合并），按民宿名称分组、按入住时间排序，检查有无日期重叠或漏填的订单，生成一份"今日入住清单"和"本周入住一览表"，保存并推送给我</code>。Hermes 自动检测数据异常并汇总，不用手动一个平台一个平台翻。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 自动生成多语言入住指南</div>
+            <div class="step-body">
+              输入：<code>为大理"洱语小筑"民宿制作一份入住指南 PDF，包含：从大理机场/火车站的交通方式、民宿 Wi-Fi 密码、周边餐厅推荐、景点攻略、退房注意事项。中文之后，再翻译成英文和日文版本分别保存</code>。Hermes 根据民宿位置自动搜索交通方式和周边信息，生成三语版指南，外国客人也能自助入住。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 批量生成社交媒体内容</div>
+            <div class="step-body">
+              输入：<code>根据我民宿的照片文件夹（~/Pictures/民宿/），用 /image_gen 为每间民宿生成 3 张不同季节的展示图，然后 /humanizer 写 10 条小红书风格的中文种草文案和 5 条 Instagram 英文文案，全部保存到 ~/Documents/民宿/营销素材/</code>。AI 生成的图片比手机随手拍专业，文案经过人性化润色完全不像机器写的。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动管理每日账务</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/民宿/每日收支.csv，自动统计各民宿当日收入、支出、净利润，对比上周同日数据计算增长率，生成"今日经营看板"信息图 /baoyu-infographic 并推送给我</code>。睡前看一眼手机就知道今天赚了多少。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置节假日价格策略提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每周五自动搜索未来 30 天内大理和丽江的节假日、大型活动、演唱会等事件，结合往年同期入住率，给我推送一份"建议调价清单"：哪些日期该涨价、涨多少、理由是什么</code>。旺季涨价不手软、淡季降价不心慌，数据帮你做决策。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>日常运营时间从 14 小时降到 4 小时。多语言指南让外国客人好评率翻倍。节假日调价策略让旺季收入多赚了 30%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 2 -->
 
 <!-- DAILY_CASES_END -->
 </main>
