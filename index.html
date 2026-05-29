@@ -186,6 +186,7 @@
     cursor: pointer; position: relative; user-select: none;
     transition: background 0.2s;
   }
+  .stat-btn-wrap { position: relative; display: inline-flex; }
   .stat-btn:hover { background: rgba(88,166,255,0.12); }
   .stat-btn .arrow-down { font-size: 0.6rem; margin-left: 2px; opacity: 0.6; }
   .dropdown {
@@ -238,13 +239,16 @@
   <h1>⚡ Hermes 每日应用案例</h1>
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
-    <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">2</strong> 天 <span class="arrow-down">▾</span></span>
+    <span class="stat-btn-wrap">
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">2</strong> 天 <span class="arrow-down">▾</span></span>
+      <div class="dropdown" id="days-dropdown"></div>
+    </span>
     <span>📋 累计 <strong>6</strong> 个案例</span>
-    <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">6</strong> 个行业 <span class="arrow-down">▾</span></span>
+    <span class="stat-btn-wrap">
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">6</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <div class="dropdown" id="industry-dropdown"></div>
+    </span>
   </div>
-  <!-- Dropdowns -->
-  <div class="dropdown" id="days-dropdown"></div>
-  <div class="dropdown" id="industry-dropdown"></div>
 </header>
 <!-- Filter bar -->
 <div class="filter-bar" id="filter-bar">
