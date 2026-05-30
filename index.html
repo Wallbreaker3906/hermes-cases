@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">2</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">3</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>6</strong> 个案例</span>
+    <span>📋 累计 <strong>9</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">6</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">9</strong> 个行业 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -677,6 +677,198 @@
   </div>
 </div>
 <!-- END Day 2 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-05-30 (Day 3) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-3">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 3</h2>
+    <span class="date-badge">2026.05.30</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 7: 餐饮 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🍜</div>
+        <div class="case-title">「一个人管一家店，连菜单都能自己优化」— 小餐馆老板用 AI 做智能运营</div>
+        <div class="case-subtitle">从菜单更新到外卖平台管理到促销文案，AI 当全能店长助理</div>
+        <div class="tags">
+          <span class="tag industry">餐饮</span>
+          <span class="tag role">餐馆老板</span>
+          <span class="tag">智能运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>老周在杭州开了一家川味小馆，同时上线了美团、饿了么两个外卖平台。每天除了炒菜，还要更新菜单、调整价格、回复平台评价、写朋友圈促销文案……一个人根本忙不过来。用 Hermes 后，文案和数据分析工作全交给 AI，他只需专心做好菜。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 智能分析菜品销量，自动优化菜单</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/餐馆/近三月销售数据.xlsx，按菜品统计销量和毛利率，找出"高销量低毛利"和"低销量高毛利"的菜，给我一份"菜单优化建议"：保留哪些、淘汰哪些、哪些该提价，保存为 PDF</code>。Hermes 自动跑数据分析，用数据告诉你哪道菜该留该砍，不再凭感觉做决定。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 一键生成多平台菜品描述</div>
+            <div class="step-body">
+              输入：<code>为我的 15 道招牌菜生成美团和饿了么两套商品描述：美团版 100 字以内突出食材和口味，饿了么版加一个"老板推荐"标签文案。再用 /humanizer 去 AI 味，读起来像真人老板写的</code>。15 道菜的描述几分钟全部生成，比一道一道手写快 10 倍。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 批量回复平台评价</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/餐馆/待回复评价.csv，对 5 星好评生成个性化感谢回复（带下次来送小菜），对 3 星以下生成诚恳道歉 + 下次改进承诺回复，全部保存并推送给我审核</code>。好评坏评都有得体回复，客人都觉得被重视。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 设计节气促销海报和朋友圈文案</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic "六月川味夏日套餐"促销信息图，深色底配红色美食图风格。再写 3 条适合发朋友圈的推广文案：一条突出"解暑"，一条突出"聚餐"，一条突出"外卖优惠"</code>。一张图加三条文案，发完朋友圈当天订单量就上来了。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置每周经营简报自动推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每周一早上 9 点自动分析上周销售数据：总流水、各平台占比、Top 5 菜品、客单价变化、对比前一周的增长率，汇总成一条微信消息格式推送到我的 QQ</code>。每周一早上一睁眼就知道上周赚了多少、哪个菜最火。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>菜单优化让整体毛利率从 55% 提高到 62%。平台评价回复率从 30% 到 100%，店铺评分涨了 0.3 分。每周经营简报让老板即使不在店里也掌控全局。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 8: 自媒体 / 内容创作 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「一个人就是一个内容工厂」— 独立创作者用 AI 做全平台内容矩阵</div>
+        <div class="case-subtitle">从选题策划到脚本撰写到多平台分发，AI 让个人创作者效率翻 5 倍</div>
+        <div class="tags">
+          <span class="tag industry">自媒体</span>
+          <span class="tag role">内容创作者</span>
+          <span class="tag">全平台运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小鱼是一个科技数码博主，同时运营 B 站、YouTube、小红书和微信公众号四个平台。以前做一个选题需要独立写四套文案——B 站的长视频脚本、YouTube 的英文标题和描述、小红书的种草短文、公众号的深度文章。一周最多出 2 条内容。用 Hermes 后，一次选题自动衍生出四个平台的版本，内容生产效率翻倍。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 联网搜热点，AI 帮你选题</div>
+            <div class="step-body">
+              输入：<code>搜索本周科技数码领域的 10 个热门话题（覆盖 B 站热搜、微博热搜、Twitter Trending、Reddit r/gadgets），分析每个话题的热度和竞争度，推荐 3 个最适合我做的选题，给出选题理由和切入点建议，保存到 ~/Documents/内容创作/选题库/</code>。Hermes 自动跨平台抓取热点，用数据帮你挑选题，不再凭感觉瞎猜。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 一次性生成四个平台的脚本和文案</div>
+            <div class="step-body">
+              输入：<code>选题是"2026 年最值得买的 5 款真无线耳机"。帮我生成四套内容：1) B 站 8 分钟长视频脚本（含开场白、分段标题、结尾引导关注）；2) YouTube 英文标题+描述+标签（SEO 优化）；3) 小红书 800 字种草文；4) 公众号深度评测文章。全部保存到 ~/Documents/内容创作/耳机选题/</code>。一次输入，四个平台的文案同时生成，风格各不同但核心信息一致。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动生成封面图和视频缩略图</div>
+            <div class="step-body">
+              输入：<code>/image_gen 为耳机选题生成 3 张 B 站视频缩略图（16:9，科技感深色背景，突出产品对比），再生成 1 张小红书封面图（3:4 竖版，清新风格），以及 1 张公众号头图（900x383）</code>。一套选题的所有视觉素材几分钟搞定，不用再花钱请设计师。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 用 AI 去机器味，让文案像真人写的</div>
+            <div class="step-body">
+              输入：<code>/humanizer 把刚才生成的所有文案全部润色一遍，加入我的个人风格标记：口语化、偶尔用"卧槽"惊讶、喜欢用"兄弟们"开头、对苹果产品稍微毒舌一点</code>。经过人性化润色后，读者完全看不出是 AI 写的，粉丝黏性反而更高了。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 定时发布 + 数据追踪</div>
+            <div class="step-body">
+              输入：<code>/cron 每周五晚上自动抓取 B 站、YouTube、小红书、公众号上周发布内容的播放量/阅读量、点赞、评论、收藏数据，对比上上周计算增长率，生成"上周内容表现报告"推送到我的 QQ。同时在每天上午 10 点提醒我今天该发哪个平台的内容</code>。数据一目了然，哪个平台涨粉快、什么内容受欢迎，AI 全帮你算好了。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>内容产出从每周 2 条提升到 8 条。四个平台粉丝总量三个月从 5 万涨到 22 万。多平台分发让广告商单报价翻了三倍。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 9: 农业 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌾</div>
+        <div class="case-title">「田里有 AI，丰收不用靠天」— 新农人用 AI 做精准种植和产销对接</div>
+        <div class="case-subtitle">从种植规划到病虫害识别到电商直销，AI 帮返乡青年科学种地</div>
+        <div class="tags">
+          <span class="tag industry">农业</span>
+          <span class="tag role">新农人</span>
+          <span class="tag">精准种植</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>阿凯从互联网公司辞职回到山东老家，承包了 50 亩地种草莓和番茄。虽然干过产品经理，但对农事一窍不通——什么时候施肥？病虫害怎么认？怎么对接批发市场和电商？他用 Hermes 当自己的"随身农技员+销售助理"，把互联网思维带到了田间地头。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 联网获取气象和农事建议</div>
+            <div class="step-body">
+              输入：<code>搜索山东潍坊未来 15 天的天气预报，结合草莓和番茄的生长周期，给我一份"两周农事操作建议"：哪天适合施肥、哪天需要灌水、哪天要预防什么病害，保存为 Markdown</code>。Hermes 自动整合气象数据和作物模型，给出精确到天的农事提醒，新手也能按指南操作。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 拍照识别病虫害，秒出防治方案</div>
+            <div class="step-body">
+              输入：<code>（附上草莓叶片照片）这张草莓叶片上出现了褐色斑点，帮我诊断是什么病害，并给出有机种植可用的防治方案和用药建议，控制在 200 字以内</code>。Hermes 分析图片中的病斑特征，匹配病害库，告诉你用什么药、用多少浓度，不用跑农技站排队问人。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成产品包装和品牌故事</div>
+            <div class="step-body">
+              输入：<code>为我的"阿凯农场"品牌写一段品牌故事（300 字以内，讲互联网人回乡种地的初心），再用 /image_gen 生成 3 款草莓礼盒的包装设计图（简约清新风格），以及一份产品介绍 PDF 用于发给电商采购经理</code>。有品牌故事和好看包装，草莓不再论斤卖，按盒卖、按礼盒卖，溢价空间大多了。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 一键生成多平台销售文案和上架信息</div>
+            <div class="step-body">
+              输入：<code>用 /humanizer 为草莓和番茄各写 5 条朋友圈推广文案（突出"自然熟、不打药、产地直发"），再写一份拼多多和抖音小店的商品描述模板，最后制作一份批发市场报价单 PDF</code>。零售批发两不误，一条龙文案覆盖全部销售渠道。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置采收日历和生产成本追踪</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 8 点推送"今日待办"：① 当前处于什么生长阶段 ② 今天该做什么农事操作 ③ 离预计采收日还有几天。再设置每周日晚上自动统计本周肥料、农药、人工成本，计算每亩投入产出比，推送到我的 QQ</code>。每天起床知道今天该干什么，每周日知道这一周赚了多少、花了多少。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>草莓亩产从 2000 斤提升到 2800 斤，病虫害损失率从 20% 降到 5%。品牌包装让零售价从 8 元/斤卖到 25 元/斤。投入产出比一目了然，种地终于不再是一笔糊涂账。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 3 -->
 
 <!-- DAILY_CASES_END -->
 </main>
