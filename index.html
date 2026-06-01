@@ -269,7 +269,7 @@
       <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">4</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>12</strong> 个案例</span>
+    <span>📋 累计 <strong>15</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">12</strong> 个行业 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -1061,6 +1061,198 @@
   </div>
 </div>
 <!-- END Day 4 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-01 (Day 5) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-5">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 5</h2>
+    <span class="date-badge">2026.06.01</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 13: 心理咨询 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧠</div>
+        <div class="case-title">「每位来访者都有一份专属心理地图」— 心理咨询师用 AI 做精准个案管理</div>
+        <div class="case-subtitle">从咨询记录整理到干预方案制定到进展追踪，AI 当咨询师的第二大脑</div>
+        <div class="tags">
+          <span class="tag industry">心理健康</span>
+          <span class="tag role">心理咨询师</span>
+          <span class="tag">个案管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>林咨询师在一家心理咨询机构工作，同时管理 30 位来访者的个案。每次咨询后要花 30 分钟写咨询记录、分析进展、调整干预方案，还要为每位来访者搜索适配的心理教育材料和自助练习。以前咨询 6 小时、文书 3 小时，整个人被文案工作掏空。用 Hermes 后，咨询记录和方案自动生成，她终于能把精力全放在咨询本身。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 语音转文字 + 自动生成咨询记录</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/咨询记录/来访者-张先生-20260601-录音.txt（已脱敏），帮我整理成标准 SOAP 格式咨询记录：S（主观描述）、O（客观观察）、A（评估分析）、P（干预计划），重点标记本次出现的核心信念和新进展，保存为 ~/Documents/咨询记录/张先生/第12次咨询-SOAP.md</code>。Hermes 自动提取关键信息，生成专业格式的咨询记录，咨询师只需审核微调。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 联网搜索适配的心理教育材料</div>
+            <div class="step-body">
+              输入：<code>帮我搜索适合\"广泛性焦虑\"来访者的心理教育资料：① 焦虑的认知行为模型图解；② 5 种可在家里做的放松训练（含具体步骤）；③ 适合阅读的焦虑自助书籍推荐（中文，带简介）。整理成一份\"来访者自助工具包\" PDF，语言温和、不引起防御心理</code>。Hermes 自动搜索权威心理学资源，整理成可直接发给来访者的自助材料，省去咨询师一个个翻书找的时间。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成个性化家庭作业和练习</div>
+            <div class="step-body">
+              输入：<code>为张先生（广泛性焦虑、核心表现为\"灾难化思维\"）设计一周的家庭作业：① 每日\"想法记录表\"模板（三栏：事件→自动思维→替代思维）；② 2 个正念呼吸练习指导（每次 5 分钟）；③ 1 个行为实验任务（测试他担心的\"如果工作出错就会被开除\"）。全部用 /humanizer 润色成温和鼓励的语气，保存为 PDF</code>。自动生成个性化家庭作业，咨询效果从\"咨询室里的一小时\"延伸到日常生活中。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 批量追踪来访者进展，生成可视化报告</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/咨询记录/来访者档案.xlsx，分析每位来访者近 4 次咨询的 GAD-7/PHQ-9 量表分数变化趋势，用 /baoyu-infographic 生成每位来访者的\"进展趋势图\"（折线图 + 关键事件标注），深色柔和主题。对分数没有改善的来访者标红提醒</code>。一张图看清每位来访者的变化趋势，哪些人在改善、哪些人停滞不前，一目了然，及时调整干预策略。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置咨询提醒和自我关怀推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 8 点推送\"今日咨询安排\"：来访者姓名、第几次咨询、上次核心议题、本次建议关注点。每周五下午 5 点推送\"咨询师自我关怀提醒\"：本周咨询总时长、建议休息和督导提醒、一句心理人共勉语录。全部推送到我的 QQ</code>。咨询前一天自动回顾来访者背景，咨询时心中有数。咨询师自我关怀提醒防止职业耗竭。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>文书时间从每天 3 小时降到 30 分钟。家庭作业完成率从 40% 提升到 85%，来访者脱落率降低 60%。可视化进展报告让督导和来访者都更清楚咨询效果。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 14: 健身运动 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💪</div>
+        <div class="case-title">「50 个学员，人人都有专属教练」— 健身教练用 AI 做千人千面训练计划</div>
+        <div class="case-subtitle">从体测分析到训练周期规划到饮食方案，AI 让私教一个人服务一个战队</div>
+        <div class="tags">
+          <span class="tag industry">健身运动</span>
+          <span class="tag role">健身教练</span>
+          <span class="tag">训练规划</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>大鹏是一家商业健身房的明星私教，手上有 50 位付费学员。每位学员都需要个性化训练计划、饮食方案和每周进展追踪。以前他每天上 8 节课，下了课还要花 3 小时做计划、回学员微信。最头疼的是学员说\"教练我平台期了怎么办\"——改计划又是一小时。用 Hermes 后，所有学员的计划自动生成和更新，他只需在课上专注动作指导。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 批量分析学员体测数据，自动分层</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Documents/学员/体测数据.xlsx（含 50 位学员的体脂率、骨骼肌、BMI、基础代谢、体能测试成绩），帮我按\"减脂/增肌/塑形/体能\"四类自动分组，每组内再按新手/进阶/高阶分三个等级，在原表新增\"分组\"和\"等级\"两列并保存</code>。50 个人的数据 Hermes 几秒钟跑完，自动分层让训练计划精准匹配。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 生成个性化四周训练周期计划</div>
+            <div class="step-body">
+              输入：<code>根据每位学员的分组和等级，自动生成四周训练计划：每周训练 3-4 天、每天包含热身（5 分钟）+ 主训练（45 分钟）+ 拉伸（10 分钟），列出每个动作的名称、组数、次数、休息时间、动作要点提示。输出为每位学员一个独立的 PDF 文件。对\"增肌-进阶\"组自动加入周期性超负荷递进</code>。Hermes 根据运动科学原理自动编排训练周期，50 份计划几分钟出完，每份都像教练亲手写的。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动配餐——从 38 万种食物中定制饮食方案</div>
+            <div class="step-body">
+              输入：<code>/fitness-nutrition 根据每位学员的体测数据和训练目标（减脂/增肌/塑形），从食物数据库中自动搭配一周 21 餐个性化食谱，要求：每天热量控制在目标范围内、三大营养素比例合理、食材家常可买到、做法简单。输出为每位学员一份带食物图片的 PDF</code>。利用技能内置的代谢模型和 38 万种食物数据库，自动生成家常可操作的饮食方案，学员不用吃水煮鸡胸也能达成目标。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动生成动作图解和教学视频脚本</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 为\"深蹲、硬拉、卧推、划船、推举\"五大基础动作各生成一张教学图解信息图：包含起始姿势、动作轨迹、常见错误对比、呼吸节奏。再用 /humanizer 为每个动作写一段 60 秒的教学口播脚本，口语化、有鼓励感</code>。学员训练时可以随时看图自查动作，减少受伤风险。教学口播脚本可以直接录成短视频发学员群。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 自动推送每日训练提醒和每周进展报告</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 7 点推送\"今日训练学员名单\"：按上课时间排序，附每位学员今日训练重点和上次训练回顾。每周日晚自动汇总：每位学员本周训练出勤、体重/体脂变化、训练重量进步，生成\"本周学员进展简报\"推送到我的 QQ。对连续两周无进步的学员标红提醒</code>。上课前心中有数、下课了数据自动追踪。哪个学员在偷懒、哪个遇到平台期，AI 全帮你盯着。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>计划制定时间从每天 3 小时降到 20 分钟。学员续课率从 55% 提升到 82%。平台期学员的自动调整方案让训练效果持续不中断，学员满意度大幅提升。教练终于有时间自己训练了。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 15: 房地产 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏠</div>
+        <div class="case-title">「一天写完二十套房源介绍」— 房产经纪人用 AI 做全渠道获客和房源管理</div>
+        <div class="case-subtitle">从楼盘调研到房源描述到客户带看报告，AI 让经纪人专注于成交</div>
+        <div class="tags">
+          <span class="tag industry">房地产</span>
+          <span class="tag role">房产经纪人</span>
+          <span class="tag">房源管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小杨是贝壳找房的一名房产经纪人，手上同时维护 20 多套房源，每天还要开发新房源、写房源描述、做市场对比分析、带客户看房后写带看报告、在各平台发推广。一套房源从拿到钥匙到全网发布，手工做要 2 小时。旺季一天接 5 套新房源，光写文案就写到半夜。用 Hermes 后，房源上架流程全自动，他把省下的时间全用来带看和谈单。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 一键生成多平台房源描述</div>
+            <div class="step-body">
+              输入：<code>我有一套新房源：北京朝阳区望京，89㎡ 两室一厅，总高 18 层的 12 层，南北通透，精装修，近地铁 14 号线望京站步行 5 分钟，小区有绿化和地下车位。帮我生成三套房源描述：① 贝壳找房版（突出户型优势和交通，200 字）；② 小红书版（家居生活感，带 emoji，适合年轻夫妻）；③ 朋友圈版（像朋友推荐，口语化 150 字）。全部用 /humanizer 润色</code>。三套文案针对不同渠道自动调整风格，一套房源全网覆盖。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 自动做楼盘调研和周边分析</div>
+            <div class="step-body">
+              输入：<code>帮我搜索北京望京区域的最新房产信息：① 周边 3 公里内的学校、医院、商超、公园列表（附距离）；② 近半年同户型成交均价和成交周期；③ 小区物业费、停车费、绿化率；④ 未来两年周边规划（地铁新线、商业体）。整理成一份\"望京××小区楼盘调研报告\" PDF</code>。Hermes 自动抓取链家、贝壳、百度地图数据，客户问\"周边有什么学校\"时你秒答，专业度拉满。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成房价对比分析报告</div>
+            <div class="step-body">
+              输入：<code>把望京这套 89㎡ 两居和周边 5 个同类型小区（根据调研报告中的数据）做一份横向对比：单价、总价、首付估算、月供估算、物业费、房龄、学区、交通评分。用 /baoyu-infographic 生成一张\"望京热门两居横向对比图\"，深色商务主题，客户一看就懂</code>。客户纠结\"买这套还是隔壁小区那套\"时，一张对比图胜过千言万语。数据可视化让客户决策更快。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动生成带看报告和跟进建议</div>
+            <div class="step-body">
+              输入：<code>今天带客户王先生看了 3 套房（望京 A 小区 89㎡、望京 B 小区 95㎡、望京 C 小区 82㎡），帮我生成一份带看报告：① 每套房的客户反馈摘要（喜欢什么、顾虑什么）；② 3 套房横向对比（价格/面积/装修/通勤）；③ 推荐优先级和跟进建议（什么时候再约、该推什么新房源）。保存为 PDF 发给我</code>。带看结束 5 分钟出报告，客户觉得你特别专业细心。跟进建议让后续动作有章法，不再凭感觉。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置新房源自动监控和客户跟进提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 9 点推送：① 我维护的房源中有无降价或新出的同户型竞品；② 近 3 天没跟进的客户清单；③ 快到期的独家房源提醒。每周一早上自动生成上周业绩简报：带看量、新增房源、意向金收取、成交单数，推送到我的 QQ</code>。哪些客户该联系了、哪个房源该降价了、上周业绩怎么样，AI 每天早上给你发日报，闭眼都知道今天该干嘛。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>一套房源上架时间从 2 小时压缩到 15 分钟。多平台房源描述 + 周边分析让客户咨询量提升 60%。带看报告让客户信任度和转介绍率翻倍。自动跟进提醒让漏跟客户归零。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 5 -->
 
 <!-- DAILY_CASES_END -->
 </main>
