@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">4</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">6</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>15</strong> 个案例</span>
+    <span>📋 累计 <strong>18</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">12</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">18</strong> 个行业 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -1253,6 +1253,198 @@
   </div>
 </div>
 <!-- END Day 5 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-02 (Day 6) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-6">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 6</h2>
+    <span class="date-badge">2026.06.02</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 16: 物流 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📦</div>
+        <div class="case-title">「仓库的大脑醒了」— 物流主管用 AI 把盘点从 3 天缩到 30 分钟</div>
+        <div class="case-subtitle">管理 500+ SKU 的仓库主管用 Hermes 自动库存分析 + 智能调度 + 预警日报</div>
+        <div class="tags">
+          <span class="tag industry">物流</span>
+          <span class="tag role">仓库主管</span>
+          <span class="tag">库存管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>老赵管着一个 500 多 SKU 的电商仓库。以前每个月盘点要带着 3 个工人干 3 天——清点、对账、做报表、算补货量。运输调度全靠电话和微信群，经常出现"车到了货没备好"或"货备好了车没到"。用上 Hermes 后，库存数据实时分析、补货自动建议、运输智能调度，仓库效率翻倍。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 导入仓库数据并自动分析库存健康状况</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/仓库/inventory-2026-06.csv，分析所有 SKU 的库存深度、周转天数、滞销预警（超过 90 天未出库）、断货风险（库存低于安全线），生成一份"库存健康度报告"保存为 Markdown 文件</code>。Hermes 在终端里自动跑分析脚本，500 个 SKU 的健康状况几分钟就出来了——哪些该清仓、哪些该补货、哪些周转正常，一目了然。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 生成智能补货清单和采购建议</div>
+            <div class="step-body">
+              输入：<code>根据库存健康度报告，为所有"断货风险"和"低库存"的 SKU 生成补货建议：包含建议采购量（考虑近 30 天日均销量×安全库存天数）、预估采购金额、推荐供应商优先级。导出为 Excel 文件方便直接发给采购</code>。不用再拿计算器一个个算"日均卖多少、该补多少"，AI 把补货逻辑全算好了，直接拿 Excel 跟供应商下单。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动规划多目的地最优运输路线</div>
+            <div class="step-body">
+              输入：<code>今天需要发 12 个订单到以下地址（地址列表在 ~/Desktop/orders-today.csv），帮我规划最优配送路线：按区域聚类分组、每组的装车顺序、建议发车时间，尽量减少总行驶里程。用 /baoyu-infographic 生成一张"今日配送路线图"方便司机查看</code>。以前调度靠经验和电话，现在 AI 直接出最优路线图，司机按图跑就行，平均每天节省 2 小时车程。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 生成仓库可视化布局图和货位优化方案</div>
+            <div class="step-body">
+              输入：<code>根据 inventory.csv 中各 SKU 的出库频率（高频/中频/低频），帮我优化仓库货位布局：高频商品移到离打包台最近的 A 区、中频放 B 区、低频放 C 区。用 /baoyu-infographic 生成一张仓库新布局平面图，标出 A/B/C 分区和推荐移动的货品清单</code>。以前凭经验摆放，拣货员每天要走 2 万步。优化后高频商品就近存放，拣货效率提升 40%。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置库存预警和自动化日报</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 7 点自动执行：① 检查库存数据，列出库存低于安全线的 SKU（红灯报警）和未来 7 天可能缺货的 SKU（黄灯预警）；② 列出今日待发货订单数和待收货入库数；③ 汇总为一段 200 字简报推送到我的 QQ 上</code>。每天起床看一条消息就知道仓库今天什么情况，再也不用早上第一件事就是打开 Excel 对数据。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>月度盘点从 3 天压缩到 30 分钟。补货建议让缺货率从 8% 降到 1.5%。路线优化每月省下约 2000 元油费。仓库存局优化让拣货员日均步数从 2 万降到 1.2 万。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 17: 影视传媒 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「一个人就是一支视频团队」— 博主用 AI 把日更从 8 小时压到 1 小时</div>
+        <div class="case-subtitle">短视频创作者用 Hermes 完成脚本→字幕→封面→多平台发布全流程</div>
+        <div class="tags">
+          <span class="tag industry">影视传媒</span>
+          <span class="tag role">博主</span>
+          <span class="tag">内容创作</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小鹿是一个 10 万粉的科技类短视频博主，每天要在 B 站、抖音、小红书更新内容。以前一天的工作流是这样的：花 2 小时找选题写脚本，拍摄 1 小时，剪辑 2 小时，做封面和字幕 1 小时，再花 1 小时写各平台文案和发布——一天 8 小时打底，天天熬夜。用上 Hermes 后，AI 承包了从脚本创意到多平台发布的所有"非拍摄"环节，她只需要专注拍摄和口播。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 输入热点话题，AI 自动生成视频脚本框架</div>
+            <div class="step-body">
+              输入：<code>搜索今天科技圈的 5 个热门话题，选 2 个最适合做短视频的（有争议性、有画面感），为每个话题写一个 3 分钟的视频脚本框架：① 黄金 5 秒开场钩子 ② 核心观点（3 个要点+案例）③ 结尾引导互动。保存在 ~/Desktop/视频脚本/ 文件夹</code>。以前找选题要刷 2 小时各个平台，现在 Hermes 几分钟就搜完热点并给出可拍的脚本框架——连开场钩子都帮你写好了。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 生成详细分镜头脚本和拍摄提示</div>
+            <div class="step-body">
+              输入：<code>把刚才选中的脚本扩展为详细的分镜头脚本，包含：每个镜头的时间码、画面描述（给什么镜头、用什么景别）、口播文案、画面上的文字叠加（花字）、需要的 B-roll 素材类型。用表格格式输出，方便我对着拍</code>。不用自己坐在那想"这段该配什么画面"，AI 把每个镜头的画面、文案、花字都规划好了，你只管照着拍。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动生成字幕文件和封面图</div>
+            <div class="step-body">
+              输入：<code>我有一段 3 分钟的视频口播文案（在 ~/Desktop/脚本/口播文案.txt），帮我：① 生成 SRT 字幕文件（中文，每段不超过 15 字）；② 用 image_gen 生成一张科技感封面图——深色背景、霓虹色标题文字、突出今天视频的核心关键词</code>。以前用剪映手动打字幕要 40 分钟，现在直接生成 SRT 文件拖进剪辑软件就行。封面图也不用打开 PS 慢慢调了。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 批量生成多平台标题和文案</div>
+            <div class="step-body">
+              输入：<code>根据今天的视频内容，帮我分别生成适合 B 站、抖音、小红书的标题和文案：B 站要 SEO 友好，抖音要前 3 秒吸睛，小红书要带 emoji 和话题标签。用 /humanizer 去 AI 味，让每段文案读起来像真人写的</code>。一个视频发 3 个平台，以前你得写 3 套完全不同的文案——现在 AI 直接根据各平台调性分别生成，一键复制粘贴。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 定时自动发布到各视频平台</div>
+            <div class="step-body">
+              输入：<code>/cron 设置发布计划：今天下午 6 点自动在 B 站发布（标题用 bilibili-title.txt），晚上 8 点在抖音发布（标题用 douyin-title.txt），晚上 9 点在小红书发布（标题用 xiaohongshu-title.txt）。发布完成后推一条汇总消息到我的 QQ："今日 3 平台已发布，链接如下…"</code>。以前要掐着时间点一个个打开 App 手动发，现在设好定时就完事了，到点 AI 自动发，你该吃饭吃饭该遛狗遛狗。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>日更从 8 小时压缩到 1.5 小时（只剩拍摄和简单剪辑）。多平台文案质量统一提升，小红书互动率涨了 35%。定时发布让博主终于能在晚上 8 点吃上一顿安心的晚饭。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 18: 人力资源 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💼</div>
+        <div class="case-title">「简历海里的智能猎头」— HR 用 AI 一天筛 500 份简历</div>
+        <div class="case-subtitle">招聘专员用 Hermes 做简历解析→智能筛选→面试出题→入职包全流程</div>
+        <div class="tags">
+          <span class="tag industry">人力资源</span>
+          <span class="tag role">HR</span>
+          <span class="tag">智能招聘</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>陈姐是一家互联网公司的 HR，最近公司同时招前端、后端、产品经理、UI 设计师 4 个岗位，每天收到 100+ 份简历。以前她得一份份打开看——学历、经验、技能匹配度全靠肉眼判断，看到第 30 份就开始眼花。面试题每次都是网上临时搜，质量不稳定。新员工入职要准备欢迎邮件、账号开通清单、入职指引，每次都从头写。Hermes 把整个招聘流程自动化了 80%。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 批量导入简历并自动打分排序</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/招聘/前端工程师/ 文件夹里的所有 PDF 简历（共 120 份），根据以下标准逐份打分：① React/Vue 项目经验（0-5 分）② 工作年限匹配度（0-3 分）③ 大厂/知名项目背景（0-2 分）。按总分从高到低排序，生成 Excel 表格（含姓名、总分、各维度得分、亮点摘要），保存到 ~/Desktop/筛选结果/</code>。120 份简历以前要看一整天，现在 Hermes 几分钟出排序表——前 20 名直接约面，精准又高效。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 为不同岗位自动生成定制化面试题</div>
+            <div class="step-body">
+              输入：<code>帮我分别为前端工程师、后端工程师、产品经理三个岗位各生成一套面试题：① 3 道技术基础题（考察基本功）② 2 道场景设计题（考察解决实际问题的能力）③ 1 道行为面试题（考察团队协作/沟通）。每道题附参考答案和评分标准。保存为三份 PDF 文件</code>。不用每次都上网临时搜题了，AI 生成的面试题紧贴岗位需求，还有评分标准——面试官照着问就行，新人也能当合格面试官。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成候选人横向对比分析报告</div>
+            <div class="step-body">
+              输入：<code>这 8 位候选人已经完成初面和笔试（数据在 ~/Desktop/面试评分.xlsx），帮我生成一份对比分析报告：① 各维度雷达图对比（技术、沟通、项目经验、学习能力、文化匹配）② 每人 3 句话亮点总结 ③ 推荐录用排序和薪资建议。用 /baoyu-infographic 生成一张"候选人能力雷达对比图"，方便在复盘会上展示</code>。面试完 8 个人，脑子已经一团浆糊——谁技术强但沟通差？谁性价比最高？AI 一张雷达图让你一目了然，复盘会上有理有据。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动制作新员工入职欢迎包</div>
+            <div class="step-body">
+              输入：<code>新同事叫"林小凡"，前端工程师，下周一入职。帮我制作入职欢迎包：① 一封温暖的欢迎邮件（含入职第一天日程安排）② 账号开通清单（邮箱/企业微信/GitLab/设计工具等 8 个系统的开通步骤）③ 30-60-90 天入职计划模板。全部用 /nano-pdf 导出为一份精美的 PDF 欢迎手册</code>。以前入职包要手动拼凑 2 小时——邮件、表格、文档东一个西一个。现在 AI 一键生成完整欢迎手册，新同事入职体验拉满。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置招聘流程自动化提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 设置招聘跟进提醒：① 每天早上 9 点推送今日待办——今天有哪些候选人需要回复、哪些面试需要确认、哪些 offer 等待接受 ② 每周一早上生成上周招聘周报：收简历数、面试数、通过数、offer 发放数、入职数 ③ 候选人超过 3 天未回复自动提醒我跟进。所有提醒推送到我的 QQ 上</code>。招聘最怕的就是忘了跟进——候选人等着等着就去了别家。AI 帮你盯住每一个节点，该回复的、该催的、该确认的，一个都不会漏。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>简历初筛从 8 小时/批次压缩到 20 分钟。面试题质量标准化后，用人部门对新人的满意度提升明显。入职包制作从 2 小时降到 5 分钟。自动跟进提醒让候选人流失率降低 40%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 6 -->
 
 <!-- DAILY_CASES_END -->
 </main>
