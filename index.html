@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">6</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">7</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>18</strong> 个案例</span>
+    <span>📋 累计 <strong>21</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">18</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">21</strong> 个行业 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -1445,6 +1445,198 @@
   </div>
 </div>
 <!-- END Day 6 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-03 (Day 7) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-7">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 7</h2>
+    <span class="date-badge">2026.06.03</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 19: 网络安全 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛡️</div>
+        <div class="case-title">「一个人的 SOC 中心」— 安全工程师用 AI 守住三万台服务器</div>
+        <div class="case-subtitle">甲方安全团队用 Hermes 做威胁情报→日志分析→日报→应急响应全流程</div>
+        <div class="tags">
+          <span class="tag industry">网络安全</span>
+          <span class="tag role">安全工程师</span>
+          <span class="tag">安全运营</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>阿远是一家中型互联网公司的安全工程师，团队只有 3 个人，却要管着 3 万台服务器和 200+ 个业务域名。以前每天的节奏是这样的：早上打开几十封安全告警邮件一个个排查，中午翻十几份漏洞情报看看跟自己有没有关系，下午写安全日报和周报，晚上还要盯着 SIEM 大屏——每周至少熬两个大夜。用上 Hermes 以后，告警自动分类、情报自动匹配、日报自动生成，他第一次体验到了「晚上能睡整觉」的感觉。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 每日威胁情报自动聚合与匹配</div>
+            <div class="step-body">
+              输入：<code>搜索今天全球发布的 10 条最重要的网络安全威胁情报（关注 CVE 漏洞、勒索软件变种、APT 组织动态），提取关键信息（影响范围、CVSS 评分、利用条件），然后自动匹配我们公司的技术栈（Nginx / Node.js / Redis / K8s），列出哪些跟我们直接相关、建议优先级，保存为 ~/Desktop/安全日报/threat-intel-今日日期.md</code>。以前每天早上要翻 NVD、推特安全圈、各家厂商公告十几个信息源，现在 Hermes 自动聚合 + 匹配，5 分钟就知道今天该先修哪个洞。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量日志分析，自动识别异常行为</div>
+            <div class="step-body">
+              输入：<code>读取昨天全天的 Nginx 访问日志（~/Desktop/logs/nginx-access-20260602.log，约 8GB），帮我：① 统计 Top 20 高频访问 IP 和路径 ② 识别疑似扫描/爆破行为（同一 IP 对 /admin /login 等敏感路径的异常高频访问）③ 找出返回 4xx/5xx 最多的 10 个接口 ④ 用 /baoyu-infographic 生成一张"昨日安全态势概览图"，包含攻击来源地理分布、攻击类型分布、流量异常时段标注。输出报告保存到 ~/Desktop/安全日报/</code>。8GB 的日志文件以前用 grep 和 awk 手动分析要折腾一上午，现在 Hermes 在后台跑分析脚本，一张图让你看清昨天有没有被盯上。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成 SIEM 告警分析与处置建议</div>
+            <div class="step-body">
+              输入：<code>这是今天早上的 47 条 SIEM 告警（~/Desktop/alerts/20260603.json），帮我逐条分析：① 判断是真告警还是误报（基于告警类型、来源、上下文关联）② 对真实威胁给出分步处置建议（隔离主机/封禁 IP/通知业务方/升级上报）③ 按严重程度（Critical / High / Medium / Low）重新分类，生成处置跟踪表格（Excel），每处理完一条可以勾选标记</code>。47 条告警以前全看下来要 2 小时，还经常把 Critical 的漏过去。现在 AI 帮你分好级、写好处置步骤，你只需要照着执行——Critical 的一个都不会错过。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动化安全合规检查与报告</div>
+            <div class="step-body">
+              输入：<code>对以下 20 个业务域名做一次基础安全合规检查：① SSL 证书有效期（标注 30 天内到期的）② HTTP 安全头配置（CSP / HSTS / X-Frame-Options）③ 开放端口扫描（Top 1000 端口）④ 检查是否暴露了 .git / .env / phpinfo 等敏感路径。生成一份 PDF 报告，每个域名一页，红色标注不合规项、绿色标注合格项，发给各个业务的负责人</code>。以前合规检查要手动跑 nmap、openssl、curl 逐个测，20 个域名搞一整天。现在 Hermes 并行扫描 + 自动出图，合规报告直接转发给业务方整改。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 定时安全态势推送 + 应急响应预案演练</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 8 点自动生成并推送"今日安全简报"到我的 QQ：① 过去 24 小时发现威胁数（含严重级别分布）② 已处置/待处置数量 ③ 今日需重点关注的风险（证书到期、漏洞预警）④ 一句话总结："今天安全态势：🟢 平静 / 🟡 关注 / 🔴 紧张"。另外，每周五下午 5 点自动生成本周安全周报（PDF），汇总全周威胁趋势和处置成果</code>。老板问"最近安全情况怎么样？"——你把周报 PDF 直接转发过去就行，不用再花半天拼凑数据。安全态势变化第一时间知道，周末也能放心。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>每日告警处理从 3 小时降到 30 分钟，误报忽略率提升 70%。威胁情报匹配让高危漏洞平均响应时间从 48 小时降到 4 小时。安全周报从半天手工整理降到 1 分钟一键生成。3 人团队管 3 万台服务器——以前不敢想，现在刚刚好。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 20: 新能源汽车 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚡</div>
+        <div class="case-title">「100 辆电车的 AI 管家」— 车队经理用 Hermes 让电池寿命延长 15%</div>
+        <div class="case-subtitle">新能源物流车队用 Hermes 做电池健康监测→充电调度→维保预测→能耗日报</div>
+        <div class="tags">
+          <span class="tag industry">新能源汽车</span>
+          <span class="tag role">车队经理</span>
+          <span class="tag">车队管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>老周管理着一个 100 辆新能源货车的城市配送车队。最让他头疼的三件事：一是电车电池衰减比想象中快，有些车才开两年续航就掉了 20%，但到底是电池问题还是驾驶习惯问题——根本说不清；二是充电排班全靠 Excel，经常出现 5 辆车同时回场抢充电桩、另外 10 个桩闲着没人用；三是维保计划纯靠"感觉"——看里程表差不多了就送修，该修的不修、不该修的乱修。用上 Hermes 后，每辆车的电池曲线都能追着看、充电排班自动优化、维保提前预警——100 辆车终于有了一个"AI 管家"。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 导入车队数据，AI 自动绘制电池衰减曲线</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/车队/battery-data-202606.csv（含每辆车的 VIN、累计里程、每次充电的 SOC 起止值、充电时长、电池温度），帮我：① 为每辆车绘制"电池健康度变化曲线"（按月份展示可用容量衰减趋势）② 标注衰减速度异常的车辆（月衰减超过 1.5% 的标红）③ 分析衰减异常的可能原因（快充占比过高？经常深度放电？高温充电？）并给出改进建议。用 /baoyu-infographic 生成一张"车队电池健康总览仪表盘"</code>。以前电池衰减是笔糊涂账——只知道续航越来越短，不知道为什么。现在每辆车都有曲线图，衰减异常的车一目了然，还能对症下药。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 智能充电排班：错峰 + 低成本 + 保续航</div>
+            <div class="step-body">
+              输入：<code>这是明天 100 辆车的配送排班表（~/Desktop/车队/schedule-0604.xlsx），帮我生成最优充电排班方案：① 根据每辆车明天的预计行驶里程和当前剩余电量，计算需要充电的车和所需电量 ② 按电网峰谷电价（8:00-11:00 峰电 1.2 元/度，22:00-6:00 谷电 0.4 元/度），优先安排谷电充电 ③ 避免多辆车同时回场抢桩（场站只有 20 个快充桩），错开回场时间 ④ 导出为充电排班表，精确到每辆车几点开始充电、几点拔枪</code>。以前排充电全凭 Excel 手算——哪辆车跑多远、剩多少电、什么时候充最便宜，算下来脑子都要炸。现在 AI 把电价、续航、桩位三个变量一起优化，一天能省 30% 充电费。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 驾驶行为分析：揪出"电池杀手"司机</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/车队/driving-log-202606.csv（每辆车的急加速次数、急刹车次数、平均车速、空调使用时长、能量回收强度），帮我：① 计算每个司机的"驾驶经济性得分"（满分 100 分，急加速急刹车扣分、平稳驾驶和高能量回收加分）② 列出得分最低的 5 位司机及其具体问题行为 ③ 为每位低分司机生成个性化的驾驶改善建议（如"减少急加速，预计可提升续航 8%"）④ 导出司机驾驶得分排行榜，在晨会上公示</code>。同样的车、同样的路线，有的司机能多跑 15% 的续航——差别就在脚法。AI 把每个人的驾驶习惯拆解得明明白白，谁是"黄金右脚"、谁是"电池杀手"，数据说了算。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 预测性维保：从"坏了再修"变成"提前保养"</div>
+            <div class="step-body">
+              输入：<code>根据每辆车的历史维保记录和当前里程、电池健康度、电机运转数据，帮我生成未来 30 天的维保预警清单：① 里程接近保养节点的车辆（距上次保养超过 8000 公里）② 电池健康度低于 80% 的车辆建议深度检测 ③ 刹车片/轮胎更换预测（基于驾驶行为和里程）④ 生成维保排期建议（错开配送高峰期），导出为 Excel 发给维修站提前备件</code>。以前维保靠"里程到了就送修"，经常出现这辆车刚保养完就出故障、那辆车小毛病拖成大故障。现在 AI 从多维数据预测什么该修、什么时候修——把"救火式维修"变成"预防式保养"，车辆出勤率明显提高。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 每日能耗与运营日报自动推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上 7 点自动生成"昨日车队运营日报"推送到我的 QQ：① 昨日总行驶里程、总耗电量、平均能耗（kWh/100km）② 充电总费用（含峰谷对比，标注省了多少钱）③ 异常车辆提醒（能耗突然升高、电池温度异常）④ 今日充电排班提醒（哪些车今晚需要插枪）⑤ 司机驾驶得分变化（谁进步了、谁退步了）</code>。以前每天早上一到公司先打开 5 个 Excel 拼数据，现在 QQ 一条消息就全有了——数据比你自己算的还准。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>智能充电排班每月节省电费约 8000 元。驾驶行为改善让车队平均续航提升 12%，电池寿命预计延长 15%。预测性维保让非计划停机减少 60%。日报自动化让车队经理每天早上多睡 1 小时。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 21: 游戏 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎮</div>
+        <div class="case-title">「NPC 终于会聊天了」— 游戏策划用 AI 两周搭完一整个支线剧情</div>
+        <div class="case-subtitle">独立游戏策划用 Hermes 做世界观构建→NPC 对话→数值平衡→本地化翻译</div>
+        <div class="tags">
+          <span class="tag industry">游戏</span>
+          <span class="tag role">游戏策划</span>
+          <span class="tag">内容创作</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>大刘是一个两人独立游戏团队的策划，正在做一款武侠题材的开放世界 RPG。他的最大瓶颈不是创意不够——是创意太多、人手太少。一个支线任务从构思到落地：先写世界观设定保证不跟主线冲突，再写 NPC 对话（一个任务动辄几千字），然后调数值（经验、金币、掉落率要做到"有爽感但不崩经济"），最后还要翻译成英文准备上 Steam。以前一个支线任务从构思到做完要两周，现在用 Hermes 并行推进，所有文案和数值都能快速出初稿，他只需要做创意把关和微调。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 世界观一致性格子：AI 把关剧情不"吃书"</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/游戏/世界观设定.md（这是已有的世界观文档，包含门派体系、历史年表、关键人物关系），我要新增一个支线任务——"铁剑门叛徒"。请帮我：① 检查这个支线剧情是否与现有世界观冲突（时间线、人物关系、势力平衡）② 如果有冲突点，列出并给出修改建议 ③ 为这个支线补充背景故事（铁剑门的内部分裂原因、叛徒的动机、与主线暗线的关联），确保融入世界观。全部输出到 ~/Desktop/游戏/支线-铁剑门叛徒/</code>。以前写支线最怕"吃书"——写到一半发现跟主线矛盾了，只能推翻重来。现在 AI 先把世界观文档读一遍，帮你把关——哪里冲突、怎么改，清清楚楚。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 批量生成 NPC 对话树和任务文本</div>
+            <div class="step-body">
+              输入：<code>根据"铁剑门叛徒"支线剧情大纲，帮我生成完整的 NPC 对话树：① 任务接取对话（NPC 铁剑门弟子"柳青"在酒馆拦路，3 种玩家回应 × 2 种 NPC 反应）② 关键剧情对话（与叛徒"沈鹤"的对峙场景，4 个对话分支，包含说服/战斗/揭发三种结局）③ 任务完成对话（2 种结局各一套）④ 环境叙事文本（场景中的信件、告示、路人旁白等 8 条）。每人对话风格要贴合人物性格——柳青年轻热血的语气、沈鹤深沉悔恨的语气。用 /humanizer 让对话读起来自然不僵硬</code>。以前写对话是策划最耗时的工作——一个支线几千字对话，要反复斟酌语气和分支逻辑。现在 AI 按人物性格批量生成，你只需要读一遍、改不顺的地方——写作效率提升 10 倍。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 数值平衡：奖励要"爽"但不能"崩"</div>
+            <div class="step-body">
+              输入：<code>这是我的游戏数值表（~/Desktop/游戏/数值表.xlsx），包含当前玩家等级 1-30 级的经济平衡线。请为"铁剑门叛徒"支线设计 3 个难度档位的奖励方案：① 简单难度（推荐等级 10-12）：经验值、铜钱 ② 普通难度（推荐等级 15-17）：经验值、铜钱 + 1 件蓝色品质武器 ③ 困难难度（推荐等级 20-22）：经验值、铜钱 + 1 件紫色品质武器 + 1 本稀有功法。要求：奖励不能破坏经济平衡（铜钱不超过该等级主线任务总收入的 20%），武器属性不能超过同等级副本掉落的上限。导出为 Excel 并标注设计依据</code>。给多少奖励是个技术活——给少了玩家骂"抠门"，给多了经济体系崩盘。AI 对照数值表帮你算好：经验、金币、装备都在合理区间，有据可查，策划再也不用拍脑袋调数值。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 本地化翻译：英文版一次成型</div>
+            <div class="step-body">
+              输入：<code>把"铁剑门叛徒"支线的所有文本（对话、任务描述、物品名、技能描述）翻译成英文，要求：① 武侠术语要意译（不是直译），让英文玩家能理解（如"铁剑门"→ Iron Sword Sect，"剑气"→ sword aura）② 对话语气保留人物性格（柳青的热血、沈鹤的深沉）③ 任务 UI 文本要简洁（每行不超过 60 个字符）④ 生成中英对照表，方便后续校对。保存到 ~/Desktop/游戏/支线-铁剑门叛徒/en/</code>。以前本地化要外包给翻译公司，一个支线报价 3000 元还要等两周。现在 AI 直接出英文，还能保留武侠韵味——2 人团队也能上 Steam 全球发售。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 自动生成任务文档和策划案归档</div>
+            <div class="step-body">
+              输入：<code>把"铁剑门叛徒"支线的所有资料（剧情大纲、对话树、数值方案、中英文文本）整理成一份标准策划案文档（Markdown），包含：任务概述、流程图（Mermaid 格式）、对话表格、数值表、本地化对照。然后用 /nano-pdf 导出为 PDF 发给程序员和美术参考。最后用 /baoyu-infographic 生成一张"任务流程总览图"贴在文档第一页</code>。以前策划案写完还得手动排版——标题、目录、表格、截图，光排版就要半天。现在 AI 把内容全部串好、自动导出 PDF，甩给程序员就能直接开发。流程图画出来，美术一看就知道要画几个场景、几个 NPC。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>一个支线任务从构思到策划案完成，从 2 周缩短到 4 小时。NPC 对话质量统一，世界观从未出现"吃书"事故。数值设计有据可查，内测阶段经济平衡调整量减少 70%。本地化翻译成本为 0，2 人团队的武侠游戏顺利登陆 Steam 全球市场。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 7 -->
 
 <!-- DAILY_CASES_END -->
 </main>
