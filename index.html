@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">8</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">9</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>24</strong> 个案例</span>
+    <span>📋 累计 <strong>27</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">24</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">27</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -1830,6 +1830,198 @@
   </div>
 </div>
 <!-- END Day 8 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-08 (Day 9) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-9">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 9</h2>
+    <span class="date-badge">2026.06.08</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 1: 养老 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧓</div>
+        <div class="case-title">「每位老人的专属AI照护师」— 养老院护理主管用Hermes告别手工排班与纸质档案</div>
+        <div class="case-subtitle">从个性化护理计划到家属周报，AI让50位老人的照护从"凭经验"变成"有数据"</div>
+        <div class="tags">
+          <span class="tag industry">养老照护</span>
+          <span class="tag role">护理主管</span>
+          <span class="tag">个性化照护</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>林姐在一家民办养老院负责50位老人的照护管理。每位老人身体状况不同——有高血压的、有轻度认知障碍的、有术后康复的。以前她手工填写每个人的护理计划和用药表，光是纸质档案就塞满了三个柜子。更头疼的是每周给家属写报告，50份下来周末全搭进去了。现在她用Hermes把从评估到沟通的整个流程数字化了。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 批量导入老人健康档案并做风险评估</div>
+            <div class="step-body">
+              在Hermes终端输入：<code>读取 ~/Desktop/养老院/老人档案.xlsx（含姓名、年龄、病史、用药、血压、MMSE认知评分），对每位老人计算跌倒风险、压疮风险、营养不良风险三个维度，在原表新增风险等级列并标红高风险项，保存</code>。Hermes自动调用Python做数据分析，50位老人的风险评估10分钟完成，以前要花一整天。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 生成个性化护理计划</div>
+            <div class="step-body">
+              输入：<code>根据刚才的风险评估结果，为每位老人自动生成一份本周护理计划单（含饮食建议、康复活动、用药提醒、监测频次），保存到 ~/Desktop/养老院/护理计划/ 文件夹，每人一个Word文件，文件名用老人姓名</code>。Hermes根据每人的具体指标（如血糖值、关节活动度）调用健康知识库生成针对性方案，不是千篇一律的模板。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 制作防跌倒宣教海报</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 生成一张「老年人防跌倒10条」信息图，A3尺寸、大字体（适合老年人阅读），暖色调、图文并茂，适合贴在走廊和活动室</code>。信息图打印出来贴在养老院公共区域，护理员和老人随时可以看到。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 自动生成家属周报并群发</div>
+            <div class="step-body">
+              输入：<code>根据本周每位老人的护理记录（~/Desktop/养老院/每日记录/），为每位老人写一段200字以内的家属周报（语气温暖、突出亮点、客观描述健康状况变化），汇总到一个PDF里，按楼层分章节，方便打印出来交给来访家属</code>。以前50份周报要写一个周末，现在Hermes自动提取每日记录要点并生成文案。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置用药提醒与异常预警</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上7点读取老人用药表，输出当天的「今日用药提醒清单」（按时间排序：早餐后、午餐后、晚餐后），如果有老人的血压/血糖记录连续3天超出正常范围，自动推送预警到我的QQ</code>。从此不再依赖护理员的手工记忆，用药遗漏率大幅下降。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>50位老人的护理计划生成从2天压缩到10分钟。家属满意度从72%提升到91%，有家属说"每周报告比我在家照顾老人还仔细"。用药准时率从85%提高到98%，养老院连续两个月零护理事故。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: 考古 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏺</div>
+        <div class="case-title">「从洛阳铲到AI铲」— 考古研究员用Hermes把发掘报告缩短6个月</div>
+        <div class="case-subtitle">从文物卡片、纹饰描述到墓葬绘图说明，AI让田野考古资料整理不再是体力活</div>
+        <div class="tags">
+          <span class="tag industry">考古文保</span>
+          <span class="tag role">研究员</span>
+          <span class="tag">资料整理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>赵博士在某省文物考古研究所工作，刚结束一个汉代墓葬群的田野发掘。出土了200多件器物——陶器、铜镜、玉饰、钱币。按照规范，每件文物需要写详细的描述卡片（尺寸、纹饰、保存状况），还要和已发表资料做对比。以前光是整理这批资料就要6-8个月，研究所人手又少，报告一拖再拖。现在他用Hermes把整个流程自动化了。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 批量生成文物描述卡片</div>
+            <div class="step-body">
+              在Hermes终端输入：<code>读取 ~/Desktop/M28发掘/器物登记表.csv（含编号、器型、尺寸、重量、照片文件名），按照《田野考古工作规程》格式为每件器物写一份标准描述卡片（包含质地、形制、纹饰描述、保存状况、初步断代），每人一件存入 ~/Desktop/M28发掘/器物卡片/</code>。Hermes自动为200件文物生成规范描述，考古术语使用准确（如"侈口"、"鼓腹"、"圈足"等）。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 检索对比资料并写研究综述</div>
+            <div class="step-body">
+              输入：<code>搜索已发表的汉代同类器物资料（铜镜、陶罐、五铢钱），对比本次M28出土器物的异同点，写一份3000字的对比研究综述，保存为 ~/Desktop/M28发掘/对比研究.md</code>。Hermes联网检索知网、考古学报等学术来源，自动提取可比器物的关键信息并生成对比表格。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 自动编排墓葬平面图说明</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 根据 ~/Desktop/M28发掘/墓葬平面图数据.csv（含墓道方向、棺椁位置、随葬品分布坐标），生成一张墓葬平面布局信息图，标注各区域和重要器物位置，学术报告风格，适合插入发掘报告</code>。信息图直接替代了手工描图的工作，学术风格也符合期刊要求。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 撰写发掘报告各章节初稿</div>
+            <div class="step-body">
+              输入：<code>根据前面的器物卡片和对比研究，撰写M28发掘报告的文字初稿（含绪论、墓葬形制、出土器物、分期断代、结语五章），学术论文风格，引用格式用脚注，输出为Word文件</code>。以前每个章节要手写两三个月，现在Hermes把零散材料串联成完整的报告初稿，研究员只需审核修改。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 生成公众科普版内容</div>
+            <div class="step-body">
+              输入：<code>把刚才的发掘报告改写成一篇面向普通公众的科普文章（2000字），标题要有吸引力（如"一座汉墓里的生活密码"），语言生动避免学术术语堆砌，用于公众号发布。再用/humanizer润色去AI味</code>。考古成果不仅要发学术期刊，也要向公众传播——Hermes一键就把学术语言"翻译"成了大众能读懂的故事。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>200件器物的资料整理从6-8个月缩短到2周。发掘报告初稿一周搞定，赵博士说"以前写报告写到怀疑人生，现在终于有时间做真正的学术研究了"。科普文章在公众号发出来，阅读量破了研究所历史纪录，还被省文旅厅转载。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: 应急管理 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚨</div>
+        <div class="case-title">「五分钟生成一份救命预案」— 社区应急管理员用AI守住防灾第一线</div>
+        <div class="case-subtitle">从台风预警到避难路线图，Hermes让基层应急从"纸上谈兵"变成"真能救命"</div>
+        <div class="tags">
+          <span class="tag industry">应急管理</span>
+          <span class="tag role">社区干事</span>
+          <span class="tag">防灾减灾</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小周是沿海某城市街道办的一名应急管理干事，负责3个社区的防灾工作。每年台风季要来七八个，每次都要做不同的预案——转移路线、安置点安排、物资调配、独居老人名单核实……以前一份预案要翻去年的改、找领导批、反复修改，弄好台风都快登陆了。现在他用Hermes把预案生成压缩到5分钟，还搭建了自动预警系统。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 自动获取气象预警信息并生成研判报告</div>
+            <div class="step-body">
+              在Hermes终端输入：<code>搜索最新台风预警信息（台风路径、预计登陆时间、风力等级、降雨量），结合我们街道的3个社区地形数据（~/Desktop/应急/社区基础数据.xlsx含低洼点、危房、地下车库位置），生成一份500字的防灾研判报告，标注高风险点位</code>。Hermes同时拉取气象局公开数据和社区自有数据做交叉分析。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 一键生成台风应急预案</div>
+            <div class="step-body">
+              输入：<code>根据研判报告，按照《社区应急预案编制指南》格式生成一份完整的台风应急预案，包含：响应启动条件、人员分工表（谁负责通知、谁负责转移、谁负责物资）、独居老人/残疾人重点转移名单、3条避难路线、安置点物资清单。导出为Word交领导审批</code>。以前照着模板手填也要半天，现在5分钟生成完整预案，关键是每个数据（名单、路线、物资）都自动从数据库提取，不会遗漏。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 绘制避难路线图与安置点分布图</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 根据应急预案中的避难路线数据，生成一张「XX街道台风避难指引」信息图，标注3个社区的低洼易涝点（红色）、避难路线（绿色箭头）、安置点位置和可容纳人数，A3尺寸适合打印张贴在楼道公告栏</code>。信息图让不识字的老人都能看懂——跟着绿色箭头走就能到安全地点。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 生成应急演练脚本</div>
+            <div class="step-body">
+              输入：<code>为下周的社区防台风演练写一份详细脚本（30分钟流程）：集结信号、各小组就位、模拟人员转移（含一名坐轮椅的老人）、安置点物资发放、复盘总结。每个环节标注时长和责任人，导出为PDF打印分发给参演人员</code>。演练脚本精确到每一分钟谁干什么，连志愿者都能照本执行。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 搭建自动预警与信息推送系统</div>
+            <div class="step-body">
+              输入：<code>/cron 台风季（6-10月）每天早上8点和晚上8点各检查一次气象预警，如果本地区发布台风蓝色及以上预警，自动生成一条紧急通知（含台风位置、预计影响时间、居民注意事项），推送我的QQ。同时把独居老人名单和对应的网格员联系方式输出到 ~/Desktop/应急/今日重点关注/</code>。从此小周不用24小时盯着气象App，Hermes自动帮他守着。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>预案生成从半天压缩到5分钟。去年台风"海燕"过境，小周提前12小时就拿到了完整的转移方案，3个社区共转移独居老人47人，无一人伤亡。街道被市里评为"基层应急管理示范单位"。小周说："以前台风季睡不着觉，现在AI帮我站岗，终于能睡个踏实觉了。"
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 9 -->
 
 <!-- DAILY_CASES_END -->
 </main>
