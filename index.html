@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">7</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">8</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>21</strong> 个案例</span>
+    <span>📋 累计 <strong>24</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">21</strong> 个行业 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">24</strong> 个行业 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -1637,6 +1637,199 @@
   </div>
 </div>
 <!-- END Day 7 -->
+
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-06 (Day 8) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-8">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 8</h2>
+    <span class="date-badge">2026.06.06</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 1: 碳中和 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌍</div>
+        <div class="case-title">「一个人的ESG部门」— 中小企业主用AI搞定碳中和合规</div>
+        <div class="case-subtitle">从碳排放核算到ESG报告，Hermes帮一家百人工厂零基础完成绿色转型</div>
+        <div class="tags">
+          <span class="tag industry">碳中和</span>
+          <span class="tag role">企业主</span>
+          <span class="tag">ESG合规</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>陈总经营一家100人的五金加工厂，出口欧盟客户突然要求提供碳足迹报告。以前请咨询公司做一次要8万起步、耗时2个月。现在他用Hermes自己动手，一周内完成全部碳排放核算和ESG报告，成本几乎为零。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 学习碳排放核算标准</div>
+            <div class="step-body">
+              在Hermes终端输入：<code>搜索ISO 14064和GHG Protocol碳排放核算标准的中文解读，告诉我一个中小企业该怎么算Scope 1、Scope 2、Scope 3，总结成简明操作指南保存到 ~/Desktop/碳核算/</code>。Hermes自动联网抓取权威资料，翻译整理成通俗易懂的指南。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 用月度账单自动算排放</div>
+            <div class="step-body">
+              输入：<code>读取 ~/Desktop/2025年能源账单.xlsx（包含每月电费、水费、天然气用量、汽油采购量），按中国电网排放因子计算Scope 1和Scope 2碳排放，生成月度趋势图和年度汇总表</code>。Hermes自动调用Python脚本做数据分析，产出可视化图表。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成供应链碳足迹（Scope 3）</div>
+            <div class="step-body">
+              输入：<code>根据 ~/Desktop/采购清单.csv 中的原材料用量和供应商信息，用EEIO模型估算Scope 3碳排放，按品类拆分输出结果</code>。即使没有供应商的精确排放数据，Hermes也能用行业平均系数做合理估算。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 一键生成ESG报告</div>
+            <div class="step-body">
+              输入：<code>/powerpoint 用刚才的碳排放数据，按照欧盟CSRD要求生成一份20页的ESG报告，包含碳排放章节、减碳目标、改进措施，中英双语对照</code>。Hermes自动排版生成.pptx文件，格式专业可直接交付客户。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设定月度碳追踪提醒</div>
+            <div class="step-body">
+              输入：<code>/cron 每月1号提醒我更新能源账单数据，自动对比上月排放量，如果环比上升超过5%就发预警到QQ</code>。从此碳排放管理变成自动化流程，不会遗漏数据更新。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>碳排放报告从8万咨询费+2个月缩短到0元+1周。欧盟客户顺利续约，还因为主动披露碳足迹拿到了一个ESG优秀供应商加分。工厂的电费和天然气用量也被反向优化，年省能源费约12万元。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: 婚庆策划 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💒</div>
+        <div class="case-title">「一场婚礼的AI总导演」— 婚礼策划师用Hermes从零到完美落地</div>
+        <div class="case-subtitle">从创意提案、预算表、供应商管理到当天流程脚本，AI全程协作</div>
+        <div class="tags">
+          <span class="tag industry">婚庆策划</span>
+          <span class="tag role">策划师</span>
+          <span class="tag">活动管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小鹿是一名独立婚礼策划师，每场婚礼需要出3版创意方案、做预算、对接10+供应商、写主持词和流程表。以前一个客户从洽谈到落地至少花80小时。现在她用Hermes把重复性工作自动化，专注在创意和现场把控上。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 灵感搜集与主题提案生成</div>
+            <div class="step-body">
+              输入：<code>搜索2025-2026年最流行的户外婚礼趋势，结合客户要求"森系+电影感"，生成3套不同风格的婚礼主题提案（每套包含色调、花艺、灯光、仪式流程），保存为 ~/Desktop/陈李婚礼/提案/</code>。Hermes抓取Pinterest、婚礼博客等来源的灵感，自动整理成结构化提案。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 制作预算表与供应商对比</div>
+            <div class="step-body">
+              输入：<code>总预算15万，制作一份婚礼预算分配表（场地30%、餐饮25%、花艺15%、摄影10%、礼服10%、其他10%），并在 ~/Desktop/陈李婚礼/供应商/ 里创建每个品类的供应商对比清单Excel</code>。Hermes自动生成带公式的预算表，超预算项目自动标红提醒。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 生成全套视觉物料</div>
+            <div class="step-body">
+              输入：<code>/baoyu-infographic 用选定的森系色调生成婚礼流程信息图（迎宾→仪式→合影→晚宴→After Party），适合发给宾客的电子请柬尺寸；再用image_gen生成3张布置效果图供客户确认</code>。一张信息图让宾客秒懂当天安排，效果图让客户提前"看到"婚礼现场。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 撰写主持词与誓言模板</div>
+            <div class="step-body">
+              输入：<code>根据新郎是程序员、新娘是花艺师的身份，写一版幽默温馨的主持词开场白和誓言引导模板，用/humanizer去AI味，让语言听起来像真人写的</code>。主持词保留自然的口语感，不像机器生成的模板文。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 当天流程脚本与应急方案</div>
+            <div class="step-body">
+              输入：<code>生成婚礼当天完整时间线脚本（从早上6点化妆到晚上10点散场，精确到每15分钟），同时输出一份应急方案（雨天转室内、音响故障、花材替换，每种情况的应对步骤），导出为PDF打印出来当天随身携带</code>。Hermes把几百个细节排成可执行的时间表。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>单个客户的服务时间从80小时降到30小时，一个月能多接两场婚礼。客户说"比咨询公司方案还专业"。当天流程脚本连司仪都夸"从没见过这么细的rundown"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: 航空航天 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚀</div>
+        <div class="case-title">「一个人就是一家航天媒体」— 科普博主用AI追踪卫星与生成深度内容</div>
+        <div class="case-subtitle">从轨道数据可视化到长文撰写，Hermes让航天科普不再高冷</div>
+        <div class="tags">
+          <span class="tag industry">航空航天</span>
+          <span class="tag role">科普博主</span>
+          <span class="tag">内容创作</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>宇航是一位航天科普博主，在B站和公众号拥有30万粉丝。以前做一期视频需要先花3天查资料——翻NASA官网、看学术论文、手动画轨道图。现在他用Hermes把整个内容生产流程压缩到半天，更新频率从周更变成了日更。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 实时抓取航天新闻与数据</div>
+            <div class="step-body">
+              输入：<code>搜索最近7天全球航天领域的重要新闻和发射动态，按优先级排序（载人航天>深空探测>商业航天>卫星应用），提取每条新闻的核心数据和看点，汇总到 ~/Desktop/航天日报/20260606.md</code>。Hermes同时抓取中英文来源，不会遗漏任何一个重要事件。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 计算卫星过境与轨道可视化</div>
+            <div class="step-body">
+              输入：<code>下载最新的TLE轨道数据，计算中国空间站未来3天在杭州的可见过境时间，生成一张星轨图并标注最佳观测时段</code>。Hermes自动从Space-Track获取最新两行轨道根数，用Python计算并绘制可视化图表。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 撰写深度科普长文</div>
+            <div class="step-body">
+              输入：<code>以"为什么SpaceX星舰第三次试飞意义重大"为主题，写一篇3000字的深度科普文章，面向普通公众，要求：用比喻降低理解门槛、穿插3个冷知识、结尾留一个互动问题。用/humanizer润色后保存</code>。文章既有硬核数据又不失趣味性。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 生成视频脚本与分镜</div>
+            <div class="step-body">
+              输入：<code>把刚才的文章改成8分钟B站视频脚本，按每30秒一段拆分，每段标注画面建议（真实火箭影像/动画示意/数据图表），同时输出一份缩略图设计建议给美工</code>。从长文到视频脚本一步到位，分镜描述精确到秒。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 设置每日航天快讯自动推送</div>
+            <div class="step-body">
+              输入：<code>/cron 每天早上7点自动抓取过去24小时航天新闻Top 5，生成图文摘要，保存为Markdown并推送到我的QQ作为今日选题参考</code>。早上起床刷QQ就能看到今日选题清单，不用打开任何新闻App。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>内容生产从3天/期压缩到半天/期，实现日更。B站粉丝3个月内从30万涨到55万。"中国空间站过境预报"系列成了爆款，单期播放量超过200万。一个人做出了一个航天媒体团队的效果。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 8 -->
 
 <!-- DAILY_CASES_END -->
 </main>
