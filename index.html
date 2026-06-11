@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">13</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">14</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>42</strong> 个案例</span>
+    <span>📋 累计 <strong>45</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">30</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">33</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -2887,6 +2887,198 @@
   </div>
 </div>
 <!-- END Day 13 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-06-11 (Day 14) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-14">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 14</h2>
+    <span class="date-badge">2026.06.11</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 1: 新能源/光伏 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">☀️</div>
+        <div class="case-title">「38座电站的AI管家」— 光伏运维工程师用Hermes把故障排查从40分钟降到5分钟</div>
+        <div class="case-subtitle">每天15万条数据自动诊断、巡检路线智能优化、年多发18万度电</div>
+        <div class="tags">
+          <span class="tag industry">新能源/光伏</span>
+          <span class="tag role">运维工程师</span>
+          <span class="tag">智能运维</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>小赵在一家新能源公司负责江苏片区38座屋顶分布式光伏电站的日常运维。这些电站分布在12个工业园区，最远的离他驻地300公里。每个电站有上百块光伏组件、逆变器、汇流箱、并网柜，小赵每天要远程监控发电数据、分析异常掉电、安排巡检路线、对接电网公司结算。38个电站每天产生约15万条运行数据，全靠他在Excel里筛选异常，眼睛都快看瞎了。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 发电异常智能诊断</div>
+            <div class="step-body">
+              在 Hermes 终端输入：<code>读取"电站数据/今日报警汇总.csv"，里面有6条报警（3条组串电流偏低、2条逆变器温度偏高、1条并网柜通讯中断）。帮我逐一分析：①对比这个电站昨天和前天的同时段数据，判断是否是天气原因（比如今天阴天）导致的正常波动；②如果不是天气原因，检查同区域其他电站有没有类似情况（可能是电网侧波动）；③给出每条报警的紧急程度（红色/立刻处理、黄色/48小时内巡检、绿色/下次巡检关注）和可能原因</code>。故障排查从每次40分钟→5分钟以内。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 巡检路线智能规划</div>
+            <div class="step-body">
+              输入：<code>根据38个电站的"健康评分"（从发电效率、报警次数、上次巡检距今的天数三个维度算），和电站的GPS坐标，帮我规划下周巡检路线：①优先安排"健康评分"低于70分的电站（预计有5-7个）；②按地理位置排最优路线，每天巡检3-4个站，控制在驾驶150公里以内；③输出7天巡检行程表，每天列出要去的电站名、地址、要重点检查的设备、预计到达时间</code>。巡检里程从每月约1800公里优化到1350公里，省油费约每月1500元。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 故障处理指引生成</div>
+            <div class="step-body">
+              输入：<code>巡检发现苏州工业园3号电站的A7逆变器效率只有82%（正常应>95%）。帮我生成一份"现场排查指引"：①第一步检查什么（直流开关、保险丝、接线端子）；②第二步测什么（组串开路电压、绝缘电阻）；③每个检查项的参考值和判断标准；④列出可能需要带的备件清单。语言要像老师傅带徒弟，每个操作的注意事项写清楚</code>。一年少跑约60次不必要的现场。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 月度电网对账</div>
+            <div class="step-body">
+              输入：<code>读取"电网对账单/6月电网结算单.xlsx"和"电站发电记录/6月发电明细.csv"，帮我做本月电费对账：①按电站逐一比对——电网记录的发电量和我方监控记录的发电量，差异超过2%的标出来；②拆分每个电站的"自发自用电量"和"余电上网电量"，分别按对应的电价计算应收电费；③和电网结算单里的金额比对，有差异的生成"对账差异表"，列出差异金额和可能原因</code>。电费对账从1整天→1小时确认。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 电站健康度周报</div>
+            <div class="step-body">
+              输入：<code>汇总本周38个电站的运行数据，生成一份"电站健康度周报"：①每个电站本周发电量、相比上周的环比变化、等效利用小时数；②本周新增报警TOP5类型及涉及电站；③健康评分下降最明显的3个电站（需重点关注）；④下周天气预报和预计发电量。用红黄绿灯标识健康度，输出为一页PDF</code>。38个电站一年多发电约18万度。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>故障排查从每次40分钟→5分钟以内，一年少跑约60次不必要的现场。巡检里程从每月约1800公里优化到1350公里，省油费约每月1500元。电费对账从1整天→1小时确认。电站平均发电效率从92.1%提升到94.6%，相当于38个电站一年多发电约18万度。小赵说："以前对着报警列表猜谜，现在Hermes帮我写好了答案，我只需要确认和执行。"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 2: 宠物医疗 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🐾</div>
+        <div class="case-title">「让宠物医生回归诊室」— 宠物医院用Hermes把化验解读从2-3小时缩到1分钟</div>
+        <div class="case-subtitle">化验单白话翻译、住院护理日志自动化、慢病回访覆盖率从40%→90%</div>
+        <div class="tags">
+          <span class="tag industry">宠物医疗</span>
+          <span class="tag role">宠物医院院长</span>
+          <span class="tag">医疗管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>方医生在广州开了一家社区宠物医院，有3位兽医和5位助理。医院每天接诊约25-35个病例——从常规的疫苗驱虫到复杂的猫瘟、犬细小的住院治疗。方医生的日常是看诊、写病历、看化验报告、跟宠物家长解释病情、管理住院动物、安排回访。宠物医院跟人医院不一样——没有HIS系统，所有病历靠手写+PDA拍照，化验报告散落在各种仪器打印出来的小纸条上，客户回访全靠脑子记。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 化验单白话解读</div>
+            <div class="step-body">
+              在 Hermes 终端输入：<code>这是刚拍的"豆豆"（5岁金毛、公、未绝育）的血常规和生化化验单照片2张。帮我生成一份"家长版化验解读"：①逐项解释每个指标是干什么的（比如ALT是肝功能的"警报器"），用遛狗、吃饭、睡觉这些日常场景打比方；②标注哪些偏高/偏低，用🟢正常/🟡注意/🔴异常三个档；③综合分析——这些异常组合在一起说明什么问题（比如ALT高+GOT高=可能肝脏有问题）；④给出接下来建议做的检查或生活调整，语气要温和，不要吓到主人</code>。化验解读从每次15-20分钟→1分钟拍照生成，每天省出约2小时。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 住院护理日志整理</div>
+            <div class="step-body">
+              输入：<code>今天住院部有4只动物：猫瘟住院的"咪咪"、胰腺炎的"旺财"、术后观察的"小灰"、肾衰输液的"球球"。助理们用语音录了今天3次查房的观察记录（录音在"住院记录/0611_查房录音"文件夹）。帮我：①把每个动物的3次查房录音转成文字，合并整理成"住院护理日志"——每个动物一张，按时间排列，记录体温、食欲、排泄、精神、用药情况；②异常变化标红（比如旺财下午体温从38.5升到39.8）；③生成晚班交班摘要——只写今晚值班同事需要重点关注的事项</code>。交班信息遗漏从平均每次遗漏1-2项→基本为零。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 慢病回访列表生成</div>
+            <div class="step-body">
+              输入：<code>扫描"病历库"文件夹里过去12个月的全部病历，筛选出：①确诊糖尿病/慢性肾衰/心脏病/关节炎的宠物；②上次就诊距今超过应复查周期的（糖尿病每个月复查一次、肾衰每3个月、心脏病每6个月）；③生成"本周回访清单"——每只宠物的名字、主人电话、确诊疾病、上次复查日期、应复查日期、超期天数。超期超过30天的标红优先联系</code>。慢病回访覆盖率从大约40%→超过90%。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 个性化回访消息</div>
+            <div class="step-body">
+              输入：<code>根据刚才的"本周回访清单"，给每位宠物主人写一条回访消息：①开头叫宠物名字（比如"豆豆妈妈你好"）；②提醒上次是什么时候来复查的、一般建议多久复查一次；③问几个简单的观察问题（比如"最近喝水多吗""精神怎么样"）；④结尾附上预约电话和时间。语气要亲切，像朋友关心，不要像催债</code>。慢性病动物按时复查率从51%提升到78%。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 月度经营分析</div>
+            <div class="step-body">
+              输入：<code>汇总这个月（6月1-11日）的接诊数据（在"门诊登记_6月.xlsx"），帮我做一份经营分析：①接诊总量、日均接诊量、与5月同期对比；②病例类型分布（疫苗/皮肤病/消化系统/泌尿系统/外科/其他）的饼图数据；③客单价变化趋势和最畅销的检查/药品TOP5；④住院率、治愈率和转诊率。看看哪方面需要改善</code>。客单价提升约15%。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>化验解读从每次15-20分钟→1分钟拍照生成，方医生每天省出约2小时，用来多看5-7个病例。交班信息遗漏从平均每次遗漏1-2项→基本为零，住院动物因交接疏忽导致的重复检查减少80%。慢病回访覆盖率从大约40%→超过90%，慢性病动物按时复查率从51%提升到78%。客单价提升约15%。方医生说："Hermes不会看病，但它帮我把看病之外的所有杂事都干了，我终于可以专心做一个医生。"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 3: 文化艺术/策展 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎨</div>
+        <div class="case-title">「48幅解说牌从30小时到4小时」— 独立策展人用Hermes撑起整个展览</div>
+        <div class="case-subtitle">展品资料标准化、多版本新闻稿一键生成、参展人数从200→350</div>
+        <div class="tags">
+          <span class="tag industry">文化艺术/策展</span>
+          <span class="tag role">独立策展人</span>
+          <span class="tag">展览策划</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>苏敏是一位独立策展人，在成都运营一个200平米的独立艺术空间"白盒子"。每年要做4-5个展览——从联系艺术家、策划展览主题、写策展文案、设计展览动线、到开幕酒会和媒体宣传全由她一个人+两个兼职助手完成。最近的展览是"城市褶皱——8位青年摄影师镜头里的成都老街"，需要统筹8位艺术家的48幅作品、写展览前言和每幅作品的解说牌、设计观众动线、做开幕邀请和媒体通稿。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 展品资料标准化</div>
+            <div class="step-body">
+              在 Hermes 终端输入：<code>"艺术家资料"文件夹里有8位艺术家发来的作品信息——3份Word文档、2份PDF画册、3段微信聊天记录截图。帮我：①从这些乱七八糟的格式中提取每幅作品的关键信息（作品名、作者、材质、尺寸、创作年份、作者自述）；②统一整理成标准格式的"展品清单.xlsx"——列：编号、作品名、作者名、材质、尺寸（高×宽cm）、创作年份、一句话创作说明、展出位置建议；③有信息缺失的标注出来方便我跟艺术家确认</code>。展品清单整理从2天手忙脚乱→1小时确认。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 展览解说牌批量生成</div>
+            <div class="step-body">
+              输入：<code>根据展品清单里的48幅作品信息，结合展览主题"城市褶皱——8位青年摄影师镜头里的成都老街"，帮我生成48份解说牌文案。每份要求：①标题用作品名（加粗）；②正文100-150字，说明艺术家想通过这张照片表达什么、跟"城市褶皱"主题有什么关系、照片里值得注意的细节（光影、构图、人物表情）；③语言要有"温度"——像一个懂行的朋友在你旁边轻声解说，不要像美术教材；④48份文案要风格统一但每份的角度不重复。输出为一个Word文档，每份之间用分隔线隔开</code>。48幅解说牌从近30小时→约4小时。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 展览动线设计说明</div>
+            <div class="step-body">
+              输入：<code>"白盒子"展厅平面图在"展厅平面图.pdf"，是一个200平长方形空间，南面是落地玻璃入口，北面有一堵4米宽的隔墙。8位艺术家分别是：A拍老街建筑结构、B拍街边小摊贩、C拍老茶馆、D拍拆迁中的废墟、E拍老街夜景灯光、F拍老社区里的人像、G拍菜市场、H拍老厂房改造。帮我设计一条参观动线：①把8位艺术家的48幅作品按叙事逻辑分成4个展区——给每个展区起名字；②说明观众进入后先看什么、后看什么，为什么这样排（比如从"街景外观"→"街里的人"→"街的消逝与新生"的情绪推进）；③标注在平面图上哪个展区放哪个艺术家的作品</code>。展览叙事逻辑清晰，观众体验大幅提升。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">4</span> 多媒体新闻稿</div>
+            <div class="step-body">
+              输入：<code>根据展览的核心信息（主题、时间6月28日-7月28日、地点白盒子艺术空间、8位摄影师、48幅作品、开幕酒会6月28日下午3点）和我写的展览前言（在"策展文案/展览前言.docx"），帮我写3版新闻稿：①都市报版——300字，强调"周末好去处、免费展览、适合拍照、成都老街记忆"，语气轻松；②艺术媒体版——500字，强调策展理念、摄影语言探索、城市记忆的学术价值，可以适当用一些专业词汇；③小红书版——150字+5个emoji+3个适合的话题标签，强调"出片、小众、有故事、周末去哪"。三版的核心事实必须一致</code>。新闻稿从需要找不同朋友帮忙改写→一次性出3版。
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">5</span> 社交媒体宣传排期</div>
+            <div class="step-body">
+              输入：<code>展览6月28日开幕，帮我做一份6月18日-7月5日的社交媒体宣传排期：①开幕前10天（6.18-6.27）预热阶段——每天发什么内容（艺术家介绍、布展花絮、主题解读、倒计时），哪几天适合发视频/哪几天发图文；②开幕当天（6.28）——开幕现场直播要点清单；③展期第一周（6.29-7.5）——观众反馈、作品细节、周末观展指南。做成日历表格，每天一行，包含：日期、平台（公众号/小红书/朋友圈）、内容主题、一句话文案草稿</code>。媒体报道从5家增加到12家。
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>展品清单整理从2天手忙脚乱→1小时确认。48幅解说牌从近30小时→约4小时（Hermes生成3小时+苏敏审校1小时），而且风格比她自己写的更统一。媒体新闻稿从需要找不同朋友帮忙改写成3个版本→Hermes一次性出3版，苏敏稍作调整就发出。展览开幕吸引了约350人参加（之前的展览平均200人），媒体报道从上一场的5家增加到12家。苏敏说："以前一个展览做下来像脱一层皮，这次居然在开幕前一周就把所有文案都搞定了——我甚至有时间在开幕前给自己染了个头发。"
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 14 -->
 
 <!-- DAILY_CASES_END -->
 </main>
