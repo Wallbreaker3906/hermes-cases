@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">22</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">23</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>69</strong> 个案例</span>
+    <span>📋 累计 <strong>72</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">55</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">58</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -4362,6 +4362,200 @@
   </div>
 </div>
 <!-- END Day 22 -->
+
+
+<!-- 📅 2026-06-23 (Day 23) -->
+<div class="day-section" id="day-23">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 23</h2>
+    <span class="date-badge">2026.06.23</span>
+  </div>
+  <div class="cases-row">
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🐟</div>
+        <div class="case-title">智慧水产养殖监测</div>
+        <div class="case-subtitle">52个网箱的水质数据，从手工抄录到3分钟自动报告</div>
+        <div class="tags">
+          <span class="tag industry">渔业/水产养殖</span>
+          <span class="tag role">养殖场技术员</span>
+          <span class="tag">数据分析</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>沿海大黄鱼养殖场，52个网箱每天三次手工抄录水温、溶氧、pH、盐度。台风季和赤潮预警期需翻阅几个月纸质记录对比趋势，等发现异常时往往已过最佳处理窗口。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 整理合并数据
+            </div>
+            <div class="step-body">
+              把传感器的 CSV 和手工记录的 txt 丢给 Hermes：<code>读取桌面上的"网箱水质日志_6月.csv"和"溶氧监测记录.txt"，把两个文件的数据按日期时间合并成一个统一表格</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 趋势分析与预警
+            </div>
+            <div class="step-body">
+              <code>分析合并后的数据，找出每个网箱在过去30天里的水温、溶氧、pH变化趋势。标注出24小时内溶氧降幅超过20%或水温骤升超过2℃的异常网箱，给出风险等级（高/中/低）</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 生成日报 + 可视化
+            </div>
+            <div class="step-body">
+              <code>根据分析结果生成一份"今日水质日报"，包含：① 整体概况（52个网箱平均值）② 异常网箱清单（编号、参数、偏离幅度、风险等级）③ 与去年同期对比。用 /baoyu-infographic 生成一张仪表盘</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">4</span> 历史对比防风险
+            </div>
+            <div class="step-body">
+              <code>调出过去3年6月份的水质记录（文件在水质档案/ 目录下），对比今年同期的数据，看看有没有需要提前防范的趋势（比如今年水温比往年同期高、溶氧偏低）</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>原来手工整理52个网箱花2小时，现在3分钟出报告。台风前夕靠历史对比提前48小时识别溶氧下降趋势，紧急增氧避免损失。养殖场老板推荐给行业协会5个同行。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏢</div>
+        <div class="case-title">物业报修智能调度</div>
+        <div class="case-subtitle">1200户小区报修从漏单15%到接近零，派单从40分钟缩至2分钟</div>
+        <div class="tags">
+          <span class="tag industry">物业设施管理</span>
+          <span class="tag role">物业经理</span>
+          <span class="tag">工单管理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>物业公司管理3个小区共1200户。报修渠道五花八门——微信群@管家、打电话、小程序提交、保安传话，每天漏单率约15%。工程部5位师傅的排班和派单全靠人工，经常跑冤枉路。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 多渠道汇总去重
+            </div>
+            <div class="step-body">
+              <code>我这里有今天的所有报修——微信聊天记录导出的txt（微信报修_0618.txt）、电话记录清单（电话报修_0618.txt）、小程序后台CSV（小程序工单_0618.csv），帮我统一整理：按"地址-问题描述-联系方式-紧急程度"标准化，合并重复报修，标注超24小时积压工单</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 智能派单
+            </div>
+            <div class="step-body">
+              <code>这是工程部5位师傅的技能清单和今天出勤情况（师傅排班_0618.xlsx），结合你刚整理好的工单，帮我按"技能匹配+就近片区+工作量均衡"原则分配，优先紧急工单（水管爆裂、停电类），每人不超过6单</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 生成师傅派工单
+            </div>
+            <div class="step-body">
+              <code>按师傅分别生成今天的派工单，每人一份Word文档：师傅姓名、联系电话、今日任务列表（序号/地址/问题/紧急程度/预计耗时），按最优路线排序</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">4</span> 晚班汇总报表
+            </div>
+            <div class="step-body">
+              <code>下班前根据今天的完成情况（标记完成的工单），生成今日汇总报表：总报修量、已完成/未完成/积压占比、各师傅完成数、平均响应时间、明天需优先处理的遗留工单</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>漏单率从约15%降到接近零。派单从每天40分钟缩短到2分钟。业主投诉"报了修没人管"减少80%。老板说这是今年花得最值的"员工"投入。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📚</div>
+        <div class="case-title">出版审稿智能汇总</div>
+        <div class="case-subtitle">一本书的审稿意见从4-6小时手工整理压缩到20分钟</div>
+        <div class="tags">
+          <span class="tag industry">图书出版</span>
+          <span class="tag role">出版社编辑</span>
+          <span class="tag">文档处理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>社科类出版社，每本书经过编辑初审、外审专家复审、主编终审三轮。审稿意见散落在3-5个Word文档里，格式各异（修订模式、批注、独立文档），手动汇总至少花半天。不同审稿人的矛盾意见还容易遗漏。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 提取多方审稿意见
+            </div>
+            <div class="step-body">
+              <code>这是我手头一本书的初审和复审反馈——初审意见.docx（编辑内部审读）、外审意见_张教授.docx（修订模式）、外审意见_李教授.docx（独立评语），还有原稿（书稿终版_第5稿.docx）。帮我做一个"意见汇总表"：提取三份审稿意见，按章节编号归并，标注每条意见的来源</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 标注分歧点
+            </div>
+            <div class="step-body">
+              <code>继续分析这个汇总表，找出不同审稿人对同一段落/同一观点给出矛盾意见的地方——比如一个说"论证充分"另一个说"论据不足"。把矛盾点单独列出来，附上原文片段和双方原话，方便我判断</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 生成终审报告
+            </div>
+            <div class="step-body">
+              <code>综合以上分析，生成一份结构化的"终审报告"：① 总体评价（综合三方意见）② 按章节列出所有修改建议（合并同类、高亮分歧）③ 标注优先级（必须改/建议改/可改可不改）④ 修改工作量估算。导出为Word文档</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">4</span> 起草作者沟通邮件
+            </div>
+            <div class="step-body">
+              <code>从终审报告中提取需要和作者沟通的关键修改点，用温和专业的语气起草一封修改建议邮件，附上简洁的修改清单。语气要建设性，别让作者觉得被批评</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>审稿汇总从4-6小时压缩到20分钟出初稿、半小时校对发出。矛盾意见不再遗漏——以前靠人眼比对漏过两次重要分歧导致作者返工。编辑部主任说"让审稿从体力活回归脑力活"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 23 -->
 
 <!-- DAILY_CASES_END -->
 </main>
