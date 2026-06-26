@@ -4558,28 +4558,28 @@
 <!-- END Day 23 -->
 
 
-<!-- 📅 2026-06-24 (Day 24) -->
+<!-- 📅 2026-06-25 (Day 24) -->
 <div class="day-section" id="day-24">
   <div class="day-header">
     <div class="dot"></div>
     <h2>Day 24</h2>
-    <span class="date-badge">2026.06.24</span>
+    <span class="date-badge">2026.06.25</span>
   </div>
   <div class="cases-row">
 
     <div class="case-card" onclick="this.classList.toggle('active')">
       <div class="case-card-inner">
         <div class="emoji">🛡️</div>
-        <div class="case-title">AI 车险快速理赔</div>
-        <div class="case-subtitle">小额案件从3工作日压缩到2小时，理赔员日处理量20单→80单</div>
+        <div class="case-title">车险理赔智能核损</div>
+        <div class="case-subtitle">事故材料自动归集 → 保单条款比对 → 配件核价减损，2小时压缩到15分钟</div>
         <div class="tags">
           <span class="tag industry">保险</span>
-          <span class="tag role">车险理赔员</span>
-          <span class="tag">图像识别</span>
+          <span class="tag role">车险理赔查勘员</span>
+          <span class="tag">理赔自动化</span>
         </div>
         <div class="case-section">
           <h4>📖 场景</h4>
-          <p>小额车险案件堆积严重——理赔员每天人工比对事故照片、维修清单和保单条款，每单耗时45分钟，高峰期一天积压30单，客户投诉不断。</p>
+          <p>事故现场照片、交警认定书、维修清单散落在微信/邮件/纸质单里，手工整理一个案子要翻几十张图和多个文档，核损定价全靠经验，容易超额赔付。</p>
         </div>
         <div class="click-hint">
           <span class="arrow">▶</span> 点击展开详细操作流程
@@ -4590,30 +4590,30 @@
           <h3>🔍 详细操作流程</h3>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">1</span> 提取保单信息
+              <span class="step-number">1</span> 材料自动归集
             </div>
             <div class="step-body">
-              <code>读取桌面上的"今日待处理案件.csv"和"车险保单库_2026.xlsx"，列出所有待处理案件的保单信息（险种、赔付上限、免赔额）</code>
+              <code>把微信收到的15张事故照片、交警出具的PDF认定书、修理厂的Excel维修清单放到一个文件夹，帮我自动分类并提取：车牌号、事故时间地点、受损部件清单、预估维修工时</code>
             </div>
           </div>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">2</span> 视觉分析事故照片
+              <span class="step-number">2</span> 保单条款比对
             </div>
             <div class="step-body">
-              <code>用 vision 逐一分析事故照片目录下的图像，提取损伤部位和严重程度，自动比对维修清单中的项目和金额是否在保单覆盖范围内</code>
+              <code>调取该保单条款文件（policy_A20260501.pdf），逐一比对受损部件是否在赔付范围内。标注出有争议的部件（如"改装件"），给出赔付建议和条款依据</code>
             </div>
           </div>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">3</span> 自动生成理赔文书
+              <span class="step-number">3</span> 配件核价减损
             </div>
             <div class="step-body">
-              <code>对赔付金额5000元以下、无争议的案件自动生成"快速理赔确认书"（Word格式），对超标或存疑案件生成"人工复核建议"并标注风险点</code>
+              <code>根据维修清单和本地配件价格数据库（parts_db.csv），逐一核价——对比修理厂报价与市场均价，偏差超过15%的标红，生成"核损核定表"和理赔报告草稿</code>
             </div>
           </div>
           <div class="highlight-box">
-            💡 <strong>效果：</strong>5000元以下小额案件理赔从3个工作日压缩到2小时，理赔员日均处理量从20单提升到80单，客户满意度提升35%，公司月均理赔成本下降8%（减少人工反复核查开销）。
+            💡 <strong>效果：</strong>原来一个案子从收材料到出报告要2小时，现在15分钟完成初稿。核价偏差自动标注避免了3次超额赔付，月度减损约4.2万元。
           </div>
         </div>
       </div>
@@ -4621,17 +4621,17 @@
 
     <div class="case-card" onclick="this.classList.toggle('active')">
       <div class="case-card-inner">
-        <div class="emoji">🛒</div>
-        <div class="case-title">连锁便利店智能补货</div>
-        <div class="case-subtitle">8家门店销售数据自动汇总分析，缺货率从18%降到4%</div>
+        <div class="emoji">🎪</div>
+        <div class="case-title">峰会全要素执行管理</div>
+        <div class="case-subtitle">8家供应商20个环节自动汇总 → 漏项检测 → 定时提醒，零救火完成500人峰会</div>
         <div class="tags">
-          <span class="tag industry">零售</span>
-          <span class="tag role">连锁便利店区域经理</span>
-          <span class="tag">数据分析</span>
+          <span class="tag industry">会展策划</span>
+          <span class="tag role">活动策划总监</span>
+          <span class="tag">项目管理</span>
         </div>
         <div class="case-section">
           <h4>📖 场景</h4>
-          <p>管着8家门店，每天要手工汇总各店POS导出的CSV销售数据、盘点库存、做补货计划。周末花半天做选品预测，数据容易对错、错过热销品补货窗口。</p>
+          <p>一场500人行业峰会涉及8家供应商、20个环节、上百条沟通记录，微信群聊、邮件、合同散落各处，临开场才发现漏了签到台物料，团队疲于救火。</p>
         </div>
         <div class="click-hint">
           <span class="arrow">▶</span> 点击展开详细操作流程
@@ -4642,30 +4642,30 @@
           <h3>🔍 详细操作流程</h3>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">1</span> 定时拉取并合并销售数据
+              <span class="step-number">1</span> 多源信息汇总
             </div>
             <div class="step-body">
-              <code>读取8家门店今天的销售文件（门店A_销售_0624.csv ~ 门店H_销售_0624.csv），合并去重后按SKU汇总销量和销售额，标注环比昨天变化超过30%的异常波动商品</code>
+              <code>把本次峰会的供应商合同（8份PDF）、物料清单（booth_plan.xlsx）、微信沟通记录导出的txt全部汇总，生成一份"全要素执行清单"——按时间线排列所有待办事项，标注责任人和deadline</code>
             </div>
           </div>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">2</span> 存销比分析与预警
+              <span class="step-number">2</span> 漏项自动检测
             </div>
             <div class="step-body">
-              <code>结合库存底表（库存快照_0624.xlsx），计算每个SKU的"存销比"和"预计售罄天数"——对预计3天内售罄且毛利率>25%的商品标记"紧急补货"，对存销比>60天的商品标记"滞销预警"</code>
+              <code>逐项检查执行清单，对比物料清单里的项目数和各供应商合同承诺的交付范围——找出遗漏项（合同里没写但实际需要的物料），在清单中标红并附补救建议</code>
             </div>
           </div>
           <div class="step-block">
             <div class="step-header">
-              <span class="step-number">3</span> 生成补货与调拨建议
+              <span class="step-number">3</span> 定时提醒推送
             </div>
             <div class="step-body">
-              <code>综合以上分析，生成一份"明日补货建议"：① 紧急补货清单（SKU名称、供应商、建议补货量）② 滞销商品调拨建议（从滞销店调拨到热销店）③ 近7天新品的动销率排名（用 markdown 表格呈现）</code>
+              <code>根据执行清单设置定时提醒：每周一推送待办汇总、每天早8点推送当天截止项、活动前72小时每小时推送倒计时checklist，全部发到我的企业微信</code>
             </div>
           </div>
           <div class="highlight-box">
-            💡 <strong>效果：</strong>原来每天花2小时做表，现在5分钟出结果，缺货率从18%降到4%。热浪天 Hermes 提前48小时从同城其他区域门店趋势识别冰饮即将爆单，单日多赚1.2万。
+            💡 <strong>效果：</strong>漏项率从往届的8%降到零，峰会当天零救火。供应商对接时间从3天压缩到半天，团队说这是"史上最省心的筹备"。
           </div>
         </div>
       </div>
