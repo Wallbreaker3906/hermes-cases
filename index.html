@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">24</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">25</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>74</strong> 个案例</span>
+    <span>📋 累计 <strong>76</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">60</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">62</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -4674,6 +4674,124 @@
   </div>
 </div>
 <!-- END Day 24 -->
+
+
+<!-- 📅 2026-06-26 (Day 25) -->
+<div class="day-section" id="day-25">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 25</h2>
+    <span class="date-badge">2026.06.26</span>
+  </div>
+  <div class="cases-row">
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚡</div>
+        <div class="case-title">SCADA告警智能分级与跨站交叉分析</div>
+        <div class="case-subtitle">7站SCADA日志自动三级分类 → 跨站交叉分析 → 每日运维简报，90分钟→3分钟</div>
+        <div class="tags">
+          <span class="tag industry">能源电力</span>
+          <span class="tag role">变电站运维工程师</span>
+          <span class="tag">智能运维</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>辖区7座变电站每天产生上千条SCADA告警和数十份巡检记录，靠人工逐条翻阅分类，紧急告警常被淹没在海量一般性提醒中，批次性缺陷难以提前发现。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 告警自动分类
+            </div>
+            <div class="step-body">
+              <code>把今天7个站的SCADA日志（scada_20260626_*.csv）和巡检记录（巡检日报_*.txt）汇总，按"一级-紧急/二级-重要/三级-一般"对所有告警分类，统计各类占比</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 跨站交叉分析
+            </div>
+            <div class="step-body">
+              <code>交叉比对7个站的一级和二级告警，找出同一型号设备（如ABB VD4断路器）在多个站频发同类故障的情况，标注"系统性风险"并附最近3次同类故障简报</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 生成运维简报
+            </div>
+            <div class="step-body">
+              <code>生成今日运维简报——告警总览仪表盘、TOP3风险项（附建议处置方案）、今日必须处理的紧急工单清单、未来72小时预防性维护计划，推送到企业微信运维群</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>告警分类从每天90分钟人工翻阅缩短到3分钟自动出表，半年内通过跨站交叉分析提前预警5次批次性设备缺陷，避免了一次可能影响3万用户的区域停电。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧬</div>
+        <div class="case-title">多中心临床试验数据自动标准化</div>
+        <div class="case-subtitle">12分中心异构数据自动汇聚 → CDISC标准化 → 逻辑核查，清洗从12h→1.5h</div>
+        <div class="tags">
+          <span class="tag industry">制药/生物医药</span>
+          <span class="tag role">临床数据管理员</span>
+          <span class="tag">数据治理</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>一项III期多中心临床试验，12个分中心的数据以不同格式（Excel、CSV、PDF CRF表）每周提交，手工整合清洗和逻辑核查占去60%工时，query遗漏率约8%。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 多格式数据标准化
+            </div>
+            <div class="step-body">
+              <code>读取本周12个分中心提交的数据包（data/center_A~L_week25/），自动识别各文件格式并统一转换为CDISC SDTM标准结构，列出所有格式异常或字段缺失的条目</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 逻辑核查与query生成
+            </div>
+            <div class="step-body">
+              <code>执行逻辑核查：检查访视窗口偏差（±3天以上标出）、实验室值超出正常范围3倍以上的极端值、合并用药与方案禁用药冲突，生成条目级query列表</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 审核报告自动汇总
+            </div>
+            <div class="step-body">
+              <code>汇总生成"Week25数据审核报告"：各分中心提交进度与质量评分排名、需发query的条目按优先级排列、建议可锁定的干净数据模块、尚未解决的遗留query追踪表</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>数据清洗从每轮12小时降至1.5小时，query遗漏率由原来的约8%降到0.3%，CRO方数据经理评价"第一次在中期锁定前就拿到了完整干净的数据集"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 25 -->
 
 <!-- DAILY_CASES_END -->
 </main>
