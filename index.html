@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">28</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">29</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>82</strong> 个案例</span>
+    <span>📋 累计 <strong>84</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">64</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">66</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -5083,6 +5083,103 @@
   </div>
 </div>
 <!-- END Day 28 -->
+
+<!-- ======================================== -->
+<!-- 📅 2026-07-01 (Day 29) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-29">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 29</h2>
+    <span class="date-badge">2026.07.01</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 83: 物流运输 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚚</div>
+        <div class="case-title">「午高峰准时率78%→94%」— 配送调度员用AI把漏单归零、月投诉从15+降至2起</div>
+        <div class="case-subtitle">订单池+骑手GPS实时匹配 → 最优取送路径动态生成 → 异常订单即时预警</div>
+        <div class="tags">
+          <span class="tag industry">物流运输</span>
+          <span class="tag role">配送调度员</span>
+          <span class="tag">智能调度</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>管理50+骑手、日均300单，午高峰爆单时调度靠对讲机吼，漏单和迟到投诉每月15+起。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 订单池+骑手GPS实时最优路径匹配</div>
+            <div class="step-body"><code>读取今天午高峰待分配订单（订单池/0701.csv，含取餐地址GPS、送达地址GPS、承诺时间窗口），结合骑手实时位置和载单数，生成每位骑手的最优取送序列——优先保证即将超时订单</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 出餐延迟自动通知骑手+安抚顾客</div>
+            <div class="step-body"><code>监测到"霸王茶姬万达店"连续5单出餐延迟超15分钟——自动通知受影响骑手暂缓前往、群发顾客延迟致歉模板并附3元补偿券</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 每日配送数据汇总与归因分析</div>
+            <div class="step-body"><code>汇总今日配送数据——准时率、人均单量、异常订单归因分析，标记需优化的商家和地址坐标偏差</code></div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>午高峰准时率从78%→94%，漏单归零，每月投诉从15+降至2起以内，调度员从"嗓子喊哑"变"盯屏幕微调"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 84: 农业科技 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌾</div>
+        <div class="case-title">「农药降40%、水肥省28%」— 温室管理员用AI图像识别早期病虫害、精准灌溉</div>
+        <div class="case-subtitle">IoT传感器数据流 → 异常阈值自动告警 → 摄像头图像识别早期病害 + 精准灌溉推荐</div>
+        <div class="tags">
+          <span class="tag industry">农业科技</span>
+          <span class="tag role">温室管理员</span>
+          <span class="tag">智慧农业</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>管理8个大棚、20种作物，温湿度/光照靠人工巡检，病虫害发现时已扩散，灌溉凭感觉浪费水和肥料。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 传感器数据对标作物生长曲线标红异常</div>
+            <div class="step-body"><code>读取8个大棚的传感器数据（温度/湿度/光照/土壤EC值/pH值，来自IoT网关/今日.csv），对比各作物的适宜生长曲线，标红偏离阈值的棚号——如3号棚温度35°C超番茄上限</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 叶片图像识别早期霜霉病+防治方案</div>
+            <div class="step-body"><code>分析4号棚摄像头拍到的叶片照片（4号棚/今早巡田.jpg），识别叶片上黄斑是否为霜霉病早期症状，生成防治方案——生物药剂名称/稀释比例/喷洒时间窗口</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 天气预报+土壤墒情→精准灌溉计划</div>
+            <div class="step-body"><code>结合明天天气预报（晴、最高32°C、风速3级）和土壤墒情，生成本周各棚精准灌溉计划——每棚灌水量/时段/滴灌时长，预估节水率和水肥成本</code></div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>病虫害发现从肉眼可见（已扩散）→图像识别早期（仅几片叶），农药用量降40%，水肥成本降28%，次品率从18%→6%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 29 -->
 
 <!-- DAILY_CASES_END -->
 </main>
