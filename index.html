@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">31</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">32</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>88</strong> 个案例</span>
+    <span>📋 累计 <strong>90</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">66</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">65</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -5375,6 +5375,124 @@
   </div>
 </div>
 <!-- END Day 31 -->
+
+
+<!-- 📅 2026-07-05 (Day 32) -->
+<div class="day-section" id="day-32">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 32</h2>
+    <span class="date-badge">2026.07.05</span>
+  </div>
+  <div class="cases-row">
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚚</div>
+        <div class="case-title">多物流商运单自动合并与异常检测</div>
+        <div class="case-subtitle">5家快递运单自动合并 → 异常规则智能标注 → 每日监控报告，2小时→4分钟</div>
+        <div class="tags">
+          <span class="tag industry">物流运输</span>
+          <span class="tag role">物流调度经理</span>
+          <span class="tag">运单监控</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>每天对接5家快递公司（顺丰/中通/圆通/韵达/极兔），每家提供不同格式的运单追踪文件，手工合并300+票件的在途状态需2小时，异常件靠人眼逐条扫，月均漏跟15单导致客户投诉。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 多格式运单统一合并
+            </div>
+            <div class="step-body">
+              <code>读取今天5家物流商的运单文件（顺丰_sf_0705.csv、中通_zt_0705.xlsx、圆通_yt_0705.csv、韵达_yd_0705.xlsx、极兔_jt_0705.csv），统一字段格式合并，匹配出同一收件人多渠道发货的重复运单并去重</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 异常规则智能标注
+            </div>
+            <div class="step-body">
+              <code>对合并后的运单逐票核查：超4小时未揽收标黄、中转站停留超12小时标橙、最后轨迹距今超24小时无更新标红，生成"异常运单清单"并估算预计延误时效</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 监控报告自动推送
+            </div>
+            <div class="step-body">
+              <code>生成今日监控报告：各快递公司准时率对比仪表盘、异常运单Top10（按紧急度排序附带处置建议）、昨日已解决异常的闭环确认——推送到钉钉物流群</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>运单汇总从每天2小时压缩到4分钟，异常件漏跟率从月均15单降到0，客户物流投诉量下降70%。调度经理说"终于不用每天下午盯着5个Excel切来切去了"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏦</div>
+        <div class="case-title">对公贷款尽调材料批量核验与风险标注</div>
+        <div class="case-subtitle">10+份尽调材料自动提取 → 流水-财报交叉核验 → 尽调初稿，8小时→40分钟</div>
+        <div class="tags">
+          <span class="tag industry">金融银行</span>
+          <span class="tag role">信贷审批助理</span>
+          <span class="tag">尽调核验</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>每笔对公贷款需收集营业执照、三年审计报告、征信报告、银行流水等10+份材料，手工核对数据一致性（流水vs财报收入能否对上、征信负债vs财报负债是否匹配），做完一份尽调初稿至少一整天，还容易漏掉关键矛盾点。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">1</span> 尽调材料批量提取
+            </div>
+            <div class="step-body">
+              <code>读取"XX科技"尽调资料包（营业执照.jpg、2023-2025审计报告3份PDF、征信报告.pdf、近6个月银行流水.xlsx），提取：注册资本、实控人、近三年营收/利润/负债、月均流水及波动趋势</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">2</span> 流水-财报交叉核验
+            </div>
+            <div class="step-body">
+              <code>交叉核验：比对银行流水中月均入账与财报营业收入偏差（超15%标红）、征信未结清贷款与财报负债科目是否对应、排查流水中单笔超月均50%的大额异常交易</code>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-header">
+              <span class="step-number">3</span> 尽调初稿自动生成
+            </div>
+            <div class="step-body">
+              <code>生成信贷尽调初稿：客户基本面概览、财务核验结果（偏差分析表）、风险信号清单（按高/中/低分级）、授信建议（附同业对比），导出为PDF</code>
+            </div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>尽调初稿从8小时缩至40分钟，数据矛盾检出率100%（之前人工核对曾漏过两笔300万以上的流水-财报偏差），审批通过率未变但坏账预警提前了。风控总监评价"这工具相当于给每个审批员配了个24小时不犯困的核查助手"。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 32 -->
 
 <!-- DAILY_CASES_END -->
 </main>
