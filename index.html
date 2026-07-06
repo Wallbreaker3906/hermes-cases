@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">31</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">32</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>88</strong> 个案例</span>
+    <span>📋 累计 <strong>90</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">66</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -5375,6 +5375,104 @@
   </div>
 </div>
 <!-- END Day 31 -->
+
+
+<!-- ======================================== -->
+<!-- 📅 2026-07-06 (Day 32) -->
+<!-- ======================================== -->
+<div class="day-section" id="day-32">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 32</h2>
+    <span class="date-badge">2026.07.06</span>
+  </div>
+  <div class="cases-row">
+
+    <!-- Case 89: 生物医药 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧬</div>
+        <div class="case-title">「SAE上报从4.5h→1.2h」— CRO项目经理用AI三系统数据汇总+SUSAR智能预警</div>
+        <div class="case-subtitle">EDC/Safety/CTMS手动汇总+SAE上报窗口紧张 → Hermes项目仪表盘自动生成+SUSAR识别即时上报+方案偏离台账</div>
+        <div class="tags">
+          <span class="tag industry">生物医药</span>
+          <span class="tag role">CRO项目经理</span>
+          <span class="tag">临床试验</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>临床试验数据跨系统（EDC/Safety/CTMS）手动汇总耗时，SAE上报窗口24小时但跨部门信息传递慢，方案偏离记录遗漏是稽查重点。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 三系统数据自动汇总</div>
+            <div class="step-body"><code>从EDC/Safety/CTMS三个系统导出今日数据，合并生成单页项目仪表盘——入组进度vs计划、SAE列表及处理状态、方案偏离数及分类，标红超24h未解决的SAE</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> SUSAR智能识别与上报</div>
+            <div class="step-body"><code>发现3号中心受试者C-027血常规异常（血小板骤降50%），判定为SUSAR疑似——自动提取受试者病史/合并用药/最近给药时间，生成24h上报NMPA的CIOMS-I格式初稿</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 方案偏离稽查准备</div>
+            <div class="step-body"><code>汇总本月3个项目方案偏离台账，按中心/类型/严重性分类，输出稽查准备报告——高频偏离类型及根因分析、CAPA建议、趋势图对比上月</code></div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>项目数据汇总从每日1.5小时→5分钟，SAE上报从触发到提交平均4.5h→1.2h，稽查前准备从1周→1天，一次通过率从70%→100%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case 90: 物业管理 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏢</div>
+        <div class="case-title">「工单响应从2.5h→18分钟」— 物业经理用AI全渠道报修派单+设备预测维护</div>
+        <div class="case-subtitle">报修散落微信/电话/纸质+派单错派率22% → Hermes智能分类派单+传感器预警预判故障+满意度月度自动分析</div>
+        <div class="tags">
+          <span class="tag industry">物业管理</span>
+          <span class="tag role">写字楼物业经理</span>
+          <span class="tag">智能运维</span>
+        </div>
+        <div class="case-section">
+          <h4>📖 场景</h4>
+          <p>租户报修/投诉散落微信+电话+纸质三联单，维修工单分派靠经验经常派错工种，设备巡检漏检导致中央空调旺季故障停摆。</p>
+        </div>
+        <div class="click-hint">
+          <span class="arrow">▶</span> 点击展开详细操作流程
+        </div>
+      </div>
+      <div class="case-detail">
+        <div class="case-detail-inner">
+          <h3>🔍 详细操作流程</h3>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">1</span> 全渠道报修智能派单</div>
+            <div class="step-body"><code>汇总今日所有报修渠道工单（微信/电话记录/纸质单扫描），按类型（电气/暖通/给排水/土建/弱电）分类，匹配维修技师技能标签自动派单，标注超2h未响应的工单</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">2</span> 设备预测性维护预警</div>
+            <div class="step-body"><code>B栋3号冷水机组振动传感器连续3天振幅+15%，对比历史故障模式判断轴承磨损趋势——自动生成预防性检修工单，排入本周六夜间窗口，附所需备件清单和停机影响评估</code></div>
+          </div>
+          <div class="step-block">
+            <div class="step-header"><span class="step-number">3</span> 租户满意度月度分析</div>
+            <div class="step-body"><code>分析本月租户满意度问卷+投诉记录+工单评价，输出月度服务报告——租户NPS趋势、高频投诉TOP5及整改建议、维修技师绩效排名，生成发全体租户的月度简报</code></div>
+          </div>
+          <div class="highlight-box">
+            💡 <strong>效果：</strong>工单平均响应从2.5小时→18分钟，错派率从22%→0，中央空调非计划停运从每年3次→0，租户续租率从78%→91%。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 32 -->
 
 <!-- DAILY_CASES_END -->
 </main>
