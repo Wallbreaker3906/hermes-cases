@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">33</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">34</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>92</strong> 个案例</span>
+    <span>📋 累计 <strong>94</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">67</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -5587,6 +5587,87 @@
   </div>
 </div>
 <!-- END Day 33 -->
+
+<!-- 📅 2026-07-07 (Day 34) -->
+<div class="day-section" id="day-34">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 34</h2>
+    <span class="date-badge">2026.07.07</span>
+  </div>
+  <div class="cases-row">
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚨</div>
+        <div class="case-title">「应急响应90分钟→15分钟」— 社区应急协调员用AI实时监控+物资调配+分级通知</div>
+        <div class="case-subtitle">台风预警后手动翻纸质预案延误黄金窗口 → Hermes cronjob气象监控触发预警、自动聚合物资库存与志愿者排班</div>
+        <div class="tags">
+          <span class="tag industry">应急管理</span>
+          <span class="tag role">社区应急响应协调员</span>
+          <span class="tag">公共安全</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>台风/暴雨预警后需30分钟内协调物资、志愿者和居民疏散，手动翻找纸质预案和Excel联系人常延误黄金窗口。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob 实时监控气象预警，触发后自动聚合物资库存、志愿者排班与分级通知，一键生成应急行动清单。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：气象监控触发预警</strong><br><code>用cron每30分钟抓取气象局台风路径数据，预计48小时内影响本区时触发预警，比照"物资仓库.xlsx"计算缺口并推荐最近调拨点</code></p>
+            <p><strong>Step 2：志愿者智能排班</strong><br><code>匹配志愿者数据库按技能分组（医疗/搬运/通讯），自动生成未来48小时三班倒值班表，冲突时段标红</code></p>
+            <p><strong>Step 3：分级通知一键发送</strong><br><code>按小区风险等级生成分级通知——高风险区（低洼/老旧楼）发撤离路线图，中风险区发物资领取指引，低风险区发居家避险清单</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>应急响应启动从手动90分钟→自动15分钟生成方案，物资调配零遗漏，居民通知覆盖率100%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👴</div>
+        <div class="case-title">「用药差错归零」— 养老服务中心主任用AI建档+每日看板+家属周报</div>
+        <div class="case-subtitle">80+老人用药方案、体检指标散落纸质档案 → Hermes扫描建档+cronjob每日用药看板异常预警+每周家属图文周报</div>
+        <div class="tags">
+          <span class="tag industry">养老照护</span>
+          <span class="tag role">社区养老服务中心主任</span>
+          <span class="tag">智慧养老</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>中心照护80+位老人，用药方案、体检指标、家属联络散落在纸质档案和微信聊天中，突发状况找关键信息需5-10分钟。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 扫描档案建立可搜索电子健康档案，cronjob 每日自动生成用药看板和异常预警，每周生成家属图文周报。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：健康档案数字化</strong><br><code>扫描80份老人PDF健康档案，提取慢性病/过敏药/紧急联系人/用药时间表，按风险等级标注"红色关注"老人（高血压/糖尿病/独居）</code></p>
+            <p><strong>Step 2：每日用药智能看板</strong><br><code>每天早上7点生成当日用药看板——哪位老人几点吃什么药、剂量、饭前饭后，血压>160或血糖>10自动标红推送</code></p>
+            <p><strong>Step 3：家属周报自动发送</strong><br><code>每周为每位老人生成图文周报——本周健康趋势、活动参与、服药依从率，通过messaging自动发送对应家属</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>用药差错归零，家属满意度提升40%，突发状况关键信息定位从5分钟→30秒。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END Day 34 -->
 
 <!-- DAILY_CASES_END -->
 </main>
