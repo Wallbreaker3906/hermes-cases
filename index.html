@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">34</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">35</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>94</strong> 个案例</span>
+    <span>📋 累计 <strong>96</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">67</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">68</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -5669,6 +5669,84 @@
 </div>
 <!-- END Day 34 -->
 
+
+<!-- 📅 2026-07-08 (Day 35) -->
+<div class="day-section" id="day-35">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 35</h2>
+    <span class="date-badge">2026.07.08</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧬</div>
+        <div class="case-title">「申报材料准备从3周→5天」— 新药研发PM用Hermes一站式管理文献、实验数据与CRO报告</div>
+        <div class="case-subtitle">研究数据碎片化→文献自动摘要+实验数据扫码入库+CRO报告合规校验</div>
+        <div class="tags">
+          <span class="tag industry">生物医药</span>
+          <span class="tag role">新药研发PM</span>
+          <span class="tag">合规审评</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>临床前研究文献、Western blot/ELISA原始数据、CRO外包报告散落在邮件、网盘和纸质笔记本中，审评前整理申报材料需2-3周。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes集中管理所有研究资产：文献自动检索摘要、实验数据扫码入库、CRO报告格式统一校验，cronjob每周生成项目进度仪表盘。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：文献智能监控</strong><br><code>每天定时检索PubMed/arXiv上靶点相关新文献，按"机制研究/竞品动态/方法学"分类生成3句话摘要，推送至项目Slack频道</code></p>
+            <p><strong>Step 2：实验数据自动入库</strong><br><code>扫描本周实验记录本照片和仪器导出CSV，提取关键参数（IC50/Kd值/批号），自动填入电子实验记录并与历史数据趋势对比标注异常点</code></p>
+            <p><strong>Step 3：CRO报告合规校验</strong><br><code>汇总各CRO本月交付报告，统一校验格式（GLP/GCP合规项、数据完整性），生成审评申报材料缺口清单——标红缺失项并估算补齐时间</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>申报材料准备从3周→5天，实验数据回溯从"翻纸质记录15分钟"→"全文搜索5秒"，CRO报告返工率从30%→不到5%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛍️</div>
+        <div class="case-title">「日上新从3件→15件」— 中古店主理人用Hermes vision+文案实现跨平台一键上新</div>
+        <div class="case-subtitle">多平台重复上架操作→AI识别成色+差异化文案+数据回传爆品预警</div>
+        <div class="tags">
+          <span class="tag industry">二手奢侈品</span>
+          <span class="tag role">中古店主理人</span>
+          <span class="tag">电商运营</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>同时在闲鱼/小红书/抖音/微信4个渠道卖包，每只包需写描述、鉴定点说明、拍照修图，一个商品上架全流程40分钟，日均只能上新3-4件。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes vision识别包包款式和成色、自动生成多平台差异化文案，file批量处理图片命名和压缩，delegate_task分发到各平台草稿箱一键发布。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：视觉识别与定价</strong><br><code>拍包包6张标准角度照片（正面/背面/底部/五金/内标/瑕疵特写），vision识别品牌型号、成色等级，对照"公价数据库.xlsx"建议定价区间</code></p>
+            <p><strong>Step 2：跨平台差异化文案</strong><br><code>根据各平台调性生成文案——闲鱼强调"二手价/成色实拍/支持鉴定"、小红书强调"vintage故事/穿搭灵感"、抖音强调"开箱验货/对比公价省多少"</code></p>
+            <p><strong>Step 3：数据回传与爆品预警</strong><br><code>每晚自动汇总当日上新在各平台的浏览/收藏/询价数据，生成本周"爆品预警"——浏览>500或询价>10的款式建议追加上新或调整价格</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单件上新从40分钟→8分钟，日上新量从3件→15件，多平台曝光量翻3倍，月销售额增长120%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 35 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
