@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">35</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">36</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>96</strong> 个案例</span>
+    <span>📋 累计 <strong>98</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">68</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -5747,6 +5747,84 @@
   </div>
 </div>
 <!-- END Day 35 -->
+
+<!-- 📅 2026-07-10 (Day 36) -->
+<div class="day-section" id="day-36">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 36</h2>
+    <span class="date-badge">2026.07.10</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔍</div>
+        <div class="case-title">「单车损小额案件定损45分钟→7分钟」— 理赔查勘员用AI vision定损+保单解析提效6倍</div>
+        <div class="case-subtitle">手动翻保单+Excel估价耗60%时间→vision事故识别+PDF条款提取+看板自动预警</div>
+        <div class="tags">
+          <span class="tag industry">保险</span>
+          <span class="tag role">理赔查勘员</span>
+          <span class="tag">定损自动化</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>日均处理20+起理赔案件，每案需审验现场照片、核对保单条款、估算维修/损失金额、撰写结案报告，手动翻保单系统和Excel估价表耗去60%时间。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes vision识别事故照片损伤级别并自动比对历史案例库定价，file批量解析保单PDF提取免赔额/赔付上限等关键条款，cronjob每日生成理赔进度看板并通过messaging推送超期案件预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：事故照片智能定损</strong><br><code>上传事故现场照片（车损/水浸/火灾），vision识别损伤部位、严重程度、是否涉及关键部件，对照"定损数据库.xlsx"自动推荐维修项目和预估金额</code></p>
+            <p><strong>Step 2：保单条款自动核验</strong><br><code>读取客户保单PDF，提取保险责任范围、免赔额、赔付上限、特别约定条款，与本次理赔申请交叉比对，标注是否触发免赔、是否触及赔付上限</code></p>
+            <p><strong>Step 3：理赔进度看板与预警</strong><br><code>每晚自动汇总当日所有在办案件，生成"理赔进度看板"——新案/待补充材料/待审核/已结案分列，超72小时未结案的标红并通过messaging推送提醒</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单车损小额案件定损从平均45分钟→7分钟，大案结案周期从7天→3天，超期案件减少70%，月度理赔报告自动生成无需人工汇总。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏨</div>
+        <div class="case-title">「4平台调价40分钟→3分钟」— 运营经理用AI动态定价+房态同步消灭超卖</div>
+        <div class="case-subtitle">手动登4后台调价耗40分钟→cronjob竞品抓取+一键同步+评价自动回复</div>
+        <div class="tags">
+          <span class="tag industry">酒店管理</span>
+          <span class="tag role">民宿运营经理</span>
+          <span class="tag">动态定价</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>房源同时在Airbnb/携程/美团/小猪4个OTA平台上线，房价调整、房态同步、客人咨询、评价回复全靠手动，调一次价格需登录4个后台逐房修改，耗时40分钟。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每2小时抓取竞品酒店价格做动态调价建议，delegate_task一键同步4平台房态与价格，web抓取各平台新评价并生成分类回复草稿，messaging实时推送紧急订单与差评预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：竞品动态定价</strong><br><code>每周五抓取周边3公里内同档次酒店的周末价格，结合本店入住率与天气/活动日历（音乐节/展会），生成动态定价建议——热门日期建议上调15%-25%，淡日期建议推出连住折扣</code></p>
+            <p><strong>Step 2：多平台房态同步</strong><br><code>收到新订单后自动同步4平台房态——将该房源在其他平台自动关房或提价，避免超卖；客人入住前1天通过messaging自动发送入住指引（门锁密码/WiFi/周边攻略）</code></p>
+            <p><strong>Step 3：评价智能回复</strong><br><code>每天上午抓取4平台新增评价，好评生成个性化感谢回复草稿，差评按问题分类（卫生/噪音/设施）标注紧急度并生成道歉+补偿方案草稿，通过messaging推送酒店经理确认后发送</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>4平台调价从40分钟→3分钟，超卖归零，评价回复率从60%→100%，周末平均房价提升18%，旺季RevPAR增长25%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 36 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
