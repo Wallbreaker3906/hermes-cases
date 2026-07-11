@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">36</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">37</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>98</strong> 个案例</span>
+    <span>📋 累计 <strong>100</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -5825,6 +5825,84 @@
   </div>
 </div>
 <!-- END Day 36 -->
+
+<!-- 📅 2026-07-11 (Day 37) -->
+<div class="day-section" id="day-37">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 37</h2>
+    <span class="date-badge">2026.07.11</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛰️</div>
+        <div class="case-title">「异常响应6分钟搞定30颗卫星」— 卫星运维工程师用AI秒级处置在轨告警</div>
+        <div class="case-subtitle">遥测人工研判40分钟→Hermes自动化基线比对6分钟</div>
+        <div class="tags">
+          <span class="tag industry">航空航天</span>
+          <span class="tag role">卫星星座运维工程师</span>
+          <span class="tag">遥测监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>管理30+颗低轨卫星遥测数据，异常告警跨时区人工逐条研判，单星响应平均40分钟，每日遥测日志手动归档2小时。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每5分钟拉取遥测流自动比对历史基线，高危告警messaging秒级推送手机，web拉取空间天气数据辅助根因分析。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：实时遥测异常检测</strong><br><code>cron每5分钟抓取30颗卫星电源/温度/姿控/链路信噪比，对比历史正常运行包络线，超阈值标红并通过messaging推送飞控值班手机</code></p>
+            <p><strong>Step 2：智能处置预案匹配</strong><br><code>星上异常事件自动匹配处置预案库，生成地面站指令序列草案，标注需人工确认的关键指令，低风险指令建议自动执行</code></p>
+            <p><strong>Step 3：星座健康日报自动归档</strong><br><code>每日UTC 00:00汇总星座健康度日报——每颗星异常事件数、轨道衰减趋势、燃料余量预估在轨寿命、空间天气预警，推送飞控团队Slack</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>MTTR从40分钟→6分钟，卫星在轨可用率99.2%→99.7%，每日遥测归档全自动零遗漏。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌱</div>
+        <div class="case-title">「碳盘查从5天缩至半天」— 碳资产管理师用AI一键生成多标准合规报告</div>
+        <div class="case-subtitle">手工核算Scope 1-3→Hermes自动解析账单+匹配排放因子</div>
+        <div class="tags">
+          <span class="tag industry">碳中和</span>
+          <span class="tag role">碳资产管理师</span>
+          <span class="tag">ESG合规</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>碳排放数据散落在能源账单PDF、差旅报销Excel、物流记录中，手工核算Scope 1-3需3-5天，多标准边界条件反复跨表核对。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file批量解析能源账单提取用能数据，web拉取IPCC最新排放因子自动计算，cronjob每月更新碳仪表盘，delegate_task一键生成多标准报告。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：Scope 1+2自动核算</strong><br><code>上传客户年度能源账单PDF，file批量提取电/天然气/柴油消耗量，web自动拉取最新排放因子，计算Scope 1直接排放+Scope 2电力间接排放</code></p>
+            <p><strong>Step 2：Scope 3全链条归集</strong><br><code>读取差旅报销Excel和物流CSV，计算Scope 3——航空里程×因子、货车吨公里×因子、采购隐含碳，按GHG Protocol 15类逐项归集并标注数据质量评级</code></p>
+            <p><strong>Step 3：月度碳盘查看板与报告</strong><br><code>每月1日cron自动生成碳盘查看板——排放源占比饼图、同比环比趋势、距碳中和目标缺口%，delegate_task生成ISO 14064核查报告初稿和全国碳市场披露报文</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单客户碳盘查从3-5天→半天，核算标准切换从手动翻文档2小时→自动匹配30秒，月省外部核查费约4万元。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 37 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
