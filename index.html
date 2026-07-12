@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">37</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">38</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>100</strong> 个案例</span>
+    <span>📋 累计 <strong>102</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -5903,6 +5903,84 @@
   </div>
 </div>
 <!-- END Day 37 -->
+
+<!-- 📅 2026-07-12 (Day 38) -->
+<div class="day-section" id="day-38">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 38</h2>
+    <span class="date-badge">2026.07.12</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏺</div>
+        <div class="case-title">「室内整理3月→2周」— 考古发掘负责人用AI实现器物自动编目与空间分析</div>
+        <div class="case-subtitle">万件器物手工编目耗时数月→vision自动分类+file数据库+cron热力图</div>
+        <div class="tags">
+          <span class="tag industry">考古文保</span>
+          <span class="tag role">考古发掘现场负责人</span>
+          <span class="tag">器物编目</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个发掘季出土上万件器物，每件需手写记录、拍照、GPS定位，田野笔记散落导致室内整理耗时3-6个月才能完成遗址空间分布分析。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes vision自动分类器物照片并提取尺寸，file将每日田野记录结构化入库，cronjob每周生成发掘进度热力图和地层分布仪表盘。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：日收工上传记录</strong><br><code>每天收工后上传各探方手写记录扫描件和出土器物照片，vision自动分类并提取尺寸与GPS坐标，file写入统一发掘数据库</code></p>
+            <p><strong>Step 2：每周进度看板</strong><br><code>每周 cron 生成发掘进度看板——各探方出土量趋势、器物类型占比饼图、地层分布热力图，自动标注密集区建议次日优先发掘</code></p>
+            <p><strong>Step 3：季末一键简报</strong><br><code>季末一键汇总全部数据，自动生成考古发掘简报初稿——含遗址平面图数据、器物统计表、地层剖面描述、与邻近遗址交叉对比</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>室内整理从3-6个月→2周完成，器物编目速度提升10倍，田野到发表周期缩短60%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏭</div>
+        <div class="case-title">「废品率下降35%」— 品控经理用AI实现产线实时监控与缺陷秒级告警</div>
+        <div class="case-subtitle">质量异常2-3班次才发现→cron PLC监控+vision AOI+messaging告警</div>
+        <div class="tags">
+          <span class="tag industry">制造业</span>
+          <span class="tag role">电子厂品控经理</span>
+          <span class="tag">质量监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>3条产线的传感器数据、AOI检测图全靠纸质记录，质量异常常在2-3个班次后才被发现，此时已有数百件不良品下线，废品率居高不下。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每10分钟抓取PLC传感器流实时对标工艺规范，vision分析AOI检测图自动识别缺陷，messaging秒级推送异常告警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：PLC实时监控告警</strong><br><code>cron每10分钟抓取3条产线PLC数据，对比工艺上下限，参数漂移>5%自动标红并通过messaging推送产线班长手机</code></p>
+            <p><strong>Step 2：AOI智能缺陷检测</strong><br><code>vision分析每班次AOI检测图像和人工QC拍照，自动识别焊点虚焊/注塑缩水/装配错位，按缺陷类型和工位汇总生成良率趋势图</code></p>
+            <p><strong>Step 3：交接报告自动化</strong><br><code>每日自动汇总三班产出/良率/停机/异常事件，生成交接报告并标注需跨班跟踪项</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>缺陷发现从2-3个班次→10分钟，废品率下降35%，交接班信息完整率从约60%→100%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 38 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
