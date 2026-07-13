@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">38</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">39</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>102</strong> 个案例</span>
+    <span>📋 累计 <strong>104</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -5981,6 +5981,84 @@
   </div>
 </div>
 <!-- END Day 38 -->
+
+<!-- 📅 2026-07-13 (Day 39) -->
+<div class="day-section" id="day-39">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 39</h2>
+    <span class="date-badge">2026.07.13</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎓</div>
+        <div class="case-title">「批改提速6倍」— 编程讲师用AI自动批改200份作业并每周更新案例</div>
+        <div class="case-subtitle">手动批改吞噬30小时/周→Hermes自动运行pytest+GitHub智能抓取</div>
+        <div class="tags">
+          <span class="tag industry">教育</span>
+          <span class="tag role">在线编程讲师</span>
+          <span class="tag">自动批改</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个人运营3门编程课，学员作业散落在微信群和邮箱，每周手动批改200+份代码耗时12小时，课程案例更新全靠业余时间搜集，运营杂务每周吞掉30+小时。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file批量读取作业代码并自动运行测试标注错误，cronjob每周抓取GitHub trending自动生成案例更新建议，messaging定时推送学员学习周报。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：自动批改与错误分类</strong><br><code>每周末读取本周学员提交的200份Python作业代码文件夹，terminal自动执行pytest测试用例并标注失败行，按错误类型分类——缩进/命名/逻辑/未处理异常——生成批改摘要，讲师只需审核边缘case的代码</code></p>
+            <p><strong>Step 2：每周案例智能更新</strong><br><code>cronjob每周一抓取GitHub trending Python项目、技术博客热门文章和官方库更新日志，自动筛选与课程大纲相关的案例素材，生成"本周案例更新建议"并标注适用于哪一节课的哪个知识点</code></p>
+            <p><strong>Step 3：学员周报与开班推送</strong><br><code>每周日cron自动汇总每位学员的作业完成率/正确率/活跃度，生成个性化学习周报，通过messaging推送给学员——包含进步亮点和下周学习建议——同时推送新一期课程开班提醒给waitlist学员</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>作业批改从每周12小时→2小时（自动批改+人工复核），课程案例更新频率从"季度大更新"→"每周微更新"，学员完课率从48%提升到72%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">☀️</div>
+        <div class="case-title">「故障响应提速48倍」— 光伏运维用AI秒级监控12座电站并自动出日报</div>
+        <div class="case-subtitle">手动登录5个后台抄数据2.5小时→Hermes自动汇总+故障秒级告警</div>
+        <div class="tags">
+          <span class="tag industry">新能源光伏</span>
+          <span class="tag role">电站运维经理</span>
+          <span class="tag">智能监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>管理省内12个分布式光伏电站，逆变器数据散落在5个不同厂家监控系统，每日手动逐站抄数据耗时2.5小时，故障响应常有2-4小时延迟导致发电损失。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每15分钟从各厂家API抓取逆变器数据并区分设备故障与天气原因，file自动生成多站发电日报和月度PR分析，messaging秒级推送故障告警到运维手机。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：实时数据抓取与异常过滤</strong><br><code>cron每15分钟抓取12个电站逆变器实时数据（功率/发电量/电压/电流/温度），对照当地天气预报辐照度数据——相同辐照下发电量偏差>15%标红为设备异常，偏差<15%标注"天气原因"自动过滤</code></p>
+            <p><strong>Step 2：发电日报自动生成</strong><br><code>每日UTC 16:00自动汇总各站日发电量、等效利用小时数、PR性能比，与昨日/上周同日/去年同期三项环比，生成一页发电日报——标红异常站、标注发电量损失预估金额</code></p>
+            <p><strong>Step 3：故障秒级告警推送</strong><br><code>逆变器故障告警（IGBT过温/绝缘阻抗低/组串电流异常）通过messaging秒级推送运维班组手机，附带故障代码解释、排查步骤建议、历史同类故障处理记录</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>发电日报从手动2.5小时→自动3分钟出报，故障响应从2-4小时→5分钟内响应，异常电站发电损失减少约60%，全年增发电量约8万度。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 39 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
