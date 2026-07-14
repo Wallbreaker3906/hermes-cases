@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">39</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">40</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>104</strong> 个案例</span>
+    <span>📋 累计 <strong>106</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -6059,6 +6059,84 @@
   </div>
 </div>
 <!-- END Day 39 -->
+
+<!-- 📅 2026-07-14 (Day 40) -->
+<div class="day-section" id="day-40">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 40</h2>
+    <span class="date-badge">2026.07.14</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🦐</div>
+        <div class="case-title">「缺氧翻塘零事故」— 养殖技术员用AI实现虾塘24小时智能监控</div>
+        <div class="case-subtitle">夜间无人值守致缺氧翻塘→cronjob+传感器+vision全自动预警</div>
+        <div class="tags">
+          <span class="tag industry">渔业/水产养殖</span>
+          <span class="tag role">养殖场技术员</span>
+          <span class="tag">物联网监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>虾塘水质需人工每4小时划船到塘中央检测，夜间无人值守时缺氧翻塘半小时内可致整塘虾死亡，一口塘损失超10万元。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>cronjob每15分钟抓取物联网传感器数据对标安全阈值，异常时messaging秒级推送告警并联动增氧机，vision识别浮头和病虾，file自动归档养殖日志。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：传感器实时监控+自动告警</strong><br><code>cron每15分钟从物联网平台抓取8口塘的溶氧/pH/温度/氨氮传感器读数，低于阈值自动通过messaging推送告警到技术员手机并触发增氧机控制器</code></p>
+            <p><strong>Step 2：vision识别虾群异常行为</strong><br><code>每日投喂后无人机航拍水面照片，vision识别虾群浮头、游塘、体色异常等行为，对照"虾病图谱库"标注疑似病害塘口并生成采样建议</code></p>
+            <p><strong>Step 3：养殖日志自动归档</strong><br><code>每日自动汇总投喂量/水温/生长速度/死虾数量，生成"养殖日志日报"——含各塘口生长曲线与预估出塘日期，历史同期对比标红发育滞后塘口</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>夜间缺氧翻塘事故归零，巡塘从每日6次（2人轮班）→每日2次（1人+远程监控），出塘规格均匀度提升，年产增收约15万元。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎪</div>
+        <div class="case-title">「200展商零逾期」— 策展人用AI把三场展会管成一场</div>
+        <div class="case-subtitle">1000+碎片信息散落各处→file+cronjob+delegate_task一站式管理</div>
+        <div class="tags">
+          <span class="tag industry">会展策划</span>
+          <span class="tag role">独立策展人</span>
+          <span class="tag">展商管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>同时推进3场展会（参展商200+家），展商资料、合同、付款、展位图、搭建进度散落在微信/邮件/Excel中，一个展商临时换展位需手动调整相邻展商布局，一场展会筹备期产生1000+条碎片化信息。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>file集中管理展商数据库和合同，web监控竞品展会动态和展商舆情，cronjob自动追踪付款节点和搭建截止日期，delegate_task一键分发多渠道参展通知。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：展商资料批量提取校验</strong><br><code>上传200+展商报名表PDF和合同文件夹，file批量提取公司名/展位号/面积/付款条款/搭建需求，自动校验展位面积与合同一致性并标红不符项</code></p>
+            <p><strong>Step 2：付款节点自动追踪催款</strong><br><code>cronjob每日对比展商付款截止日期与实际到账记录，逾期>48小时自动生成催款函草稿并通过messaging推送策展人确认后一键发出；搭建前7/3/1天自动推送提醒给搭建商</code></p>
+            <p><strong>Step 3：竞品监控+多渠道通知分发</strong><br><code>web每周抓取3个竞品展会官网和行业媒体，自动汇总展商重合度/展位价格变化/主题趋势，生成"竞品展会周报"；delegate_task一键分发"参展商入场须知"到200+展商的邮箱和微信群</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>展商资料整理从3天→半天，付款逾期率从12%→2%，展位调整布局从40分钟→5分钟自动重排，竞品监测从"凭印象"变成有数据支撑的策略参考。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 40 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
