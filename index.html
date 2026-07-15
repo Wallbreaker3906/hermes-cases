@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">40</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">41</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>106</strong> 个案例</span>
+    <span>📋 累计 <strong>108</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">69</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -6137,6 +6137,86 @@
   </div>
 </div>
 <!-- END Day 40 -->
+
+<!-- 📅 2026-07-15 (Day 41) -->
+<div class="day-section" id="day-41">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 41</h2>
+    <span class="date-badge">2026.07.15</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚖️</div>
+        <div class="case-title">「胜诉率↑15%」— 诉讼律师用AI卷宗分析+类案检索一键生成庭前报告</div>
+        <div class="case-subtitle">卷宗阅卷4-6h→30min，证据矛盾发现率↑80%</div>
+        <div class="tags">
+          <span class="tag industry">法律</span>
+          <span class="tag role">诉讼律师</span>
+          <span class="tag">卷宗分析</span>
+          <span class="tag">类案检索</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每案上百页卷宗+类案检索+证据比对全手动，阅卷占60%工作时间，庭前常熬夜</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>file批量解析卷宗提取时间线 → web自动检索类案裁判倾向 → terminal校验证据一致性 → messaging排期预警</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：卷宗智能解析</strong><br><code>上传案件卷宗PDF文件夹，file批量提取关键字段——当事人、争议焦点、关键日期、金额——自动生成案件事实时间线图并标注证据对应关系</code></p>
+            <p><strong>Step 2：类案自动检索</strong><br><code>web每日检索最高法指导案例和本地法院同类判决，按支持/驳回/改判分类并提取裁判要旨，自动对比本案情节生成类案裁判倾向报告和诉讼风险评估</code></p>
+            <p><strong>Step 3：证据链校验+排期预警</strong><br><code>terminal比对证据链中合同、转账记录、聊天记录的日期与金额一致性标红矛盾点；cronjob监控举证期限和庭审排期，提前3天通过messaging推送提醒并生成准备清单</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>卷宗阅卷从每案4-6小时→30分钟，类案检索从手动半天→10分钟自动出报告，证据矛盾发现率提升80%，庭审胜诉率提高约15%</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌾</div>
+        <div class="case-title">「年产量↑18%」— 智慧农业主管用AI多传感器汇聚+病害视觉识别守护大棚</div>
+        <div class="case-subtitle">异常响应2-4h→5min，病害早发现率30%→85%</div>
+        <div class="tags">
+          <span class="tag industry">农业</span>
+          <span class="tag role">运营主管</span>
+          <span class="tag">物联网</span>
+          <span class="tag">病害识别</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>20个大棚×5套异构传感器无统一看板，异常滞后2-4小时，病害扩散一次损失数万元</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>cronjob每5分钟汇聚传感器数据 → 对标作物模型联动控制器 → vision识别早期病害 → file生成农事日志 → delegate_task推送周报</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：多传感器数据汇聚</strong><br><code>cron每5分钟抓取20个大棚的5套异构传感器数据（温湿度/光照/CO₂/土壤EC），统一汇聚并对标番茄最优生长曲线——温湿度偏离阈值自动通过messaging推送告警，联动卷帘机/风机/湿帘控制器</code></p>
+            <p><strong>Step 2：病害视觉识别</strong><br><code>每日巡检手机拍摄作物叶片/果实照片上传，vision对照病害图谱库识别晚疫病/霜霉病/白粉虱等早期症状，标注疑似病株位置和严重度评级并生成植保方案（药剂/浓度/施药方式）</code></p>
+            <p><strong>Step 3：运营周报自动推送</strong><br><code>每周自动汇总各棚产量预估/农事操作/水肥消耗/病虫害趋势，生成大棚运营周报——含各棚健康评分和采收预测，delegate_task推送至农场主和农技员手机</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>异常响应从人工巡检2-4小时→实时5分钟告警，病害早期发现率从30%→85%，农药使用量降低20%，年产量提升约18%</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 41 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
