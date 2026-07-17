@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">42</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">43</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>110</strong> 个案例</span>
+    <span>📋 累计 <strong>112</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">71</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -6295,6 +6295,84 @@
   </div>
 </div>
 <!-- END Day 42 -->
+
+<!-- 📅 2026-07-16 (Day 43) -->
+<div class="day-section" id="day-43">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 43</h2>
+    <span class="date-badge">2026.07.16</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔬</div>
+        <div class="case-title">「报告编制4小时→20分钟，数据差错归零」— 食品检测技术负责人用Hermes自动化检测报告全流程</div>
+        <div class="case-subtitle">5台仪器数据手动抄录易出错→Hermes文件解析CSV+AI核验标签+自动日报</div>
+        <div class="tags">
+          <span class="tag industry">检验检测</span>
+          <span class="tag role">实验室技术负责人</span>
+          <span class="tag">自动化报告</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>日均200+食品样本，检测数据来自5台不同品牌仪器（色谱/光谱/质谱），手动抄录耗时4小时，跨仪器数据比对靠肉眼逐行核对，曾因小数点错位导致整批复检。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file 批量解析各仪器导出CSV并自动填入报告模板、校验数据合理性，vision 识别样本标签照片防混淆，cronjob 每晚自动生成当日检测汇总并推送异常预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：仪器数据自动入库</strong><br><code>上传当日各仪器导出CSV（HPLC/GC-MS/ICP-MS/UV-Vis/ELISA），file自动提取检测值并匹配样本编号填入报告模板，检出限/回收率/RSD超标自动标红</code></p>
+            <p><strong>Step 2：样本标签AI核验</strong><br><code>vision识别样本前处理照片中的标签编号与交接单交叉比对，标红编号不一致或缺失样本，防止"张冠李戴"</code></p>
+            <p><strong>Step 3：每日检测日报自动汇总</strong><br><code>每晚cron自动汇总当日检测完成率/不合格项/仪器运行状态，生成日报推送技术负责人，标注需复检样本和仪器维护提醒</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>报告编制从4小时→20分钟，数据录入差错归零，样本混淆事故从每季度2-3次→0次。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏘️</div>
+        <div class="case-title">「紧急响应8分钟→90秒，月报自动生成」— 物业经理用Hermes实现2000+户智慧社区管理</div>
+        <div class="case-subtitle">工单碎片化响应延迟→Hermes IoT监控+智能派单+自动月报</div>
+        <div class="tags">
+          <span class="tag industry">智慧物业</span>
+          <span class="tag role">物业经理</span>
+          <span class="tag">IoT巡检</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>管理12栋楼2000+户，工程报修/保洁巡检/安保巡更/业主投诉散落在微信/电话/纸质工单中，每月手动汇总服务数据耗时3天，电梯困人等紧急事件响应常延迟5-10分钟。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob 定时抓取 IoT 设备状态，messaging 秒级推送紧急告警，file 自动归类工单并生成月度服务报告，vision 分析巡更照片识别异常事件。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：IoT告警秒级推送</strong><br><code>cron每2分钟抓取电梯/消防/供水IoT传感器状态，困人/火警/水管爆裂自动通过messaging推送保安手机并附带预案（最近安全出口/阀门位置/维保电话）</code></p>
+            <p><strong>Step 2：vision自动生成维修工单</strong><br><code>vision分析保安巡更打卡照片和保洁巡检拍照，识别垃圾桶溢出/路灯损坏/消防通道堵塞等异常并自动生成维修工单</code></p>
+            <p><strong>Step 3：月度服务报告一键输出</strong><br><code>每月1日自动汇总工单完成率/投诉响应时长/设备故障率/物业费收缴率，生成物业服务月报并对比上月趋势，标注恶化指标和改进建议</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>紧急事件响应从平均8分钟→90秒，月度报告从3天→自动生成，业主投诉响应超时率下降70%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 43 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
