@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">43</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">44</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>112</strong> 个案例</span>
+    <span>📋 累计 <strong>114</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">71</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -6373,6 +6373,84 @@
   </div>
 </div>
 <!-- END Day 43 -->
+
+<!-- 📅 2026-07-22 (Day 44) -->
+<div class="day-section" id="day-44">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 44</h2>
+    <span class="date-badge">2026.07.22</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎵</div>
+        <div class="case-title">「首周播放量提升60%」— 独立音乐人用AI一站式多平台发行</div>
+        <div class="case-subtitle">4平台手动管理耗时3天→Hermes半天完成差异化发行+自动化周报</div>
+        <div class="tags">
+          <span class="tag industry">音乐</span>
+          <span class="tag role">独立音乐人</span>
+          <span class="tag">多平台发行</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>同步管理Spotify/网易云/QQ音乐/抖音4个平台的新歌发行，需手动撰写4套差异化宣发文案、逐平台登录后台抄数据做周报，单曲上线耗时3天。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes web自动抓取各平台后台数据统一看板，file批量生成多平台差异化文案，cronjob每周推送播放趋势与版税预估，delegate_task一键分发物料。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：歌曲定位与受众分析</strong><br><code>上传新歌音频+封面到项目文件夹，web搜索同类歌曲在4平台评论区高频词和热门标签，生成"歌曲定位卡"——推荐投放歌单、对标艺人、核心受众画像</code></p>
+            <p><strong>Step 2：多平台差异化文案生成</strong><br><code>按平台调性生成差异化文案——Spotify走英文vibe风（"for late-night drives"）、网易云走情感共鸣风（歌词金句+故事感）、抖音走15秒hook挑战话题风</code></p>
+            <p><strong>Step 3：自动化发行周报</strong><br><code>cron每周一抓取4平台播放/收藏/分享/歌单收录数据，汇总为"发行周报"——分平台趋势曲线、歌单表现排行、版税预估，标注增长异常并建议加投歌单或做remix</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单曲发行从3天→半天完成全平台上线，周报从手动登录4后台2小时→自动推送，首周播放量因多平台差异化文案提升约60%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚗</div>
+        <div class="case-title">「充电站在线率99%」— 运营经理用AI秒级故障派单与动态调价</div>
+        <div class="case-subtitle">故障滞后30分钟靠投诉发现→Hermes 5分钟自动派单+竞品监控智能调价</div>
+        <div class="tags">
+          <span class="tag industry">新能源汽车</span>
+          <span class="tag role">充电站运营经理</span>
+          <span class="tag">设备监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>30+充电站设备状态/使用率/故障工单分散在3个品牌后台无统一看板，故障常滞后30分钟由用户投诉发现，月度运营报告手动整理3天。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每5分钟抓取多品牌充电桩API统一监控，异常通过messaging秒级派单，web监控竞品电价做动态调价，file自动生成月度运营报告。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：充电站实时监控与自动派单</strong><br><code>cron每5分钟抓取30+站设备状态（在线/功率/温度/故障码），离线或功率异常自动标红区分"通信中断"和"硬件故障"，messaging推送最近运维人员手机附带维修手册页号</code></p>
+            <p><strong>Step 2：竞品电价动态调价</strong><br><code>web每周抓取周边3km竞品充电站电价，结合本站时段利用率——峰值利用率>80%建议涨0.1元/度，低谷<20%推出"夜间特惠"并通过messaging推送用户App通知</code></p>
+            <p><strong>Step 3：自动化月度运营报告</strong><br><code>每月1日汇总充电量/收入/故障率/运维成本，file生成运营月报——各站健康评分排名、ROI分析、扩建/淘汰建议，对比上月和去年同期趋势</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>故障响应从30分钟→5分钟自动派单，充电站在线率从94%→99%，低谷利用率提升35%，月报从手动3天→自动生成15分钟。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 44 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
