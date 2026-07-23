@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">44</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">45</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>114</strong> 个案例</span>
+    <span>📋 累计 <strong>116</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">71</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -6451,6 +6451,86 @@
   </div>
 </div>
 <!-- END Day 44 -->
+
+<!-- 📅 2026-07-23 (Day 45) -->
+<div class="day-section" id="day-45">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 45</h2>
+    <span class="date-badge">2026.07.23</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「版本查找提速240倍」— 影视后期制作统筹用Hermes管理网剧500+素材片段</div>
+        <div class="case-subtitle">版本文件散落三方硬盘→file自动归档标注差异+vision粗剪+cron进度监控</div>
+        <div class="tags">
+          <span class="tag industry">影视传媒</span>
+          <span class="tag role">影视后期制作统筹</span>
+          <span class="tag">后期制作</span>
+          <span class="tag">版本管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>网剧后期涉及500+条剪辑片段、100+个特效镜头、40+版调色方案，版本文件散落在剪辑师/特效师/调色师各自硬盘里，导演一句"找前天那版加了转场特效的"常翻找20分钟。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file自动按日期-镜头号-版本-作者归档素材并标注版本差异，vision识别人物场景自动粗剪，cronjob每日生成后期进度看板，messaging推送导演审核节点。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：素材自动归档与版本比对</strong><br><code>上传各工种当日交付素材（剪辑XML/调色LUT/特效MP4），file自动归入项目文件夹并对比上一版差异标注——调色偏移/镜头替换/新增特效一目了然</code></p>
+            <p><strong>Step 2：vision智能粗剪</strong><br><code>vision扫描原始素材识别人物/场景/对话段，按场次自动粗剪并匹配同期声，输出"粗剪时间线"供剪辑师精修，跳过手动打标记的繁琐流程</code></p>
+            <p><strong>Step 3：cronjob每日进度看板</strong><br><code>每晚cron扫描项目完成率——剪辑/调色/特效/混音各环节百分比——推送制片群，标红滞后项及阻塞原因（如"第12场A特效等外包交付，预计延3天"）</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>版本查找从20分钟→5秒定位，粗剪提速50%，后期交付从12周→8周，超期罚款归零。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚚</div>
+        <div class="case-title">「生鲜报废率降70%」— 冷链物流调度经理用Hermes实时监控50+车辆温控</div>
+        <div class="case-subtitle">温控/GPS/签收三方人工校验→cron IoT实时监控+messaging秒级告警+vision交叉校验</div>
+        <div class="tags">
+          <span class="tag industry">物流</span>
+          <span class="tag role">冷链物流调度经理</span>
+          <span class="tag">冷链监控</span>
+          <span class="tag">智能调度</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每日配送200+家超市/餐厅，温控数据、GPS轨迹、客户签收单三方校验全靠人工，一次温度超标未发现致整车生鲜报废损失8万元。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每5分钟抓取车载IoT温湿度+GPS自动比对配送路线和温控标准，异常通过messaging秒级推送，vision识别电子签收单交叉校验，file每晚生成在途运力看板。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：cronjob IoT实时监控与告警</strong><br><code>cron每5分钟抓取50辆车载IoT（温度/湿度/GPS/车门开关），温度超标>2°C或偏离路线>500m自动通过messaging推送调度员手机并记录异常时段</code></p>
+            <p><strong>Step 2：vision签收单交叉校验</strong><br><code>vision识别客户电子签收单照片，提取签收时间/数量/备注，与GPS到达时间交叉校验——签收早于到站自动预警"疑似代签"并通知跟单员回访</code></p>
+            <p><strong>Step 3：file每日冷链日报生成</strong><br><code>每晚汇总当日配送完成率/温度合格率/在途异常/油耗，生成"冷链日报"——标红温控风险车辆、标注客户投诉需跟进项、按路线效率排名</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>温度异常从30分钟→实时告警，生鲜报废率降70%，配送准时率82%→96%，月均省货损约6万元。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 45 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
