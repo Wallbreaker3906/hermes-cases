@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">47</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">48</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>120</strong> 个案例</span>
+    <span>📋 累计 <strong>122</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">72</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">74</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -6689,6 +6689,86 @@
   </div>
 </div>
 <!-- END Day 47 -->
+
+<!-- 📅 2026-07-26 (Day 48) -->
+<div class="day-section" id="day-48">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 48</h2>
+    <span class="date-badge">2026.07.26</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👗</div>
+        <div class="case-title">「版单30分钟→3分钟，返工从3.4次→1.2次」— 独立设计师用AI视觉识别设计稿自动生成标准版单</div>
+        <div class="case-subtitle">版单参数传递误差致每款反复打版3-4次→Hermes vision提取设计参数+自动生成版单，cronjob追踪打版进度防超期</div>
+        <div class="tags">
+          <span class="tag industry">纺织服装</span>
+          <span class="tag role">独立设计师</span>
+          <span class="tag">设计稿→版单</span>
+          <span class="tag">供应链协同</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每季新款开发涉及50+款设计稿、100+种面辅料，设计稿→打版→采购三方协作全靠微信和Excel，版单参数传递误差导致每款反复修改3-4次。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes vision识别设计稿自动提取款式参数生成版单，file管理面料库与供应商报价比价，cronjob追踪打版进度与采购节点，messaging推送关键里程碑预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：设计稿→标准版单自动生成</strong><br><code>上传50款新款设计稿手绘扫描件，vision自动提取领型/袖型/廓形/工艺细节，对照"面料库.xlsx"推荐适配面料并生成标准版单——含各部位尺寸规格表和工艺说明</code></p>
+            <p><strong>Step 2：打版进度自动追踪与超期预警</strong><br><code>cronjob每日扫描版单状态——已发版房/一次样/二次样/确认样，超72小时未更新自动通过messaging推送设计师："第3款一次样已超期，建议联系张师傅确认"</code></p>
+            <p><strong>Step 3：面辅料采购清单自动生成与比价</strong><br><code>根据确认版单自动汇总面辅料用量——按S/M/L码×预估首批产量计算采购量，file生成采购清单并按供应商报价排序——标注最低报价和最快交期选项</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>版单制作从每款30分钟→3分钟，打版返工从平均3.4次→1.2次，面料采购成本因比价透明降低约8%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌍</div>
+        <div class="case-title">「日报2小时→3分钟，超标10分钟内告警」— 监测站用AI统一汇聚5套设备数据并智能溯源</div>
+        <div class="case-subtitle">5套异构设备数据手动融合耗时2小时→Hermes cronjob统一汇聚对标国标，web气象数据辅助污染溯源</div>
+        <div class="tags">
+          <span class="tag industry">环保</span>
+          <span class="tag role">技术负责人</span>
+          <span class="tag">环境监测</span>
+          <span class="tag">数据融合</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>管理15个监测点空气质量/水质/噪声数据，5套不同厂家设备数据格式不统一，手动汇总日均报告需2小时，超标预警滞后2-3小时。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每10分钟抓取多品牌设备数据统一汇聚对标国标阈值，异常秒级messaging推送，file自动生成环评日报与月报，web拉取气象数据辅助污染溯源。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：多品牌设备数据统一汇聚与超标告警</strong><br><code>cron每10分钟抓取15个监测点5套设备数据（PM2.5/PM10/O₃/COD/氨氮/噪声），统一汇聚并对标GB 3095/3838标准——超标参数自动标红并通过messaging推送站长手机</code></p>
+            <p><strong>Step 2：气象数据辅助污染溯源</strong><br><code>web每小时拉取气象局风向风速数据，结合监测点超标参数和地理分布，自动标注可能污染来源方向与疑似贡献源——辅助执法人员快速锁定排查区域</code></p>
+            <p><strong>Step 3：环境质量日报自动生成与推送</strong><br><code>每日UTC 08:00自动汇总前24小时各监测点AQI/水质等级/噪声均值，file生成"环境质量日报"——含超标项统计/同比环比趋势/建议关注点，delegate_task推送环保局工作群</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>日报从手动2小时→自动3分钟出报，超标响应从2-3小时→10分钟内告警，污染溯源效率提升60%，季度环评报告自动汇总零人工。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 48 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
