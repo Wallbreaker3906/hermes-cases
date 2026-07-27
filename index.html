@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">48</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">49</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>122</strong> 个案例</span>
+    <span>📋 累计 <strong>124</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">74</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">75</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -6769,6 +6769,84 @@
   </div>
 </div>
 <!-- END Day 48 -->
+
+<!-- 📅 2026-07-27 (Day 49) -->
+<div class="day-section" id="day-49">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 49</h2>
+    <span class="date-badge">2026.07.27</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📖</div>
+        <div class="case-title">「节点遗漏归零，年出书量+50%」— 出版社策划编辑用AI管理12本书稿全流程</div>
+        <div class="case-subtitle">版本管理混乱→Hermes自动归档+进度甘特图</div>
+        <div class="tags">
+          <span class="tag industry">图书出版</span>
+          <span class="tag role">策划编辑</span>
+          <span class="tag">出版流程</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>12本书稿的作者稿件/校对返修/排版文件散落在邮箱+微信+网盘，每本书从交稿到付印30+个节点全靠大脑记，曾因漏跟排版deadline延误新书首发。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file 自动按书名+版本号归档稿件并标修改差异，cronjob 每日扫描编校/排版/审读节点生成进度甘特图，messaging 推送逾期预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：书稿版本管理</strong><br><code>上传12本书稿文件夹（作者原稿/编辑批注版/校对版/排版稿），file自动归档并对比版本差异——新增/删改段落高亮标注，避免混淆旧版</code></p>
+            <p><strong>Step 2：编校进度追踪</strong><br><code>cronjob每日扫描各书稿状态（一审→二审→排版→校对→蓝纸确认），任一环节超7天未推进则通过messaging推送编辑："《XX》排版超期5天，建议催排版部"</code></p>
+            <p><strong>Step 3：付印节点倒推</strong><br><code>确认付印日期后自动倒推各节点deadline并生成甘特图，标红已延误节点并实时估算对最终上市日期的累积影响天数</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>版本查找从翻文件夹10分钟→文件名搜索3秒，节点遗漏从月均4次→归零，年策划出书量从12本→18本。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏃</div>
+        <div class="case-title">「补给断档归零，赛后报告2小时出」— 赛事运营总监用AI调度5000人马拉松</div>
+        <div class="case-subtitle">信息碎片化+对讲机调度→Hermes实时监控+分群秒推指令</div>
+        <div class="tags">
+          <span class="tag industry">体育赛事</span>
+          <span class="tag role">赛事运营总监</span>
+          <span class="tag">大型赛事调度</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>5000+跑者报名数据、50个补给站物资、200+志愿者排班、医疗/安保/交通协调信息散落在10+个Excel和微信群里，赛事当天调度全靠对讲机，补给断档和医疗响应延迟时有发生。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file 统一管理报名数据与物资分配表，cronjob 实时抓取赛道计时点数据更新各点位状态，messaging 分群秒推调度指令，vision 分析赛道监控识别拥堵和伤员。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：报名数据与物资准备</strong><br><code>上传报名系统CSV（姓名/号码布/尺码/紧急联系人），file自动按配速分组生成起跑分区表，一键输出物资包清单——每个号码布对应的T恤尺码+芯片+补给品</code></p>
+            <p><strong>Step 2：赛事实时调度</strong><br><code>赛事当天cron每5分钟抓取各计时点通过人数和补给站消耗量，messaging分群推送——医疗组"15km处密度超标注意中暑"、补给组"25km水杯余量&lt;30%速补"</code></p>
+            <p><strong>Step 3：赛后智能复盘</strong><br><code>赛后自动汇总计时数据+赛道照片+医疗记录，file生成赛事总结报告——完赛率/分龄段排名/医疗统计/补给消耗/赛道拥堵热力图，赛后2小时出报告</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>赛前筹备从2个月→6周，补给断档归零，医疗响应从平均4分钟→即时定位，赛后报告从手动3天→自动2小时。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 49 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
