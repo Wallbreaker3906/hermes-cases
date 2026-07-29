@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">50</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">51</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>126</strong> 个案例</span>
+    <span>📋 累计 <strong>128</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">77</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">79</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -6925,6 +6925,84 @@
   </div>
 </div>
 <!-- END Day 50 -->
+
+<!-- 📅 2026-07-29 (Day 51) -->
+<div class="day-section" id="day-51">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 51</h2>
+    <span class="date-badge">2026.07.29</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔬</div>
+        <div class="case-title">「发补响应从15天缩至5天，审评一次通过率85%」— 注册专员用Hermes实时追踪法规+自动催办跨部门补正</div>
+        <div class="case-subtitle">100+份技术文档散落各部门催办难→web扫法规+cron催补正+file管文档版本</div>
+        <div class="tags">
+          <span class="tag industry">医疗器械</span>
+          <span class="tag role">NMPA注册专员</span>
+          <span class="tag">法规追踪</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每款产品注册需编制100+份技术文档，法规标准不定期更新，跨部门收集数据全靠邮件催办，一次资料缺失导致发补延误3个月。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes web 每日扫描NMPA/CMDE法规更新推送变更摘要，file 按产品线管理文档版本与关联引用，cronjob 追踪各部门资料提交deadline，messaging 逾期自动催办+发送补正预警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：每日法规扫描与影响分析</strong><br><code>cron每日8:00抓取NMPA公告/CMDE指导原则/标准更新，用diff对比上一版本标注新增/修订条款并生成变更影响分析——标记是否需要修订已提交文档</code></p>
+            <p><strong>Step 2：文档归档与交叉校验</strong><br><code>file以产品注册号为索引归档全部文档（技术要求/检测报告/临床评价/说明书标签），自动交叉校验引用一致性和页码连续，缺失项标注红色待补</code></p>
+            <p><strong>Step 3：发补倒计时自动催办</strong><br><code>设定发补倒计时后cronjob每日扫描各部门补正资料提交状态——超24小时未响应通过messaging推送对应部门负责人并抄送项目经理</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>发补响应周期从平均15天→5天，文档一致性校验零遗漏，一次性通过技术审评率从60%→85%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🤖</div>
+        <div class="case-title">「换线45分钟→12分钟，一次直通率从91%→96.5%」— 生产主管用Hermes秒级监控产线参数+AI判AOI缺陷</div>
+        <div class="case-subtitle">200+传感器数据人工巡检滞后→cron秒级监控+file换线参数库+vision AOI判缺</div>
+        <div class="tags">
+          <span class="tag industry">智能制造</span>
+          <span class="tag role">SMT产线主管</span>
+          <span class="tag">产线监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>3条产线200+传感器数据分散在PLC/SCADA/MES三套系统，设备异常靠人工巡检每2小时一轮，等发现停机时已损失半批次产品，换线调试依赖老师傅经验耗时45分钟。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cron 每5分钟抓取产线PLC温度/速度/震动数据对标工艺窗口，偏差>阈值即时 messaging 告警，file 管理换线工艺参数库一键下发，vision 识别AOI检测图片自动判定虚焊/桥接缺陷。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：产线参数秒级异常监控</strong><br><code>cron每5分钟抓取回流焊温区/贴片速度/锡膏余量等关键参数，对标工艺窗口±5%阈值——超限秒级messaging推送设备编号+偏离值+建议复位参数，避免批量不良</code></p>
+            <p><strong>Step 2：换线工艺参数一键下发</strong><br><code>换线时输入新产品料号，file匹配历史最优工艺参数（刮刀压力/贴装高度/回流曲线）并一键下发到设备，新人也能完成标准换线，不再依赖老师傅口传</code></p>
+            <p><strong>Step 3：AOI缺陷AI判定与根因定位</strong><br><code>AOI检测图片批量上传，vision识别焊点形态——标红虚焊/桥接/少锡缺陷并关联对应贴片机吸嘴编号，生成缺陷Pareto图定位TOP3根因</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>非计划停机从月均8次→2次，换线耗时从45分钟→12分钟，一次直通率从91%→96.5%，月产能提升约15%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 51 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
