@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">52</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">53</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>130</strong> 个案例</span>
+    <span>📋 累计 <strong>132</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">79</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">81</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -7081,6 +7081,84 @@
   </div>
 </div>
 <!-- END Day 52 -->
+
+<!-- 📅 2026-07-31 (Day 53) -->
+<div class="day-section" id="day-53">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 53</h2>
+    <span class="date-badge">2026.07.31</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📡</div>
+        <div class="case-title">「告警秒定+挖断归零」— 运维工程师用AI自动定位故障根因与风险预判</div>
+        <div class="case-subtitle">故障定位40分钟→8分钟秒定根因，光缆挖断从月均3次→0次</div>
+        <div class="tags">
+          <span class="tag industry">电信</span>
+          <span class="tag role">运维工程师</span>
+          <span class="tag">智能运维</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>200+基站告警、光缆割接工单、用户投诉分散在华为/中兴/烽火3套网管系统和微信群中，故障定位靠人工逐跳排查平均耗时40分钟，一次光缆中断导致3000+用户断网2小时被投诉到工信部。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes cronjob每5分钟抓取多品牌网管告警聚合去重并关联拓扑图自动定位根因，messaging秒推断站/断缆告警至运维班组手机，web拉取市政施工公告和气象数据辅助预判外部风险。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：多品牌告警聚合与根因定位</strong><br><code>cron每5分钟抓取华为/中兴/烽火网管告警流，按基站ID+告警类型去重聚合，关联光缆拓扑图自动推断故障根因——区分"设备板卡故障"和"上游光缆中断导致连锁告警"，messaging推送精确故障点GPS坐标和影响用户数</code></p>
+            <p><strong>Step 2：外部风险智能预判</strong><br><code>web每日抓取市政道路施工公告和气象局雷暴/大风预警，与光缆路由GIS地图叠加分析——标注未来72小时施工路段与光缆交叉点，生成"外部风险热力图"并推送巡检班组提前加固</code></p>
+            <p><strong>Step 3：网络运行日报自动生成</strong><br><code>每晚自动汇总当日断站次数/平均修复时长/用户投诉量/割接完成率，file生成"网络运行日报"——标红超时故障、环比恶化指标、TOP3重复故障站点，推送运维经理</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>故障MTTR从40分钟→8分钟自动定位，断网用户投诉率下降60%，外部施工挖断光缆事故从月均3次→0次。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔥</div>
+        <div class="case-title">「巡检秒报+隐患当日告警」— 安全主管用AI自动分析巡检数据与施工风险</div>
+        <div class="case-subtitle">日报2小时→3分钟自动生成，泄漏隐患从月滞后→当日告警</div>
+        <div class="tags">
+          <span class="tag industry">城市燃气</span>
+          <span class="tag role">安全巡检主管</span>
+          <span class="tag">管网安全</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>500公里管线巡检数据（阴极保护电位/泄漏检测/第三方施工监控/防腐层检测）散落在巡检仪导出文件和纸质记录表中，日报手动整理2小时，管道腐蚀泄漏隐患常在月度汇总时才发现，已错过最佳抢修窗口。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file批量解析巡检仪CSV自动对标国标安全阈值标红异常，vision分析施工区域现场照片自动评估风险等级，cronjob每日生成管网安全日报并通过messaging秒推泄漏告警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：巡检数据自动解析与隐患排序</strong><br><code>每日上传巡检仪导出CSV和防腐层检测数据，file自动解析阴极保护电位/土壤电阻率/管道壁厚并对照GB 50028安全阈值——电位不达标或壁厚减薄>15%自动标红，生成"隐患清单"按紧急度排序</code></p>
+            <p><strong>Step 2：施工风险智能识别</strong><br><code>巡检员拍摄第三方施工区域照片上传，vision识别施工机械类型（挖掘机/顶管机/钻机）和距管线距离，自动评估风险等级——机械在管线5米内标红并messaging推送现场巡检员和抢修队</code></p>
+            <p><strong>Step 3：管网安全日报自动推送</strong><br><code>每日UTC 06:00 cron汇总全线巡检完成率/隐患分布/泄漏检测结果/第三方施工监控状态，file生成"管网安全日报"——含隐患热力图、抢修工单状态、明日重点巡检区段推送至安全总监</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>日报从手动2小时→自动3分钟，管道泄漏隐患发现从月均滞后29天→当日告警，第三方施工破坏事故归零，年节省抢修成本约40万元。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 53 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
