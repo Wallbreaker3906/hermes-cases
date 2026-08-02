@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">54</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">55</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>134</strong> 个案例</span>
+    <span>📋 累计 <strong>136</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">82</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">83</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -7237,6 +7237,85 @@
   </div>
 </div>
 <!-- END Day 54 -->
+
+<!-- 📅 2026-08-02 (Day 55) -->
+<div class="day-section" id="day-55">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 55</h2>
+    <span class="date-badge">2026.08.02</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「素材秒级定位」— 纪录片导演用AI管理500小时拍摄素材</div>
+        <div class="case-subtitle">海量素材管理混乱拖长周期→Hermes自动标签索引+进度看板</div>
+        <div class="tags">
+          <span class="tag industry">影视制作</span>
+          <span class="tag role">纪录片导演</span>
+          <span class="tag">素材管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>拍摄素材500+小时4K视频散落在6块硬盘，场记手写笔记和采访录音文本分离管理，剪辑师找一个特定镜头平均翻20分钟，后期制作周期因素材管理混乱拖长2个月。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes vision分析视频关键帧自动打标签索引，file管理场记/采访文本/版权协议统一归档，cronjob每周生成后期进度看板，messaging推送剪辑节点提醒。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：素材自动标签索引</strong><br><code>上传每日拍摄素材和场记PDF，vision自动识别场景类型/出场人物/对话密度/光线条件并生成可搜索标签索引——输入"夕阳逆光下的老人特写"秒级定位对应素材</code></p>
+            <p><strong>Step 2：字幕自动校对输出</strong><br><code>采访录音转文字后file归档并与对应视频时间码关联，web自动校对字幕——标注口误和前后文不一致处，一键输出SRT字幕文件</code></p>
+            <p><strong>Step 3：后期进度自动看板</strong><br><code>cron每周汇总粗剪完成率/素材利用率/待补拍清单/预算消耗，生成后期进度看板——标红延期风险并通过messaging推送制片人和投资方</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>素材检索从平均20分钟→10秒定位，后期制作周期缩短45%，字幕校对从人工3天→30分钟。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📚</div>
+        <div class="case-title">「统稿时间压缩90%」— 图书编辑用AI管理8位作者稿件</div>
+        <div class="case-subtitle">多作者版本混乱延误出版→Hermes自动diff+出版甘特图</div>
+        <div class="tags">
+          <span class="tag industry">图书出版</span>
+          <span class="tag role">图书策划编辑</span>
+          <span class="tag">出版流程</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>8位作者稿件版本批注散落Word/微信/邮件，一本书从初稿到定稿平均往返12稿，每次统稿手动逐章比对新旧版本耗时3小时，关键出版节点靠脑子记忆常漏掉送审deadline。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes file管理稿件版本自动diff标注变更，web抓取同类书销售数据和读者评论辅助选题决策，cronjob追踪各书编校/排版/印刷节点生成甘特图并逾期告警。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：稿件版本自动diff</strong><br><code>上传作者最新稿件，file自动diff对比上一版标注增删改——新增段落标绿/删减段落标红/数据修改标黄——生成"变更摘要"推送给编辑和作者，避免重复审读</code></p>
+            <p><strong>Step 2：竞品数据分析报告</strong><br><code>web抓取同类竞品书的豆瓣评分/读者评论痛点/当当京东销量趋势，自动生成"选题竞争力报告"——含市场缺口分析、差异化建议、预估首印量参考</code></p>
+            <p><strong>Step 3：出版甘特图自动追踪</strong><br><code>cron每周追踪8本书的三审三校/申请书号/排版/印刷/入库节点，生成出版甘特图——标红逾期环节并通过messaging推送责任编辑和印制部</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>统稿时间从3小时→20分钟，出版延期从年均4本→0本延迟，选题过会通过率从40%→65%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 55 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
