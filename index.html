@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">60</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">61</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>146</strong> 个案例</span>
+    <span>📋 累计 <strong>148</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">88</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">89</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -7711,6 +7711,84 @@
   </div>
 </div>
 <!-- END Day 60 -->
+
+<!-- 📅 2026-08-08 (Day 61) -->
+<div class="day-section" id="day-61">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 61</h2>
+    <span class="date-badge">2026.08.08</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📈</div>
+        <div class="case-title">「策略迭代速度提升3倍」— 独立量化投资者用Hermes实现多源数据监控与自动交易复盘</div>
+        <div class="case-subtitle">同时盯20+数据源→Hermes定时抓取+阈值告警+Telegram晨报推送</div>
+        <div class="tags">
+          <span class="tag industry">金融投资</span>
+          <span class="tag role">量化投资者</span>
+          <span class="tag">多源数据</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>同时盯20+数据源（股票/加密货币/宏观指标/新闻情绪），关键信号常淹没在噪音里；工作日白天开会错过最佳交易窗口，深夜手动复盘到凌晨——上个月因为漏看一条美联储讲话导致期权持仓单日回撤12%。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes每日定时抓取多源数据生成晨报推送到Telegram，关键指标触发阈值自动告警，交易日志自动归档形成可回溯的策略迭代记录。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：定时晨报生成</strong><br><code>每天早上7:30自动抓取Bloomberg/Reuters头条、CoinGecko市值前50波动、美股期货和VIX指数，对比我的持仓清单，生成300字晨报推送到Telegram</code></p>
+            <p><strong>Step 2：波动阈值告警</strong><br><code>每小时扫描BTC/ETH/SOL价格和美股主要指数，当任一标的1小时波动超2%或24小时波动超8%时，自动搜索相关新闻和链上数据异动，生成"波动简报"</code></p>
+            <p><strong>Step 3：交易日志自动归档</strong><br><code>每天收盘后读取当日所有成交记录，按策略分类汇总盈亏、胜率、最大回撤，自动写入Obsidian交易日志——包含每笔交易的入场理由回顾和反思提示</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>晨报从手动刷40分钟→自动推送5分钟读完，关键信号零遗漏；波动预警让一次ETH闪崩前提前15分钟收到告警成功止损约$3,200；交易复盘从"想做但没时间"变成每日自动归档，策略迭代速度提升3倍。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎓</div>
+        <div class="case-title">「月收入从¥1.8万到¥3.5万」— AI知识博主用Hermes实现选题→答疑→课程流水线自动化</div>
+        <div class="case-subtitle">每周8-10小时找灵感→Hermes自动抓取热点生成选题简报+社群问答分类</div>
+        <div class="tags">
+          <span class="tag industry">教育培训</span>
+          <span class="tag role">课程创作者</span>
+          <span class="tag">AI知识付费</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每周产出一门新课+3条短视频+2篇公众号，选题靠手动刷Twitter/GitHub/Product Hunt/论文——信息源分散导致每周花8-10小时"找灵感"；学员社群3000+人每天上百条提问，回复不及时导致完课率和口碑下滑；课程大纲和逐字稿从零写起每周耗时20+小时。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes每日自动抓取AI领域热点生成选题简报，学员常见问题自动分类+生成回复草稿，课程内容从研究→大纲→逐字稿流水线化产出。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：每周选题调研</strong><br><code>每周一早上7:00自动搜索过去7天GitHub trending AI项目、HuggingFace新模型、Product Hunt AI品类Top10、ArXiv热门论文、Twitter AI KOL高频讨论话题——按"能做成视频教程的实操性"评分1-10，输出本周Top5选题</code></p>
+            <p><strong>Step 2：社群问答分类应答</strong><br><code>抓取学员社群（3个微信群+Discord）本周所有提问，按主题分类——环境配置/代码报错/概念理解/项目实战/职业规划——每类生成标准回复模板，标注需亲自回答的复杂问题</code></p>
+            <p><strong>Step 3：课程内容流水线生成</strong><br><code>根据本周选定选题，自动搜索全网同类课程大纲做竞品拆解，生成课程大纲（6章×3节）+每节Learning Objective，为每节写500字逐字稿初稿，配套GitHub仓库README和代码注释框架</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>选题时间从每周8-10小时→1小时（看简报+做决策），课程产出速度从1门/周→2门/周；学员社群响应从"有空再回"→30分钟内回复，完课率从47%→71%；月收入从¥1.8万→¥3.5万（课程销量+社群续费率双增长）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 61 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
