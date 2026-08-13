@@ -266,10 +266,10 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">65</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">66</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>156</strong> 个案例</span>
+    <span>📋 累计 <strong>158</strong> 个案例</span>
     <span class="stat-btn-wrap">
       <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">93</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
@@ -8105,6 +8105,84 @@
   </div>
 </div>
 <!-- END Day 65 -->
+
+<!-- 📅 2026-08-13 (Day 66) -->
+<div class="day-section" id="day-66">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 66</h2>
+    <span class="date-badge">2026.08.13</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔐</div>
+        <div class="case-title">「高危CVE当天响应，告警一条分级日报」— 安全运营工程师用Hermes自动巡检分级告警</div>
+        <div class="case-subtitle">告警散落十几个后台、漏看即潜伏 → Hermes SSH拉日志+CVE情报自动分级推送Slack</div>
+        <div class="tags">
+          <span class="tag industry">网络安全</span>
+          <span class="tag role">安全运营工程师</span>
+          <span class="tag">安全巡检</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>WAF/IDS/EDR/云审计多套系统的告警分散在十几个后台，工程师每天手动翻日志，漏看一条异常登录就可能让入侵在内部网络潜伏数天。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 定时巡检各系统日志与漏洞情报，用 terminal/SSH 拉日志、web 抓 CVE 公告，异常自动分级汇总并推送 Slack，工程师只做研判与处置。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：定时拉取日志分级日报</strong><br><code>每小时通过 SSH 拉取 WAF、IDS、EDR 和云审计日志，按规则匹配暴力破解、异常登录、批量扫描、敏感文件访问等行为，生成按风险分级的安全日报推送到 Slack</code></p>
+            <p><strong>Step 2：每日CVE情报比对</strong><br><code>每天早上 7:00 抓取 NVD/CNVD 和厂商安全公告，对比公司资产清单（server/资产.xlsx），筛出影响在用组件的高危 CVE，附修复建议和紧急程度</code></p>
+            <p><strong>Step 3：高危告警应急响应初稿</strong><br><code>当检测到高危告警时自动关联上下文日志，生成含时间线、受影响资产、建议处置步骤的"应急响应初稿"推送值班群，等待人工确认后执行</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>告警排查从"翻 10+ 后台"→一条分级日报，高危 CVE 响应从平均 7 天→当天识别，入侵潜伏时间大幅缩短，工程师每天省约 3 小时日志排查。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「单条本地化从6小时→40分钟」— 本地化负责人用Hermes并行生成多语配音字幕</div>
+        <div class="case-subtitle">多工具手工倒腾产能卡壳 → Hermes vision+delegate_task并行多语+ffmpeg自动合成</div>
+        <div class="tags">
+          <span class="tag industry">影视传媒</span>
+          <span class="tag role">本地化负责人</span>
+          <span class="tag">多语本地化</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>中文短剧要出海到欧美和东南亚，配音、字幕、平台规格适配需在多个工具间手工倒腾，单条视频本地化耗时 6-8 小时，产能严重卡壳。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 vision 提取画面、转写台词并生成多语字幕与配音脚本，再用 delegate_task 并行处理各语种版本，terminal 调 ffmpeg 自动合成分发。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：视频转写生成翻译底稿</strong><br><code>读取待本地化视频（素材/0813 文件夹），转写中文台词并识别画面关键信息，生成带时间轴的翻译底稿</code></p>
+            <p><strong>Step 2：并行生成多语版本</strong><br><code>用 delegate_task 并行生成英语、西班牙语、印尼语三个版本的字幕和配音脚本，分别按当地习惯润色俚语和口型节奏</code></p>
+            <p><strong>Step 3：ffmpeg 自动合成上传</strong><br><code>调用 ffmpeg 将多语字幕烧录、合成配音并压制到目标平台规格，自动上传至对应平台草稿箱，附一份发布 checklist</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单条视频本地化从 6-8 小时→40 分钟，日产能从 2 条→8 条，多语版本同步上线，出海账号播放量与转化率翻倍。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 66 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
