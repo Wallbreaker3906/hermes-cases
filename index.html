@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">66</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">67</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>158</strong> 个案例</span>
+    <span>📋 累计 <strong>160</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">93</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">95</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8183,6 +8183,84 @@
   </div>
 </div>
 <!-- END Day 66 -->
+
+<!-- 📅 2026-08-14 (Day 67) -->
+<div class="day-section" id="day-67">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 67</h2>
+    <span class="date-badge">2026.08.14</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧾</div>
+        <div class="case-title">「报税提速 10 倍、漏报归零」— 代账会计用 AI 自动生成凭证与逾期预警</div>
+        <div class="case-subtitle">40 家客户票据手工录凭证常漏报 → Hermes 解析发票流水自动做账并按税务日历预警</div>
+        <div class="tags">
+          <span class="tag industry">财税服务</span>
+          <span class="tag role">代账会计</span>
+          <span class="tag">代理记账</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>40 家客户的发票、银行流水、工资表散落在邮件和微信里，每月 15 号报税期靠手工录凭证+逐一核对，常熬夜赶工还漏报。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 file 解析发票 PDF 和流水 Excel 自动生成凭证，web 抓取税务申报日历，cron 定时推送逾期预警，会计只做复核。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：发票批量转凭证</strong><br><code>读取"客户/8月发票"文件夹的 200 张发票 PDF，按客户归类并提取金额、税率、税额，自动生成记账凭证草稿</code></p>
+            <p><strong>Step 2：流水自动对账</strong><br><code>解析"客户/8月银行流水"各 Excel，与发票凭证自动对账，标出金额不符或缺失凭证的条目</code></p>
+            <p><strong>Step 3：税务逾期预警</strong><br><code>每天早 8 点抓取税务申报日历，对比各客户申报截止日，生成"3 天内到期"红色预警推送到企业微信</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>凭证录入从每月 40 小时→4 小时，漏报从月均 2 次归零，报税期不再熬夜，多承接 10 家客户。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💍</div>
+        <div class="case-title">「报价 30 分钟变 5 分钟」— 珠宝设计师用 AI 识别风格并自动算成本</div>
+        <div class="case-subtitle">需求碎片化、手动翻金价反复确认 → Hermes 识别参考图+抓金价自动报价归档</div>
+        <div class="tags">
+          <span class="tag industry">珠宝定制</span>
+          <span class="tag role">珠宝设计师</span>
+          <span class="tag">定制报价</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>客户需求靠微信聊天碎片化记录，报价要手动翻当日金价和供应商报价单，设计稿与客户来回确认十几次才定稿。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 vision 识别客户参考图提取风格要素，web 抓当日金价与宝石行情自动算成本报价，file 归档客户方案并推送进度。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：参考图识别风格</strong><br><code>读取客户发来的参考图，用视觉识别戒托材质、主石类型、镶嵌工艺，输出风格关键词和设计建议</code></p>
+            <p><strong>Step 2：自动报价算成本</strong><br><code>抓取今日金价和供应商宝石报价表，按客户预算自动生成 3 档材料方案与成本报价单</code></p>
+            <p><strong>Step 3：方案归档与进度推送</strong><br><code>把每位客户的需求、预算、修改记录归档为独立档案，生成订单进度看板并按节点自动推送提醒</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>报价从手动算 30 分钟→5 分钟，方案确认从十几版→2-3 版定稿，月接单量翻倍、客单价提升。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 67 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
