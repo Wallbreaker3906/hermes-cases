@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">70</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">71</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>166</strong> 个案例</span>
+    <span>📋 累计 <strong>168</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">97</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">98</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8497,6 +8497,86 @@
   </div>
 </div>
 <!-- END Day 70 -->
+
+<!-- 📅 2026-08-19 (Day 71) -->
+<div class="day-section" id="day-71">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 71</h2>
+    <span class="date-badge">2026.08.19</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👨‍💻</div>
+        <div class="case-title">「PR审查47分钟→11分钟」— 研发团队技术负责人用Hermes自动汇总issue/PR并跑测试出风险清单</div>
+        <div class="case-subtitle">大量PR与issue人工逐条审查易漏风险 → Hermes定时汇总读diff跑测试生成风险摘要，工程师只做最终把关</div>
+        <div class="tags">
+          <span class="tag industry">软件开发</span>
+          <span class="tag role">研发团队技术负责人</span>
+          <span class="tag">代码审查</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>大量 PR 与 issue 靠人工逐条审查，单个 PR 平均 47 分钟还常漏风险。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 定时汇总 issue/PR，读 diff 跑测试生成风险摘要与发布就绪清单，工程师只做最终把关（社区实测案例）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：每日自动汇总</strong><br><code>每天 9 点自动抓取新增 issue/PR，按紧急度分类生成摘要推送到团队频道</code></p>
+            <p><strong>Step 2：合并前自动审查</strong><br><code>合并前阅读 diff 并运行相关测试，输出风险点、性能隐患和发布检查清单</code></p>
+            <p><strong>Step 3：每周状态报告</strong><br><code>每周自动生成工程状态报告，记录阻塞项并归档到团队知识库</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>PR 审查从 47 分钟→11 分钟，发布风险提前暴露，周报零手工。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「选题调研2小时→自动出简报」— 科技视频博主把调研沉淀成skill每周一自动跑</div>
+        <div class="case-subtitle">每周选题靠手动刷多个平台耗时 → Hermes沉淀选题调研为skill，cron每周一自动输出Top3选题</div>
+        <div class="tags">
+          <span class="tag industry">内容创作</span>
+          <span class="tag role">科技类视频博主</span>
+          <span class="tag">内容选题</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每周选题靠手动刷多个平台，找选题加写脚本占掉大半创作时间。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 把选题调研沉淀为 skill，用 cron 每周一自动执行并输出 Top3 选题（社区真实用法：weekly cron + YouTube-video-research 技能）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：设定每周 cron</strong><br><code>设定每周一 9 点 cron：调研当前热门 AI 工具，返回最适合做教程视频的 Top 3 选题</code></p>
+            <p><strong>Step 2：沉淀为技能</strong><br><code>让 Hermes 把这次调研方法保存为"YouTube-video-research"技能，之后每周自动复用</code></p>
+            <p><strong>Step 3：生成大纲排期</strong><br><code>从简报选定选题后，生成脚本大纲、参考素材与发布排期</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>选题从手动刷 2 小时→每周一自动出简报，稳定周更不断更。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 71 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
