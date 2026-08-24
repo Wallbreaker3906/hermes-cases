@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">73</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">74</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>172</strong> 个案例</span>
+    <span>📋 累计 <strong>174</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">99</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">100</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8737,6 +8737,86 @@
   </div>
 </div>
 <!-- END Day 73 -->
+
+<!-- 📅 2026-08-24 (Day 74) -->
+<div class="day-section" id="day-74">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 74</h2>
+    <span class="date-badge">2026.08.24</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚗</div>
+        <div class="case-title">「一句话远程控车」— 新能源车主自建远程控车技能直连车辆API并cron监控充电</div>
+        <div class="case-subtitle">多个厂商App来回切换、冬天热车要跑车库 → 一句话控车+cron定时监控充电状态推Telegram</div>
+        <div class="tags">
+          <span class="tag industry">智能汽车</span>
+          <span class="tag role">新能源车主</span>
+          <span class="tag">智能控车</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>远程启动、查电量、看充电状态要打开多个厂商 App，冬天想提前热车总得手动操作。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 自建"远程控车"技能直连车辆 API，一句自然语言就能控车和监控充电（社区真实案例：@gwyntel）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：创建控车技能</strong><br><code>让 Hermes 创建一个"远程控车"技能，接入车辆 API（远程启动/锁车/查询电量与充电状态）</code></p>
+            <p><strong>Step 2：一句话执行控车</strong><br><code>对话里说"帮我远程启动车并把空调调到 24 度"，Hermes 执行后回读结果确认</code></p>
+            <p><strong>Step 3：cron监控充电</strong><br><code>设定 cron 定时检查 EV 充电状态，充满或异常时自动推送到 Telegram 提醒</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>告别多个 App 来回切换，一句话控车，充电进度实时掌握，冬天提前热车不再跑车库。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧬</div>
+        <div class="case-title">「多库检索一次出报告」— 药学研究者用drug-discovery技能完成AI辅助药物发现</div>
+        <div class="case-subtitle">ChEMBL/AlphaFold/OpenFDA逐站手动翻找 → 内置drug-discovery技能自动多库检索并输出分析报告</div>
+        <div class="tags">
+          <span class="tag industry">生物医药</span>
+          <span class="tag role">药物研发研究者</span>
+          <span class="tag">科研辅助</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>药物筛选要反复检索 ChEMBL、AlphaFold、OpenFDA 等数据库，化合物-靶点数据分散，手工整理极其耗时。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 内置 drug-discovery 技能（ChEMBL 活性检索+AlphaFold 蛋白结构+OpenFDA 不良反应+QSAR 工作流），自动完成多库检索与分析（社区真实案例：尼日利亚药学本科生）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：定义研究目标</strong><br><code>加载 drug-discovery 技能，定义研究目标（目标靶点/疾病）</code></p>
+            <p><strong>Step 2：自动多库检索</strong><br><code>让 Hermes 检索 ChEMBL 候选化合物活性、AlphaFold 蛋白结构并计算分子性质</code></p>
+            <p><strong>Step 3：汇总分析报告</strong><br><code>汇总生成含 Lipinski 规则评估、hERG 风险提示的候选药物分析报告</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>多数据库检索从逐站手动翻找→一次对话出报告，研究效率大幅提升、数据可追溯。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 74 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
