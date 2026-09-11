@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">74</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">75</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>174</strong> 个案例</span>
+    <span>📋 累计 <strong>176</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">100</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">102</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8817,6 +8817,86 @@
   </div>
 </div>
 <!-- END Day 74 -->
+
+<!-- 📅 2026-09-11 (Day 75) -->
+<div class="day-section" id="day-75">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 75</h2>
+    <span class="date-badge">2026.09.11</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚢</div>
+        <div class="case-title">「千种托书一键归档」— 货代操作主管用AI批量解析托书报关草单并每日盯船期</div>
+        <div class="case-subtitle">每票手工录15-20个字段、英文品名易录错 → file+terminal批量提取字段并定时抓船期预警延误</div>
+        <div class="tags">
+          <span class="tag industry">国际货运代理</span>
+          <span class="tag role">操作主管</span>
+          <span class="tag">单据识别</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>客户托书和报关草单版式上千种、中英混排还带手写批注，每票要手工录 15-20 个字段（约 3 分钟），英文品名或件重尺录错就影响订舱，300 票几乎占掉一个人整月的精力。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 file+terminal 批量解析托书与报关草单，自动提取订舱字段并换算体积重量，按节点定时抓船期与到港动态，异常自动推送提醒。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：托书批量成表</strong><br><code>读取"托书/0911"文件夹的68份海运和空运托书（PDF与Excel），提取发货人、收货人、英文品名、件数、毛重、尺寸，尺寸自动换算成体积，输出可直接导入订舱系统的结构化表格</code></p>
+            <p><strong>Step 2：报关草单批量赋值</strong><br><code>解析"报关/草单"文件夹的报关草单，抓取境内货源地等关键字段，把同批次共用的申报要素（生产厂家、贸易方式）批量赋值给所有商品，输出审单清单</code></p>
+            <p><strong>Step 3：船期盯梢与延误预警</strong><br><code>每天早上8点抓取本周30票在途货物的船期与到港动态，对比预计到港日，标注可能延误的航次并生成给客户的告知话术草稿</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单票托书录入从 3 分钟→30 秒复核（效率约 5 倍），字段错录导致的改单从月均 6 票→归零，操作员从录单里解放出来做客户维护。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👓</div>
+        <div class="case-title">「验光档案不丢单」— 眼镜店店主用AI建档会员度数、预测镜片补货并催复查</div>
+        <div class="case-subtitle">验光单散落纸质档案、镜片常缺度数、复查无人提醒 → AI建档案+库存预警+复查日历自动催客</div>
+        <div class="tags">
+          <span class="tag industry">眼镜零售</span>
+          <span class="tag role">店主/验光师</span>
+          <span class="tag">会员运营</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>验光单、镜片度数库存、复查提醒、售后调整散在纸质档案和微信里，镜片备货凭经验常缺度数，该复查的会员没人通知，复购全靠顾客自己想起来。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 统一建档会员验光历史、镜片库存预警与复查日历，自动生成提醒话术，店主只管验光和推荐。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：验光档案电子化</strong><br><code>从"会员档案"文件夹的验光单照片和登记表中提取每人左右眼度数、散光、瞳距、配镜日期和镜架型号，建立可检索电子档案，按下次复查日期排序</code></p>
+            <p><strong>Step 2：镜片补货预测</strong><br><code>对比"库存/镜片.xlsx"中各度数镜片的近3个月消耗量，预测未来4周需求，列出需补货的度数与数量，标注常缺的低度数散光片</code></p>
+            <p><strong>Step 3：复查提醒清单</strong><br><code>生成本月应复查会员清单——把配镜满11个月的顾客挑出来按度数变化风险排序，生成微信提醒话术（复查+免费清洗调整），我审核后发送</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>验光记录查找从翻纸质档案 5 分钟→10 秒，镜片缺货断档从月均 5 次→1 次，复查提醒带来月均 30+ 人次到店，老客复购率提升约 25%。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 75 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
