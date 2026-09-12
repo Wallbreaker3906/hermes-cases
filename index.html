@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">75</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">76</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>176</strong> 个案例</span>
+    <span>📋 累计 <strong>178</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">102</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">103</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8897,6 +8897,86 @@
   </div>
 </div>
 <!-- END Day 75 -->
+
+<!-- 📅 2026-09-12 (Day 76) -->
+<div class="day-section" id="day-76">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 76</h2>
+    <span class="date-badge">2026.09.12</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎣</div>
+        <div class="case-title">「缺氧提前1-2小时预警、饲料省15%」— 对虾养殖场长用AI合并三套探头做塘口看板并算次日投料</div>
+        <div class="case-subtitle">探头品牌各异靠人工巡塘抄表、夜里翻塘天亮才发现、投料全凭手感 → Hermes合并多源数据做阈值告警并按水温存塘量算投料量</div>
+        <div class="tags">
+          <span class="tag industry">水产养殖</span>
+          <span class="tag role">养殖场长</span>
+          <span class="tag">数据看板</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>6口塘的溶氧、水温、pH 来自3套不同品牌的探头，早晚靠人工巡塘抄表，夜里缺氧翻塘常常天亮才发现；投料全凭手感，占成本大头却算不清每口塘的真实饵料系数；用药和药残检测记录散在微信里，卖鱼时翻不出依据。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 把多套探头数据合并成一张塘口看板并做夜间阈值告警，按存塘量和水温自动算次日投料量，把用药、检测、出塘记录归档成可追溯台账。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：合并多源探头，出今日看板</strong><br><code>读取"传感器/0912"文件夹里3套探头的今日CSV，按塘口编号合并，标注溶氧低于3mg/L、水温骤变超2℃的塘口，生成一张"今日塘口健康看板"</code></p>
+            <p><strong>Step 2：按存塘量算次日投料</strong><br><code>结合各塘存塘量、平均规格和今日水温，按饵料系数1.2估算明天每口塘的投料量与投喂次数，对比上周实际用料标出偏差</code></p>
+            <p><strong>Step 3：夜间告警 + 台账归档</strong><br><code>设定 cron 每小时检查溶氧数据，低于2mg/L立即推送告警到微信；并把本周用药记录和药残检测报告归档到对应塘口台账</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>巡塘抄表从每天3次→看板一屏，夜间缺氧预警提前1-2小时，饲料浪费降约15%，卖鱼时检测与用药记录10秒调出。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👵</div>
+        <div class="case-title">「派单2小时压到15分钟」— 居家养老服务站长用AI自动排单并把长护险台账一次做对</div>
+        <div class="case-subtitle">需求散在微信群和纸质派单本、白板排班、补贴工单月底手工汇总常被退回 → Hermes建电子档案自动派单、留痕并汇总合规台账</div>
+        <div class="tags">
+          <span class="tag industry">养老照护</span>
+          <span class="tag role">服务站站长</span>
+          <span class="tag">排单调度</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>180位老人的送餐、助浴、康复、陪诊需求散在微信群和纸质派单本里，护理员排班靠手写白板；家属每周追问"这周谁上门、几点来"，站长挨个截图解释；长护险补贴的工单凭证月底手工汇总，常被退回补材料。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 统一管理老人档案与服务计划、按技能和距离自动派单，服务完成后生成图文记录留痕，补贴工单自动汇总成合规台账。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：建老人电子档案（含禁忌项）</strong><br><code>从"老人档案"文件夹的登记表和评估报告中提取每位老人的身体状况、失能等级、服务项目、家属联系方式，建立电子档案并标注禁忌（如跌倒史需双人助浴）</code></p>
+            <p><strong>Step 2：按技能/地址/时间窗自动排单</strong><br><code>把本周42个服务需求（"派单/0912.xlsx"）按服务类型、地址、护理员技能证书和时间窗口自动排单，避免单人单日跨小区超2次，输出派单表</code></p>
+            <p><strong>Step 3：长护险台账与补件提醒</strong><br><code>月底把本月服务记录和家属签字凭证按长护险要求汇总成台账——逐单核对服务时间、项目、签字，标出缺材料的单子并生成补件提醒</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>派单从手排2小时→15分钟，家属咨询从截图解释→自动生成周服务报告，补贴工单退回率从月均5单→0，站长每天省下约2小时。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 76 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
