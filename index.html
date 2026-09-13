@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">76</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">77</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>178</strong> 个案例</span>
+    <span>📋 累计 <strong>180</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">103</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">105</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -8977,6 +8977,86 @@
   </div>
 </div>
 <!-- END Day 76 -->
+
+<!-- 📅 2026-09-13 (Day 77) -->
+<div class="day-section" id="day-77">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 77</h2>
+    <span class="date-badge">2026.09.13</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛗</div>
+        <div class="case-title">「维保漏检归零」— 电梯维保主管用AI做15天到期看板，超期电梯当天就有人盯</div>
+        <div class="case-subtitle">到期日散在纸质台账和维保员微信、漏检就被扣分、季度报告临时凑 → Hermes按周期算到期日、每天推清单、签字单照片按电梯编号归档</div>
+        <div class="tags">
+          <span class="tag industry">电梯维保</span>
+          <span class="tag role">维保主管</span>
+          <span class="tag">设备巡检</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>在管120台电梯每15天必须维保一次，到期日散在纸质台账和维保员微信里，漏检一次就被监管扣分；困人故障记录、现场签字单散落各处，客户要季度报告只能临时凑。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 把维保台账变成到期看板，cron 每天早上推送当日应维保清单，现场签字单与照片按电梯编号归档，季度报告自动汇总。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：台账算到期日</strong><br><code>读取"维保台账/0913.xlsx"里的电梯编号、小区、上次维保日期，按15天周期算出到期日，列出本周应维保清单并标出已超期的电梯</code></p>
+            <p><strong>Step 2：每天自动推清单</strong><br><code>每天早8点检查到期清单，把今天该维保的电梯按小区和维保员分组，生成任务提醒推送到工作群，我确认后再发</code></p>
+            <p><strong>Step 3：记录归档 + 出报告</strong><br><code>把维保员发回的现场照片和签字单放进"维保照片/0913"，按电梯编号归档，月底汇总成客户版维保报告</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>到期漏检从月均3-4台→0，客户季度报告从临时凑2小时→几分钟生成，故障与维保记录随时可查。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🚗</div>
+        <div class="case-title">「车况10秒调档」— 二手车行店长用AI按车架号建单车档案，并盯住长库龄车</div>
+        <div class="case-subtitle">车况照片保养记录堆在手机、销售问有没有事故靠人回忆、在库车天天贬值没人盯 → Hermes读检测报告建单车档案、照片归档、按库龄周提醒</div>
+        <div class="tags">
+          <span class="tag industry">二手车经销</span>
+          <span class="tag role">车行店长</span>
+          <span class="tag">库存管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>车况照片、保养记录、过户材料堆在手机和微信里，销售问"这台车有没有事故"只能靠人回忆；在库车辆天天贬值，卖得慢的没人盯。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 按车架号建单车档案（读检测报告与保养手册、照片归档），并每周按库存天数提醒该盯哪几台。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：按车架号建档案</strong><br><code>读取"收车/0913"里的检测报告和保养手册照片，按车架号建单车档案，提取里程、过户次数、事故与维修记录</code></p>
+            <p><strong>Step 2：出售卖卡片</strong><br><code>把手机里每台车的车况照片按车架号归档，生成一车一页的售卖卡片（年份/里程/车况要点），销售直接用</code></p>
+            <p><strong>Step 3：库龄周提醒</strong><br><code>每周一统计每台车的库存天数，超过45天的按库龄排序列出建议调价区间和促销话术</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>车况查询从群里喊人问→10秒调出档案，长库龄车不再被忘，库存周转改善、议价有据可依。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 77 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
