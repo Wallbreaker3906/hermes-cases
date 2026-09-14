@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">77</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">78</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>180</strong> 个案例</span>
+    <span>📋 累计 <strong>182</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">105</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">107</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9057,6 +9057,86 @@
   </div>
 </div>
 <!-- END Day 77 -->
+
+<!-- 📅 2026-09-14 (Day 78) -->
+<div class="day-section" id="day-78">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 78</h2>
+    <span class="date-badge">2026.09.14</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">♟️</div>
+        <div class="case-title">「复盘不再翻引擎」— 棋类俱乐部教练用AI定位每盘棋的第一个昏招，讲评稿自动生成</div>
+        <div class="case-subtitle">复盘逐手翻引擎评分、看不出错在哪一步、讲评全靠临场回忆 → Hermes批量读PGN、逐手比对引擎评分、按失误类型归集出讲评稿</div>
+        <div class="tags">
+          <span class="tag industry">国际象棋培训</span>
+          <span class="tag role">俱乐部教练</span>
+          <span class="tag">训练复盘</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>复盘要逐手翻引擎评分，看不出"第一个昏招"到底在哪一步，讲评全靠教练临场回忆。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 批量读取 PGN 对局、逐手比对引擎评分，自动定位致命漏着并生成讲解稿。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先出一张对局总览</strong><br><code>读取"对局/0914"里本周14盘学员 PGN，提取开局名称、回合数、胜负结果，按学员分组生成一张对局总览表</code></p>
+            <p><strong>Step 2：找出第一个昏招</strong><br><code>调用本地引擎逐手评分，标出每盘棋胜率首次跌破60%的那一步——也就是真正的"第一个昏招"——并列出当时另外两个候选着法</code></p>
+            <p><strong>Step 3：归集失误、生成讲评稿</strong><br><code>把失误按漏子、漏杀、时间紧张、开局脱谱四类归集，生成每位学员的讲评稿和下周开局训练重点</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>复盘从"每盘手翻引擎半小时"变成自动出讲评稿，能定位第一个昏招而不只看输赢，教练把精力留给拆棋思路本身。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🥬</div>
+        <div class="case-title">「临期损耗下降」— 社区食材店店主用AI算先卖哪样、周配菜怎么搭</div>
+        <div class="case-subtitle">先出什么、会员配菜怎么搭全靠脑记、临期损耗与重复进货两头亏 → Hermes按库存+入库新鲜度加权算分排序，自动出周配菜与降价清单</div>
+        <div class="tags">
+          <span class="tag industry">生鲜食材零售</span>
+          <span class="tag role">食材店店主</span>
+          <span class="tag">库存周转</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>货架和冰柜里什么该先出、会员的"周配菜"怎么搭，全靠脑子记，临期损耗和重复进货两头亏。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 给每样食材算"库存＋入库新鲜度"加权分，用自然语言自动推荐先卖什么、配什么。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：算出该先卖的十样</strong><br><code>读取"库存/0914.xlsx"里每样食材的数量、入库日期和保质期，按"库存优先60%＋入库早者优先40%"算分排序，列出最该先卖的十样</code></p>
+            <p><strong>Step 2：逐户搭配周配菜</strong><br><code>结合本周12户会员的忌口、份量和预算，用先出食材搭出周配菜组合，逐户输出菜单和预估成本</code></p>
+            <p><strong>Step 3：出临期降价清单</strong><br><code>把临期2天内的食材单列一张降价清单和叫卖话术，我确认后再发会员群</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>临期损耗下降，配菜方案从晚上现想变成提前出单，重复进货和缺货同时减少，店主只管验货待客。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 78 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
