@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">79</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">80</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>184</strong> 个案例</span>
+    <span>📋 累计 <strong>186</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">109</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">111</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9217,6 +9217,86 @@
   </div>
 </div>
 <!-- END Day 79 -->
+
+<!-- 📅 2026-09-16 (Day 80) -->
+<div class="day-section" id="day-80">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 80</h2>
+    <span class="date-badge">2026.09.16</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎤</div>
+        <div class="case-title">「会一散纪要就到」— 会展公司会议运营用AI接管转写与待办，不再靠人重听录音手抄</div>
+        <div class="case-subtitle">录音和转写躺在云盘没人翻、纪要靠专人重听一遍再手抄到群里 → Hermes 监听线上会议事件，自动取转写生成结构化纪要并投进团队系统</div>
+        <div class="tags">
+          <span class="tag industry">会展会务</span>
+          <span class="tag role">会议运营负责人</span>
+          <span class="tag">纪要自动化</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一年承接 20+ 场企业会议，录音和转写躺在云盘里没人翻，纪要和待办靠专人重听一遍再手抄到群里，谁负责、什么时候交全靠人盯。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>用 Hermes 官方 Teams 会议流水线：Graph 事件一到就取会议转写（没有转写才回落下载录音做语音识别），自动生成结构化纪要投递到 Teams 频道或 Notion 数据库。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：接通会议事件</strong><br><code>启用 teams_pipeline 插件并配好 Microsoft Graph 凭证，把公网 HTTPS 的 /msgraph/webhook 暴露出去，用来接收线上会议事件</code></p>
+            <p><strong>Step 2：订阅转写并挂上续订任务</strong><br><code>订阅会议转写资源，另挂一个每天定时跑的 maintain-subscriptions 任务——Graph 的会议订阅 72 小时就过期而且不会自动续，不续就会静默失效</code></p>
+            <p><strong>Step 3：把纪要投进团队原有系统</strong><br><code>投递目标设成 Teams 频道或 Notion 数据库，输出固定四栏结构：决议、待办、负责人、截止日；优先用现成转写，没有才下载录音识别</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>会后从「等人重听录音手抄待办」变成事件触发自动出纪要，待办直接落进团队原有任务系统，不再漏项。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔬</div>
+        <div class="case-title">「论文读完自动入库」— 材料实验室研究员用AI做第二大脑，单篇消化压到 15 分钟</div>
+        <div class="case-subtitle">论文读完散在下载文件夹和聊天记录里、写综述要翻三个月前的笔记 → Hermes 接入 Obsidian 笔记库，摘要自动归档打标签、可跨笔记引用检索</div>
+        <div class="tags">
+          <span class="tag industry">科研实验室</span>
+          <span class="tag role">实验室研究员</span>
+          <span class="tag">知识管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>同时跟进 3 个课题，论文读完就散在下载文件夹和聊天记录里，写综述时要翻回三个月前的笔记，读一篇两小时却只留下一份 PDF。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 接入 Obsidian 笔记库当第二大脑，论文摘要自动归档、按现有分类法打标签，可跨笔记引用检索。据公开用例收录，台湾半导体材料团队实测单篇论文消化时间从 2 小时降到 15 分钟。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：让它先读懂你自己的旧笔记</strong><br><code>把 Hermes 指向 Obsidian 笔记库目录，先跑通"我问一句、它引用我自己的旧笔记来回答"</code></p>
+            <p><strong>Step 2：把入库格式教一次，固化成技能</strong><br><code>把论文丢给它：摘要存到 10-Research/，写清关键发现和未解问题，标签沿用我现有的分类法——教一次就固化成技能，以后每次都一样</code></p>
+            <p><strong>Step 3：每天早上自动读日记和日程</strong><br><code>设一个每天早上的任务：读昨天的日记、今天的日程和未完成任务，在 00-Daily/Today.md 写一份早间简报</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从「读完就忘」变成每篇 15 分钟产出结构化摘要并入库，写综述和汇报时能直接引用自己的历史笔记。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 80 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
