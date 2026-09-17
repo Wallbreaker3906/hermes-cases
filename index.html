@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">80</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">81</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>186</strong> 个案例</span>
+    <span>📋 累计 <strong>188</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">111</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">113</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9297,6 +9297,86 @@
   </div>
 </div>
 <!-- END Day 80 -->
+
+<!-- 📅 2026-09-17 (Day 81) -->
+<div class="day-section" id="day-81">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 81</h2>
+    <span class="date-badge">2026.09.17</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌊</div>
+        <div class="case-title">「五组暴雨试算半天出」— 市政设计院给排水工程师用AI批量跑模型并自动质检，不再一天算一组</div>
+        <div class="case-subtitle">积水点方案要反复试算几十组参数、跑一次几小时，模拟值与实测对不上还少人复核 → Hermes 用 terminal 批量调模型引擎跑多组重现期并逐项质检</div>
+        <div class="tags">
+          <span class="tag industry">市政工程设计</span>
+          <span class="tag role">给排水工程师</span>
+          <span class="tag">仿真批量试算</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个积水点方案要在暴雨洪水模型里反复试算几十组参数，人工跑一遍要几小时；模拟结果和现场实测积水深度对不上也少有人复核，方案报告与计算书的数据还常互相打架。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 terminal 批量调模型引擎跑多组重现期试算，逐项做质检（水量平衡、参数越界、模拟与实测偏差），把校核过程留成可追溯记录（社区真实项目：GitHub 的 agentic-swmm-workflow，用 Hermes 做暴雨模型建模并带质检环节）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：建模前先体检数据</strong><br><code>读取“项目/0917积水点”里的管网拓扑、汇水区划分和降雨序列文件，检查参数有没有越界或缺失，先出一份“建模前数据体检表”</code></p>
+            <p><strong>Step 2：批量跑五组重现期</strong><br><code>用 terminal 批量跑 1 年/2 年/3 年/5 年/10 年五组重现期的模拟，把每个节点的积水深度和持续时间汇总成一张对比表</code></p>
+            <p><strong>Step 3：模拟与实测逐条对账</strong><br><code>把模拟积水点和现场实测位置逐条比对，标出偏差超过 20% 的节点并给出排查方向，输出校核记录供审图存档</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>试算从一天一组变成半天出五组，模型与实测的偏差当天暴露，报告和计算书数据对不上再没发生过。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📐</div>
+        <div class="case-title">「刷网站1小时变看5分钟清单」— 造价咨询负责人用AI盯招标公告，只在有变化时叫醒模型</div>
+        <div class="case-subtitle">公告、答疑、开标时间散在几十个网站靠人刷屏，变更公告隔天才发现 → Hermes 脚本离线预筛，有变化才唤醒模型读原文并比对在手项目</div>
+        <div class="tags">
+          <span class="tag industry">工程造价咨询</span>
+          <span class="tag role">造价咨询负责人</span>
+          <span class="tag">信息监控</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>招标公告、澄清答疑、开标时间散在几十个交易网站，每天靠人刷屏，变更公告常隔天才发现；关键条款还要从几百页招标文件里人工翻。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 先用脚本离线预筛，只有公告新增或改动时才唤醒模型读原文，再结合在手项目清单判断是否相关（参考社区零 token 监控插件的做法：无变化不花 token）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：只把有变化的抓下来</strong><br><code>写一个脚本每天抓固定几个招标网站的列表页，只把“新增或内容变化”的条目存下来——没变化不叫醒我，有改动的整理成待看清单</code></p>
+            <p><strong>Step 2：和在手项目比对定优先级</strong><br><code>把待看清单和在手项目清单比对，判断每条公告属于哪个项目、是否影响报价或工期，标出必须当天处理的</code></p>
+            <p><strong>Step 3：新招标文件出一页要点卡</strong><br><code>对新接到的招标文件，提取投标截止、保证金、评分办法、废标条款四类关键信息，生成一页“投标要点卡”</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>刷网站从每天 1 小时变成早上看 5 分钟清单，变更公告当天发现，错过答疑和漏标的风险基本归零。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 81 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
