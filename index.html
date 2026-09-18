@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">81</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">82</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>188</strong> 个案例</span>
+    <span>📋 累计 <strong>190</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">113</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">115</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9377,6 +9377,86 @@
   </div>
 </div>
 <!-- END Day 81 -->
+
+<!-- 📅 2026-09-18 (Day 82) -->
+<div class="day-section" id="day-82">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 82</h2>
+    <span class="date-badge">2026.09.18</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🔍</div>
+        <div class="case-title">「翻半天变一条指令」— 品牌舆情负责人用AI并行扫五个平台，出带链接带情绪的简报</div>
+        <div class="case-subtitle">Reddit、X、YouTube 各有门槛，人工逐帖翻一个话题耗掉半天 → Hermes 装多平台调研技能，一条指令并行搜索、去重并补评论线程</div>
+        <div class="tags">
+          <span class="tag industry">市场调研</span>
+          <span class="tag role">舆情调研负责人</span>
+          <span class="tag">多平台信息采集</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>想知道用户到底在说什么，可 Reddit、X、YouTube、Hacker News 各有各的门槛，一个人逐个平台翻，一个话题先耗掉半天，最后只捞到零星几条。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 装一个多平台调研技能，一条指令并行搜五个平台，自动去重、补上评论线程和视频字幕，出一份带链接、带情绪的简报（社区真实用例：awesome-hermes-usecases 收录的 last30days 技能）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：把调研技能装进来</strong><br><code>把 last30days-skill 克隆到 ~/.hermes/skills/research/last30days，确认 SKILL.md 在目录里，让我下次能自己发现它</code></p>
+            <p><strong>Step 2：一条指令跑一轮调研</strong><br><code>帮我调研“这个行业最近 30 天大家到底在讨论什么”，限定要看的社区和账号，每条给一句话摘要、情绪判断和原帖链接，发到我手机上</code></p>
+            <p><strong>Step 3：挂成每周自动简报</strong><br><code>挂成每周一早 9 点的定时任务，只盯 3 个竞品关键词，简报自动存进笔记库，我周一开会前看 5 分钟</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>一个话题的调研从人工翻半天变成一条指令出统一简报，用户原话和情绪可追溯，竞品动态变成每周自动送达。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🖼️</div>
+        <div class="case-title">「手动点一下午变一条指令」— 电商设计师用AI接管出图工作流，自动补节点、批量跑、按提示词归档</div>
+        <div class="case-subtitle">换工作流就缺插件报错、装模型排查环境吃掉半天 → Hermes 读工作流文件自动补齐节点，拉起出图服务并批量投任务</div>
+        <div class="tags">
+          <span class="tag industry">电商视觉设计</span>
+          <span class="tag role">独立电商设计师</span>
+          <span class="tag">批量出图</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>批量出图得在出图工具里手动点节点，换一套工作流就缺插件、报错，光装模型和排查环境就吃掉半天。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 读工作流文件，自动补齐缺失的自定义节点、拉起出图服务、把任务批量投进去，再把成品按提示词归档（社区真实用例：Reddit r/hermesagent 的 ComfyUI 工作流编排）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：环境缺什么自己补</strong><br><code>装好出图工具和运行技能，缺哪个自定义节点你自己去下载安装，装完把服务拉起来监听 8188 端口，跑通再叫我</code></p>
+            <p><strong>Step 2：批量投任务并归档</strong><br><code>把这批商品的工作流文件交给你，40 张主图用同一套参数批量出，按提示词哈希命名，统一放进 renders 文件夹</code></p>
+            <p><strong>Step 3：把参数固化成技能</strong><br><code>出完一轮把这次的参数记成技能——下次换一批商品直接复用，不用重新调节点</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>批量出图从手动点一下午变成一条指令排队跑完，节点报错和成品归档有人兜底，换工作流也能沿用旧参数。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 82 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
