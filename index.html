@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">82</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">83</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>190</strong> 个案例</span>
+    <span>📋 累计 <strong>192</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">115</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">117</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9457,6 +9457,86 @@
   </div>
 </div>
 <!-- END Day 82 -->
+
+<!-- 📅 2026-09-19 (Day 83) -->
+<div class="day-section" id="day-83">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 83</h2>
+    <span class="date-badge">2026.09.19</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎬</div>
+        <div class="case-title">「一句指令出双语稿」— 自由译者用AI接管取片、转写、翻译，人只做术语校对</div>
+        <div class="case-subtitle">视频链接进来后要在五六个工具间倒腾字幕和翻译，一条片子耗掉大半天 → Hermes 用官方转写技能加自制流水线，固化成可反复调用的技能</div>
+        <div class="tags">
+          <span class="tag industry">翻译与本地化</span>
+          <span class="tag role">自由译者</span>
+          <span class="tag">音视频转写</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>客户丢来的往往是视频链接和音频文件，扒字幕、转写、翻译、调轴要在五六个工具之间来回倒腾，一条片子能耗掉大半天。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用官方 youtube-content 转写技能加一条自制流水线，把「取视频→转写→翻译→回读校对」固定成一个技能，说清一次以后反复调用（来源：NVIDIA 开发者论坛用户实测；官方转写技能见 Hermes 文档 media-youtube-content）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：取原文转写并套术语表</strong><br><code>把这条视频链接丢给你：先取带时间轴的原文转写，按我的术语表把专有名词替换成指定译法，拿不准的单独列出来</code></p>
+            <p><strong>Step 2：出双语字幕稿</strong><br><code>生成中文和英文两版字幕稿，时间轴保持不变，标出语速过快需要合并的句子和需要我确认的术语</code></p>
+            <p><strong>Step 3：固化成技能并归档</strong><br><code>把这次的术语表和排版习惯存成“字幕本地化”技能，下次同类视频直接复用，交付稿按语种分文件夹放好</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>一条视频从「开五个工具手倒」变成一句指令出双语稿，人只做术语和语感校对，小工作室的接单量明显上去。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📦</div>
+        <div class="case-title">「月底盘点变每天预警」— 仓库主管用AI读单据照片，缺货与积压清单自动送上门</div>
+        <div class="case-subtitle">出入库单据靠手写拍照、库存一天一录，账实不符要等月底才发现 → Hermes 用 vision 读单据、file 汇总库存、cron 定时算安全库存</div>
+        <div class="tags">
+          <span class="tag industry">批发仓储</span>
+          <span class="tag role">仓库主管</span>
+          <span class="tag">库存预警</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>出入库单据靠手写和拍照，库存数在 Excel 里一天一录，账实不符要等月底盘点才发现，缺货和压货同时发生。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 用 vision 读单据照片、file 汇总库存表、cron 定时算安全库存，缺货与积压清单每天推到手机上（来源：社区用户 @akashnet 在 X 分享的实时库存跟踪用法，强调库存这类活儿最吃「上下文＋记忆＋实时输入」）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：读照片更新库存表</strong><br><code>读取“出入库/0919”里的单据照片和 Excel，逐笔提取品名、规格、数量、方向，按 SKU 更新库存表，标出和上一版对不上的条目</code></p>
+            <p><strong>Step 2：算安全库存出两张清单</strong><br><code>对比近三个月出库速度，算出每样货还能卖多少天，列出三天内会断货和压了九十天以上的两张清单</code></p>
+            <p><strong>Step 3：挂成每天早八点的提醒</strong><br><code>每天早八点自动跑一遍，把缺货预警和账实差异推到我微信，我确认后再转给采购</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>账实不符当天就暴露，断货和积压清单每天送到手上，盘点从月末突击变成日常动作。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 83 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
