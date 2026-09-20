@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">83</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">84</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>192</strong> 个案例</span>
+    <span>📋 累计 <strong>194</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">117</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">118</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9537,6 +9537,86 @@
   </div>
 </div>
 <!-- END Day 83 -->
+
+<!-- 📅 2026-09-20 (Day 84) -->
+<div class="day-section" id="day-84">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 84</h2>
+    <span class="date-badge">2026.09.20</span>
+  </div>
+  <div class="cases-row">
+    <!-- Case 1 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🐈</div>
+        <div class="case-title">「急症不再翻书」— 宠物急诊兽医把中毒处置表交给AI整理，判断权始终留在医生手上</div>
+        <div class="case-subtitle">猫狗误食是急诊常客，该催吐、该上活性炭还是只能对症支持根本记不全 → Hermes 把常见中毒物整理成本地处置表，兽医逐条核对后入库再查</div>
+        <div class="tags">
+          <span class="tag industry">宠物医疗</span>
+          <span class="tag role">急诊值班兽医</span>
+          <span class="tag">急症知识库</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>猫狗误食是急诊常客，可「哪种要催吐、哪种该上活性炭、哪种只能对症支持」根本记不全，慌乱中现翻书或群里问人，最容易把处置方向搞反。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>让 Hermes 把常见中毒物整理成一张本地处置表，兽医逐条核对后入库，值班时用自然语言查自己核过的那一版（来源：Reddit r/hermesagent 用户 u/Elaphe21 分享的真实用法）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先让AI出初稿</strong><br><code>帮我把宠物最常见的 20 种中毒物整理成表格——每种写清中毒表现、处置方向（催吐／活性炭／脂肪乳／对症支持）和参考来源</code></p>
+            <p><strong>Step 2：逐条人工核对后入库</strong><br><code>表格先给我逐条核对，我说“这条不对”你就改；核对完存进本地知识库，以后每次引用这一版，不许自己改</code></p>
+            <p><strong>Step 3：值班时只查核过的表</strong><br><code>值班时我直接问“这只猫误食百合，按我的表该怎么处理”，你只按我核对过的表回答，拿不准的就明说要查资料</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>急症处置从「翻书加群里问人」变成几秒调出自己核过的表；AI 只做检索和排版，判断权始终留在医生手上。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- Case 2 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🌦️</div>
+        <div class="case-title">「早班一张表出门」— 气象服务值班工程师用AI合成多源预报，异常时段自动兜底</div>
+        <div class="case-subtitle">模型图、雷达回波、多家预报源来回切页面，客户一句“明天上午能不能干活”要手工翻几个网站 → Hermes 装天气插件直取官方资料并算站点表</div>
+        <div class="tags">
+          <span class="tag industry">气象服务</span>
+          <span class="tag role">短临预报值班工程师</span>
+          <span class="tag">多源数据合成</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每天在多家预报源、模型图和雷达回波之间来回切页面，客户一句「明天上午这站点能不能干活」，要手工翻好几个网站才凑得出答案。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>装上天气插件，让 Hermes 直接取模型图与雷达资料并做规范气象量计算，把多源数据合成一张站点表（来源：GitHub FahrenheitResearch 的 hermes-weather-plugin，含 NWS 级模型图与 NEXRAD 雷达，15 星）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：装插件并跑通取数</strong><br><code>装上天气插件，先跑通“能调出目标站点的雷达回波和预报图”，确认取的都是官方资料源</code></p>
+            <p><strong>Step 2：每天早上自动出站点表</strong><br><code>每天早上自动出一张表：客户站点未来 72 小时的风速、辐照度、降水概率，并和昨天的预报对一遍，标出差异大的时段</code></p>
+            <p><strong>Step 3：异常时段推给人工复核</strong><br><code>差异超阈值就补查一次雷达和预警信息，把需要人工复核的时段单独列出来推给我，最终结论我自己定</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>值班早班从「翻几个网站凑答案」变成看一张表就出门，异常时段有人兜底，客户问话不用临时翻资料。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 84 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
