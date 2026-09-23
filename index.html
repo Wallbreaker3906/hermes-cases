@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">85</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">86</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>196</strong> 个案例</span>
+    <span>📋 累计 <strong>198</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">120</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">122</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -9695,6 +9695,86 @@
   </div>
 </div>
 <!-- END Day 85 -->
+
+<!-- 📅 2026-09-23 (Day 86) -->
+<div class="day-section" id="day-86">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 86</h2>
+    <span class="date-badge">2026.09.23</span>
+  </div>
+  <div class="cases-row">
+    <!-- 案例一：户外烧烤餐饮 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🍖</div>
+        <div class="case-title">「整夜不用守炉子」— 烧烤店老板用探针接进 AI 替自己值夜班</div>
+        <div class="case-subtitle">慢烤 12 小时炉温飘一度就废 → 定时读温+越界推送+自动微调</div>
+        <div class="tags">
+          <span class="tag industry">户外烧烤餐饮</span>
+          <span class="tag role">小店老板</span>
+          <span class="tag">物联网接入</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>慢烤牛胸肉得守 12 小时以上，炉温飘一度整块肉就废，夜里只能定闹钟爬起来看炉子。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>把烤炉温度探针的接口接成 Hermes 工具，定时读温度、越界就推送，还能自己改炉子设定值，夜里替人当班。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先把探针接进来</strong><br><code>把我这台烤炉的温度探针接进来，先跑通“我问一句，你报出当前炉温和肉温”</code></p>
+            <p><strong>Step 2：设成定时监工</strong><br><code>设成每小时读一次：肉温掉出目标区间就提醒我，偏离超过5度就自动把炉子设定温度微调一下，每次调整都记下来</code></p>
+            <p><strong>Step 3：早上出报告并存技能</strong><br><code>第二天早上给我一份烤程曲线和调整记录，把这组参数存成技能，下次烤同样的肉直接复用</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从“夜里爬起来看炉子”变成“手机收提醒”，整夜不用守，肉不再烤废，参数一次调好反复用。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- 案例二：工业设备技术支持 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📚</div>
+        <div class="case-title">「四千页手册几秒查」— 设备技术支持用本机全文索引替代人工翻页</div>
+        <div class="case-subtitle">整本手册塞爆上下文 → 拆页检索只喂命中片段，答案带页码</div>
+        <div class="tags">
+          <span class="tag industry">工业设备技术支持</span>
+          <span class="tag role">技术支持工程师</span>
+          <span class="tag">文档检索</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>手册太厚，整本塞给 AI 上下文直接爆掉，客户问一个故障码还得人工翻几百页。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>用本机全文索引把 PDF 手册拆成可检索片段，只把命中的几页交给模型作答，答案附章节与页码。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：手册入库</strong><br><code>把“手册/设备说明书”里的 PDF 逐页拆成小段，带上章节名和页码，存进本机一个可全文检索的数据库，别整本读进上下文</code></p>
+            <p><strong>Step 2：限定只用检索到的原文回答</strong><br><code>以后客户问“这个故障码是什么意思”，你只根据检索到的原文回答，附上章节和页码，没写到的就直说手册里没有</code></p>
+            <p><strong>Step 3：固化成技能</strong><br><code>把这套流程存成“查手册”技能，以后新版本手册只要重新入库就能用，答案都带出处</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>找答案从“翻几百页翻半天”变成几秒给出并附页码，有出处不瞎编，几千页资料在普通办公电脑上也能跑。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 86 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
