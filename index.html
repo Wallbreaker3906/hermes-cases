@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">93</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">94</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>212</strong> 个案例</span>
+    <span>📋 累计 <strong>214</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">136</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">138</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -10335,6 +10335,86 @@
   </div>
 </div>
 <!-- END Day 93 -->
+
+<!-- 📅 2026-10-02 (Day 94) -->
+<div class="day-section" id="day-94">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 94</h2>
+    <span class="date-badge">2026.10.02</span>
+  </div>
+  <div class="cases-row">
+    <!-- 案例一：具身智能/机器人研发 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🦾</div>
+        <div class="case-title">「不懂机器学习，也能把机械臂教会」— 小型机器人团队工程师用三个技能跑通租卡、仿真收数据、微调训练一条闭环</div>
+        <div class="case-subtitle">想让机械臂学会新动作，却卡在租 GPU、配环境、收数据、跑评估四道工序上，全绊在“不会 ML”这一关 → 三个技能把“跑仿真→收轨迹→筛成功样本→租卡训练→A/B 替换”整条闭环交给 agent 自己跑</div>
+        <div class="tags">
+          <span class="tag industry">具身智能/机器人研发</span>
+          <span class="tag role">机器人团队工程师</span>
+          <span class="tag">模型微调</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>想让机械臂学会一个新动作，就得微调视觉-语言-动作（VLA）模型。可租 GPU、配训练环境、采集轨迹数据、跑评估这四道工序，每一道都要求你懂机器学习；团队里没人会，机械臂就只能停在原地。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>给 Hermes 装上三件技能：vast-gpu 负责租云卡、vla-trainer 负责微调 VLA 模型、robot-loop 负责在仿真里收数据。“跑仿真→收轨迹→筛成功样本→租卡训练→评估→换掉更好的模型”整条闭环由 agent 自己跑，人只提要求。开源项目基于 LeRobot + SmolVLA + MuJoCo，来自 Hermes Agent Hackathon。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：按需租卡，跑完自动销毁</strong><br><code>用 vast-gpu 技能帮我租一台最便宜的 A100，把 SSH 地址给我；训练跑完自动销毁实例，别让它一直在后台计费</code></p>
+            <p><strong>Step 2：仿真里跑一轮，只留成功样本</strong><br><code>在 MuJoCo 仿真里加载当前检查点跑一轮抓取任务，把每条轨迹按 LeRobot 格式存下来，只留奖励超过阈值的成功样本</code></p>
+            <p><strong>Step 3：攒够数据就自动微调一次</strong><br><code>攒够新数据就自动微调一次 SmolVLA，新旧模型做 A/B 对比，新的更好就替换成当前策略，并把这次的花费和指标记进日志</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>单次微调成本约 2-4 美元（A100 约 1 美元/小时），没有 ML 经验也能让机器人策略一轮轮自己变强——作者原话是“任何机器人主人都能通过与 agent 对话微调出 SOTA 模型”。来源：GitHub bryercowan/hermes-embodied（Hermes Agent Hackathon 项目，15 星）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- 案例二：求职与职业发展 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💼</div>
+        <div class="case-title">「岗位自己排队，投递自己填表」— 求职者让 Hermes 每 15 分钟爬招聘站按画像打分，再从队列自动投递</div>
+        <div class="case-subtitle">每天手动刷几家招聘站、岗位重复、匹配度靠眼睛估、投递还要一格格填表，找工作快变成一份全职工作 → 定时爬三家招聘站按个人画像打分分档排队，再从队列里自动填申请表</div>
+        <div class="tags">
+          <span class="tag industry">求职与职业发展</span>
+          <span class="tag role">算法/技术从业者</span>
+          <span class="tag">自动投递</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每天手动刷几家招聘站，岗位重复、匹配度全靠眼睛估，投递还得一格格填表——找一份工作本身，快变成了一份全职工作，真正想去的公司反而没精力好好准备。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>给 Hermes 装三件技能跑自动化求职：定时爬 Greenhouse、AshbyHQ、Lever 的岗位，按个人画像打 0-100 分并分档排队，再从队列里自动填 Greenhouse 的申请表、传简历、提交；碰到验证码或填不动的下拉框就退回邮箱投递，每笔都记账。个人资料只存在本机 profile.yaml 且已 gitignore。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：填好个人画像，只留本机</strong><br><code>把 profile.yaml 填好：姓名、邮箱、电话、简历 PDF 路径、是否需要工作签证、目标岗位关键词；这份文件只留本机，不许提交进 git</code></p>
+            <p><strong>Step 2：定时爬岗位，打分排队</strong><br><code>每 15 分钟爬一次 Greenhouse、AshbyHQ、Lever 的 ML/AI 岗位，去重后按我的画像打 0-100 分，分一线/二线/三线排进队列，低于 60 分的直接丢掉</code></p>
+            <p><strong>Step 3：从队列自动填表投递</strong><br><code>每 30 分钟从队列取一线岗位填表、传简历并提交；碰到验证码或下拉框填不动的，就退回用 careers@ 邮箱投，每笔投递都记进 applied.json</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>岗位筛选与投递从“手动刷 + 一格格填”变成排队自动跑，人只把精力留给真正想去的几家；技能拆成三个小文件，某家招聘系统改版只需改其中一个。来源：GitHub arimanyus/hermes-merchant（36 星，MIT）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 94 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
