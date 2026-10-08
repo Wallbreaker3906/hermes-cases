@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">98</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">99</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>222</strong> 个案例</span>
+    <span>📋 累计 <strong>224</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">146</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">148</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -10735,6 +10735,86 @@
   </div>
 </div>
 <!-- END Day 98 -->
+
+<!-- 📅 2026-10-08 (Day 99) -->
+<div class="day-section" id="day-99">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 99</h2>
+    <span class="date-badge">2026.10.08</span>
+  </div>
+  <div class="cases-row">
+    <!-- 案例一：数字取证 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🕵️</div>
+        <div class="case-title">「案件数据怕串进私人对话，变成一个助手开三个互不相通的档」— 企业数字取证分析员用 Hermes 分档隔离工作、教学与个人实验室，工作档接 Obsidian 并同步 Git 留版本</div>
+        <div class="case-subtitle">白天查公司案件、晚上带培训课、自己还有技术实验室，全挤在同一个 AI 助手里，怕案件资料串进个人对话、也怕私事搅浑工作上下文 → 三类工作各开一个独立配置，工作档接笔记库并同步 Git，时间线和结论可追溯</div>
+        <div class="tags">
+          <span class="tag industry">数字取证</span>
+          <span class="tag role">DFIR 分析员</span>
+          <span class="tag">多档隔离</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>企业数字取证与事件响应（DFIR）分析员通常身兼三职：白天查公司案件、晚上带培训课、自己还有一套技术实验室。案件资料、培训课件和个人实验环境全挤在同一个 AI 助手里，既怕公司案件数据串进个人对话，又怕自己的私事把工作上下文搅浑，换个场景就得重新交代一遍背景。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>给三类工作各开一个独立 Hermes 配置：各自的 SOUL.md、记忆、技能和定时任务互不可见。工作档接上 Obsidian 笔记库并同步 Git，案件时间线、用过的工具和结论都按既有目录写进去，可追溯、有版本。来源：Hermes 官方 User Stories 收录的 DFIR 分析员分档用法。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：建三个互不相通的档</strong><br><code>给我建三个互相隔离的配置：工作用的「取证」档、讲课用的「培训」档、自己玩的「实验室」档，三个档的记忆、技能和定时任务彼此看不到</code></p>
+            <p><strong>Step 2：工作档接笔记库并留版本</strong><br><code>把「取证」档接到我的 Obsidian 笔记库，案件时间线、用过的工具和结论都按我现有的目录写进去，并同步到私有仓库留版本</code></p>
+            <p><strong>Step 3：每天早上推一页先看清单</strong><br><code>每天早上 8 点用「取证」档跑一遍：昨天新入库的日志和检测告警里哪些异常值得我先看，整理成一页推到我手机</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>案件、教学、个人实验三条线彻底隔离，公司数据不会漏进个人对话，换档工作时也不用重新交代背景；工作档里的时间线和结论还带 Git 版本，回溯取证过程有据可查。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <!-- 案例二：移动应用测试 -->
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📱</div>
+        <div class="case-title">「十几台测试机一台台点主流程，变成一句话排队跑完」— 小团队 Android 兼容性测试负责人用 hermes-android 让 agent 直接装包点流程抓日志，冒烟流程存成技能复用</div>
+        <div class="case-subtitle">十几台测试机要逐台装包、点主流程、导日志、截图，换版本又全来一遍，写报告只能靠回忆凑 → 用 hermes-android 把手机变成 agent 能直接操作的对象，冒烟流程存成技能，失败机型带截图＋日志可复现</div>
+        <div class="tags">
+          <span class="tag industry">移动应用测试</span>
+          <span class="tag role">Android 测试负责人</span>
+          <span class="tag">自动化测试</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>小团队的 Android 兼容性测试负责人一个人管十几台测试机：每出一个版本就要一台台装包、点主流程、导日志、截图，重复劳动占掉大半天，最后写兼容性报告时只能靠回忆和零散截图凑，出了问题也很难复现。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>用 hermes-android 把手机变成 agent 能直接操作的对象——装包、点击、读界面、抓日志都由 AI 代劳，把重复的冒烟流程存成一个技能，交代一次、以后复用。来源：GitHub raulvidis/hermes-android（137 星）。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：把测试机都接进来</strong><br><code>把这十几台测试机都接进来，先跑通「我问一句，你报出每台的机型、系统版本、剩余空间和已装版本号」</code></p>
+            <p><strong>Step 2：把冒烟流程做成技能</strong><br><code>把这个版本的冒烟流程做成技能：装包→登录→走完下单主流程→每步截图→抓崩溃日志，逐台跑完，把失败的机型单独列出来</code></p>
+            <p><strong>Step 3：输出可复现的对比表</strong><br><code>跑完给我一张对比表：机型、系统版本、通过还是失败、卡在哪个界面、对应日志片段和截图路径，我照着复现</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>装包点流程从「一台台手动重复」变成一句话排队跑完，兼容性问题的复现材料（截图＋日志）一次配齐，报告不用再靠回忆拼。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 99 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
