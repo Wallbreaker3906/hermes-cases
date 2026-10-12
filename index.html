@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">102</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">103</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>230</strong> 个案例</span>
+    <span>📋 累计 <strong>232</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">154</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">156</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -11055,6 +11055,86 @@
   </div>
 </div>
 <!-- END Day 102 -->
+
+<!-- 📅 2026-10-12 (Day 103) -->
+<div class="day-section" id="day-103">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 103</h2>
+    <span class="date-badge">2026.10.12</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🏦</div>
+        <div class="case-title">客户改风控规则不用等发版 — 反洗钱规则工程师用AI批量改造2500多处规则场景</div>
+        <div class="case-subtitle">规则改不动、改一次要发版 → Hermes批量改写逐条核对，写死的参数抽成后台配置</div>
+        <div class="tags">
+          <span class="tag industry">金融合规</span>
+          <span class="tag role">反洗钱规则工程师</span>
+          <span class="tag">规则库改造</span>
+          <span class="tag">配置化</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>支付风控平台靠上千条规则给每笔支付打分，用来识别洗钱、人口贩卖和欺诈。客户一改阈值或加场景，就得走一遍开发部署流程，改得慢、风险还高。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 批量改写并逐条核对全量规则场景，把写死在代码里的客户参数抽成后台配置项，改配置不再需要发版。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：逐条过规则场景，先备份再比对</strong><br><code>把规则库里每条规则的所有场景逐条过一遍，动之前先备份一版，改完逐条比对逻辑有没有走样</code></p>
+            <p><strong>Step 2：2500多处改动分批提交并回归验证</strong><br><code>总共 2500 多处改动分批提交，每批跑一遍回归验证，有问题的单独列出来给我看，不要直接合进去</code></p>
+            <p><strong>Step 3：抽配置项，出运营自助修改清单</strong><br><code>把原本写死在代码里的客户参数抽成后台可改的配置项，整理一份"运营可自助修改"清单，附改完怎么自检</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>上线一周验证——客户改配置不用再等开发发版，运营在后台自己改就生效（当事人原话：这些天我基本不用参与了）。<br>来源：Hermes 官方 User Stories 收录的反金融犯罪平台案例（2,500+ 规则场景改造）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛢️</div>
+        <div class="case-title">车间里也能秒回客户 — 汽修店老板让AI每15分钟摘要Messenger咨询再问自己口径</div>
+        <div class="case-subtitle">白天忙车间、消息只能事后翻、回晚客人跑了 → Hermes定时轮询摘要+逐条问口径</div>
+        <div class="tags">
+          <span class="tag industry">汽修服务</span>
+          <span class="tag role">汽修店老板</span>
+          <span class="tag">即时通讯跟进</span>
+          <span class="tag">定时轮询</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>客源主要来自 Facebook Messenger 上的咨询，白天在车间忙，手机响了一堆消息只能事后翻，回晚了客人早跑去别家询价。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 每 15 分钟读一遍 Messenger 新消息，每条压成一句话摘要并回头问老板该怎么回，口径由老板定，它负责不迟不漏。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：15分钟轮询新咨询并逐条摘要</strong><br><code>每 15 分钟去读一遍 Facebook Messenger 上的新咨询，每条压成一句话——谁问的、想做什么项目、有没有要报价，别把整段聊天记录念给我</code></p>
+            <p><strong>Step 2：逐条问老板口径再回，不擅自报价</strong><br><code>整理完直接问我这条该怎么回，我说一句你就按我的口径发；没等到我回复的先标成待处理，不要自己替我报价</code></p>
+            <p><strong>Step 3：存成技能，每晚给未回完清单</strong><br><code>把这套做法存成技能：以后新消息照同样口径处理，晚上给我一份当天没回完的清单</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从"白天没空看手机、晚上翻几十条消息"变成车间里随手就能定回复，咨询不漏、回复不迟。<br>来源：Hermes 官方 User Stories 收录的法国小企业服务商案例（累计约 8,000 次定时运行，旗下客户含这家发动机清洗店）。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 103 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
