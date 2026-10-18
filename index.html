@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">108</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">109</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>242</strong> 个案例</span>
+    <span>📋 累计 <strong>244</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">166</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">168</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -11535,6 +11535,84 @@
   </div>
 </div>
 <!-- END Day 108 -->
+
+<!-- 📅 2026-10-18 (Day 109) -->
+<div class="day-section" id="day-109">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 109</h2>
+    <span class="date-badge">2026.10.18</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📊</div>
+        <div class="case-title">「业务同事在 Slack 里自己取数」— 数据平台负责人用 Hermes 打通三套数据源</div>
+        <div class="case-subtitle">非技术同事排队等报表→三源接入 Slack 自助查询</div>
+        <div class="tags">
+          <span class="tag industry">企业数据分析</span>
+          <span class="tag role">数据平台负责人</span>
+          <span class="tag">自助取数</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>BigQuery、Stripe、Amplitude 各有各的后台，非技术同事想知道本月付费转化率，只能排队等数据团队排期。数据团队整天在重复查数、拼表、贴报表，成了人肉报表机。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>把三套数据源同时接进 Hermes，放进公司 Slack 里。业务同事用日常说法直接提问，Hermes 按统一口径查数并说明数据来源，不用再经过数据团队中转。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：接通三个数据源</strong><br><code>把公司的 BigQuery、Stripe 和 Amplitude 接进 Hermes，先跑通「我问一句本月付费转化率，你能查出数并说清口径」</code></p>
+            <p><strong>Step 2：固化指标口径</strong><br><code>把这几个数据源整理成一份常用指标清单——每个指标写清取自哪张表、怎么算，口径对不上的单独列出来问我</code></p>
+            <p><strong>Step 3：放进 Slack 开放给业务</strong><br><code>把 Hermes 放进公司 Slack 让业务同事自己问；涉及客户隐私的字段一律不查、不外发</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>非技术同事在 Slack 里问一句就能自己拿到数，不用再排队等报表；数据团队从重复查数里解放出来，去做口径和模型这些只有他们能做的事。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧩</div>
+        <div class="case-title">「只看例外清单」— 17 人创业公司运营用 Hermes 分身各跑各的</div>
+        <div class="case-subtitle">周期运营活全靠人等空→每团队独立配置只挑异常</div>
+        <div class="tags">
+          <span class="tag industry">初创公司运营</span>
+          <span class="tag role">运营负责人（BizOps）</span>
+          <span class="tag">流程自动化</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>17 人的公司里，pipeline 复盘、账目核对、进度表更新每样都得等人抽空做。人一忙，这些周期性活儿就往后拖；而真正需要人拍板的异常，反倒埋在表里没人捞出来。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>给销售、交付、财务各开一套独立 Hermes 配置，记忆和定时任务互不干扰。BizOps 那一套专跑周期性运营活，跑完只把「对不上、卡住、空缺」的例外挑出来推给人。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：给每个团队开一套独立配置</strong><br><code>给销售、交付、财务各开一套独立 Hermes：记忆和定时任务各自独立，彼此看不到对方的会话</code></p>
+            <p><strong>Step 2：固定周期性运营动作</strong><br><code>让运营那套按周跑固定动作——pipeline 复盘、账目核对、进度表更新，输出固定格式的周报草稿给我</code></p>
+            <p><strong>Step 3：只推例外不推全量</strong><br><code>每轮结束后把「数字对不上、进度卡住、负责人空缺」的条目单列成例外清单，只把这些推给我</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>周期性运营活有了固定归宿，人只看例外清单；整套跑在一台德国机房的物理机上，各团队各有性格，夜里还会自己复盘。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 109 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
