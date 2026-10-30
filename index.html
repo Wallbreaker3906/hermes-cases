@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">120</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">121</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>266</strong> 个案例</span>
+    <span>📋 累计 <strong>268</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">186</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">187</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -12484,6 +12484,84 @@
   </div>
 </div>
 <!-- END Day 120 -->
+
+<!-- 📅 2026-10-30 (Day 121) -->
+<div class="day-section" id="day-121">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 121</h2>
+    <span class="date-badge">2026.10.30</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🛠️</div>
+        <div class="case-title">客户只发照片说“照着做一个”，半天画不出图 — 机加工师傅用 Hermes 读照片听口述出参数化图纸</div>
+        <div class="case-subtitle">非标件只有实物照片、没有图纸→读照片＋口述关键尺寸，FreeCAD 直接出图纸和三维模型</div>
+        <div class="tags">
+          <span class="tag industry">机械加工车间</span>
+          <span class="tag role">车间师傅</span>
+          <span class="tag">图纸建模</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>客户只发来几张实物照片加一句“照着做一个”，画成能上机的三维图要大半天，图画错一处整块料就废，单子越小越不划算。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 先读照片认出是什么件、哪些面是配合面，再听师傅口述孔径、孔距、板厚、倒角，用 FreeCAD 直接生成参数化图纸和三维模型，师傅只做两件事：标尺寸、审图。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先让 AI 看懂照片</strong><br><code>把这几张零件照片读一遍，认出是什么件、哪几个面是配合面，先把外形轮廓和主要台阶量给我看</code></p>
+            <p><strong>Step 2：口述尺寸，直接出图出模型</strong><br><code>我口述的关键尺寸听着记——孔径、孔距、板厚、倒角，生成参数化图纸和三维模型，单位统一毫米</code></p>
+            <p><strong>Step 3：给的和我猜的分开列，等确认</strong><br><code>导出成能上机的格式，把我给的尺寸和你推断的尺寸分开列，推断的那几项等我确认</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>几张照片加一段口述就出图纸和模型，师傅的时间从上机画图挪回真正上机干活，小单也接得起了。（来源：Hermes 官方 User Stories 收录的车间实操）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🍄</div>
+        <div class="case-title">半夜爬起来看棚，一茬菇说坏就坏 — 蘑菇种植户用 Hermes 自动管温湿度和二氧化碳</div>
+        <div class="case-subtitle">全靠手感调设备、夜里也得盯→树莓派每 30 分钟读传感器，按菌种阶段自动开关并回读确认</div>
+        <div class="tags">
+          <span class="tag industry">食用菌种植</span>
+          <span class="tag role">种植户</span>
+          <span class="tag">传感器自动控制</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>棚里温度、湿度、二氧化碳一变就得开窗、开雾化、开风机，半夜也要爬起来看，全靠经验手感调，一个没跟上整茬菇就坏。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 在一台树莓派上跑循环：每 30 分钟读一次传感器，按菌丝期、催蕾期、出菇期各自的阈值判断，超范围就开关对应继电器，动完再回读一遍确认真的执行了，每天早上交一份棚况小结。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先把传感器和设备接进来</strong><br><code>把棚里的温湿度、二氧化碳传感器和雾化、风机、补光继电器接进来，先跑通“我问一句，你报出现在的几个读数和哪台设备在开”</code></p>
+            <p><strong>Step 2：按菌种阶段设阈值，定时判断</strong><br><code>按菌丝期、催蕾期、出菇期各设一套阈值，每 30 分钟读一次，超范围就开关对应设备，动完回读一遍确认</code></p>
+            <p><strong>Step 3：每天小结，经验存成技能</strong><br><code>每天给我一条棚况小结：各阶段待了几天、调了几次设备、哪段时间最贴上限；两茬的经验存成技能，下一茬直接照跑</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>不用半夜爬起来看棚，两茬猴头菇完整跑完并攒下 21 条经验，下一批照着技能执行即可。（来源：Hermes 官方 User Stories 收录的两次猴头菇完整栽培实测）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 121 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
