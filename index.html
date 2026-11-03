@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">124</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">125</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>274</strong> 个案例</span>
+    <span>📋 累计 <strong>276</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">193</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">194</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -12796,6 +12796,84 @@
   </div>
 </div>
 <!-- END Day 124 -->
+
+<!-- 📅 2026-11-03 (Day 125) -->
+<div class="day-section" id="day-125">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 125</h2>
+    <span class="date-badge">2026.11.03</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🗄️</div>
+        <div class="case-title">几百次变更后文档成了废纸，一次夜扫全对齐 — 家庭实验室玩家把 IPAM 交给 Hermes</div>
+        <div class="case-subtitle">加机改 IP 调 VLAN 后 NetBox 永远停在改动前→独立 VLAN 里借工具机扫网段，夜间增量发现自动回写</div>
+        <div class="tags">
+          <span class="tag industry">IT基础设施</span>
+          <span class="tag role">家庭实验室玩家</span>
+          <span class="tag">网络资产自动发现</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>虚拟机一加、IP 一改、VLAN 一调，NetBox 里的文档永远停在改动前那一版。一年几百次变更累积下来，IPAM 里记的地址和实际网络对不上，查一个空闲 IP 都不敢信，最后干脆没人看——文档等于废纸。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>让 Hermes 住在独立 VLAN 里，只给它一个能 SSH 到工具机的账号；工具机上只装 nmap，负责扫网段。Hermes 按夜间定时任务做增量发现，把 IP、设备、虚拟机和新产生的变更日志自己写进 NetBox，并保留原有分配记录和历史痕迹。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先隔离，再跑通一次人工扫描</strong><br><code>把 Hermes 放在独立 VLAN，只给它一个能 SSH 到工具机的账号，工具机上装 nmap；先跑通“你从工具机扫一遍这段网段，把存活主机和 IP 报给我”</code></p>
+            <p><strong>Step 2：建独立账号，先做一次全量导入</strong><br><code>在 NetBox 里给 Hermes 建独立账号和 API token，先做一次全量导入——VLAN 我从 phpIPAM 导成 CSV 给你，按现有结构录进 IPAM</code></p>
+            <p><strong>Step 3：存成技能，挂夜间定时做增量同步</strong><br><code>把这次做法存成 netbox-network-discovery 技能并挂到每天凌晨 2 点：增量扫两段网段，只更新有变化的条目，保留分配记录和历史</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>文档跟着环境自动走，不再靠人记得改。发版前它把待更新项记进 Journal，更新完再改成已完成，IPAM 从此每次查都是当前状态。（来源：VirtualizationHowto，2026-10-13）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🥤</div>
+        <div class="case-title">一台机器、一个网关撑起三套 profile — 食品饮料负责人把运营、财务、审批彻底分开</div>
+        <div class="case-subtitle">三摊事混在一个助手账号里谁都能问、什么都能改→同机三 profile 切分记忆与工具权限，互不相通</div>
+        <div class="tags">
+          <span class="tag industry">食品饮料</span>
+          <span class="tag role">公司负责人</span>
+          <span class="tag">多 profile 权限隔离</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>运营、财务、高管审批三摊事全塞在一个助手账号里：谁都能问、什么都能改。越权查询和大额审批被日常操作顺手带过去的风险收不住，可又不放心干脆不用。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>一台机器、一个网关底下跑三套 profile——运营、财务、只管审批，按角色切分记忆与工具权限，彼此互不相通，三套全部投产运行。每档能碰什么、不能碰什么写进规则，越界请求直接拒绝并回报。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：一个网关下建三个独立岗位档</strong><br><code>在同一台机器的一个网关下建三个 profile：运营、财务、审批，各自独立的记忆和定时任务</code></p>
+            <p><strong>Step 2：按摊子接系统，各管各的</strong><br><code>运营档接订单、库存和供应商文档，只做日常运营；财务档接账目和发票，只碰钱；审批档只处理高管和大额审批，不接日常操作</code></p>
+            <p><strong>Step 3：边界写进规则，该拍板的单独推</strong><br><code>把每档能碰什么、不能碰什么写进规则，越界请求直接拒绝并告诉我；每天早上把需要我拍板的单子单独推一条</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>一套硬件、一个网关就撑起三条线，权限按角色收口：大额审批不会被日常操作顺手绕过，三套 profile 都已在生产环境稳定运行。（来源：X @lecaj_，2026-09-17）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 125 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
