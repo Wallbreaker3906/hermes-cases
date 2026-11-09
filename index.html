@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">130</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">131</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>286</strong> 个案例</span>
+    <span>📋 累计 <strong>288</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">203</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">205</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -13264,6 +13264,84 @@
   </div>
 </div>
 <!-- END Day 130 -->
+
+<!-- 📅 2026-11-09 (Day 131) -->
+<div class="day-section" id="day-131">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 131</h2>
+    <span class="date-badge">2026.11.09</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🪚</div>
+        <div class="case-title">「半天描图，变成几分钟出图」— 定制木作老板把客户发来的几张现场照片交给 Hermes，读图认出板厚层数，再照口述尺寸建参数化模型，工程图和下料单一起出</div>
+        <div class="case-subtitle">客户只发几张手机照片说「按这个做」，师傅在 CAD 里一笔笔描掉半天→视觉读图认结构＋尺寸全做变量＋三视图、STEP、开料清单一次生成</div>
+        <div class="tags">
+          <span class="tag industry">定制木工车间</span>
+          <span class="tag role">小型木作车间老板</span>
+          <span class="tag">看图建模 下料清单</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>定制单来的时候，客户往往只丢几张手机照片，加一句「按这个做」。师傅得先跑去量现场，回来再在 CAD 里一笔一笔描：柜体多厚、几层隔板、门往哪边开，全靠眼睛估。一套图描完半天过去了，客户中途改个宽度，等于整张图推倒重画。图画完还不算完，哪块板开多大、要几块，另得手工列一遍下料单，错一个尺寸就是一块料白切。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>把「看图」和「出图」两步都交给 Hermes：先让它把现场照片读一遍，认出板厚、层数、开门方向这些结构信息，拿不准的地方列成问题问老板，而不是自己猜；再按老板口述的关键尺寸（宽 1800、深 600、高 2200，左边留 300 给冰箱）在 FreeCAD 里建参数化模型——所有尺寸都写成变量，改一个数整张图跟着变。模型建好直接出三视图和 STEP 文件，同时把每块板的开料尺寸和数量算出来，存进「客户名_日期」的文件夹，等老板复核完再下料。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先读照片，把不确定的挑出来问</strong><br><code>把这批现场照片读一遍，认出柜体板厚、层数、开门方向，拿不准的先列出来问我</code></p>
+            <p><strong>Step 2：按口述尺寸建参数化模型</strong><br><code>按我口述的尺寸（宽1800、深600、高2200，左侧留300给冰箱）在 FreeCAD 里建参数化模型，尺寸全用变量，改一个数全图跟着变</code></p>
+            <p><strong>Step 3：出图、出清单，等复核再下料</strong><br><code>出三视图和 STEP 文件，标清每块板的开料尺寸和数量，存进「客户名_日期」文件夹，我复核后再下料</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>一套定制柜从半天描图变成几分钟出图。客户改尺寸，只改一个变量，工程图、三维模型、下料单同时更新，不用重画；开料单和图纸出自同一个模型，尺寸对不上、切错料这种事基本没了。来源：Hermes 官方 User Stories 收录的 FreeCAD 照片转参数化图纸案例。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🧩</div>
+        <div class="case-title">「孩子的卡点，终于有记录可查」— 有学习障碍孩子的家长把学校方案、家教笔记、家庭练习并进同一个知识库，每两周出一版可转发的调整建议</div>
+        <div class="case-subtitle">学校目标／家教记录／家里练习各说各话，全靠家长自己拼→同一知识库对齐目标＋逐次归档找反复卡点＋沟通说明直接转发给老师和家教</div>
+        <div class="tags">
+          <span class="tag industry">特殊教育</span>
+          <span class="tag role">学习障碍孩子的家长</span>
+          <span class="tag">家校协同 知识库</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>孩子的干预是三头在做的：学校有自己的目标，家教每次课上完口头说几句，家里还有一堆练习要做。三份材料各说各话，孩子到底卡在哪、下一步该练什么，全靠家长自己拼。每次换老师、换家教，背景要从头讲一遍；时间一长，连「上次那个问题后来好了没有」都说不清，只剩下「感觉好像进步了点」。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>把所有材料收进同一个知识库：评估报告、学校的目标、家教的计划，先整理成一页「当前目标＋已经在做的干预」，互相冲突的地方单独标出来让家长先解决。之后每次家教课结束，家长口述几句就行——练了什么、错在哪、情绪怎么样——Hermes 按日期归档，并跟前几次对比，找出反复出现的卡点。每两周给一版调整建议：家里该补练什么、跟老师和家教各自沟通哪件事，还附一段可以直接转发出去的说明，家长不用再自己组织语言。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：三方材料并成一页，冲突标出来</strong><br><code>把孩子的评估报告、学校目标和家教计划都读进知识库，整理成一页「当前目标＋已在做的干预」，冲突处标出来</code></p>
+            <p><strong>Step 2：每次家教课口述记录，找反复卡点</strong><br><code>每次家教课结束我把口述笔记发你——练了什么、错在哪、情绪如何，按日期归档，并对比前几次找反复出现的卡点</code></p>
+            <p><strong>Step 3：每两周出一版调整建议</strong><br><code>每两周给我一版调整建议：家里补练什么、跟老师和家教各沟通哪件事，附一段可直接转发的说明</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>学校、家教、家里终于对齐在同一条线上。卡点从「感觉好像」变成有记录可查，孩子某一段时间退步，能翻出是哪次课开始出现的；家长不用再一遍遍重讲背景，换老师时把那份说明转过去就行。来源：Hermes 官方 User Stories 收录的学习障碍孩子家校协同案例。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 131 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
