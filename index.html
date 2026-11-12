@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">133</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">134</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>292</strong> 个案例</span>
+    <span>📋 累计 <strong>294</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">209</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">211</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -13502,6 +13502,88 @@
   </div>
 </div>
 <!-- END Day 133 -->
+
+<!-- 📅 2026-11-12 (Day 134) -->
+<div class="day-section" id="day-134">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 134</h2>
+    <span class="date-badge">2026.11.12</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📡</div>
+        <div class="case-title">「设备台账不再过期」— 网络运维工程师用AI夜扫网段，变动自动补进NetBox</div>
+        <div class="case-subtitle">IP与设备靠手写、换台机器记录就过期→先扫全网段建底账，每晚只补新增与消失的设备</div>
+        <div class="tags">
+          <span class="tag industry">网络运维</span>
+          <span class="tag role">网络运维工程师</span>
+          <span class="tag">网段扫描</span>
+          <span class="tag">设备台账</span>
+          <span class="tag">夜间增量巡检</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个人管一条办公网加上家庭实验室几十台设备，IP 与设备台账全靠手写。换台机器、加个交换机，记录当场就过期；想查“这个网段还剩哪些地址空着”，得现场扫一遍，再回头一格一格补进文档。台账永远落后于现实，真正需要它的时候反而不敢信。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>让 Hermes 先扫一遍全网段，按现有 NetBox 结构把在线 IP、MAC、设备名和型号建起初始底账；再把扫描挂成每晚自动跑的增量任务，只处理新出现和消失的设备，不整表重写；每次跑完附一句变更小结，对不上台账的留给他人工复核。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：扫网段建初始底账</strong><br><code>先把这段网段扫一遍，认出在线的 IP、MAC、设备名和型号，按我 NetBox 现有的结构建好初始记录</code></p>
+            <p><strong>Step 2：做成每晚增量任务</strong><br><code>把这套扫描做成每晚自动跑的增量任务：只处理新出现和消失的设备，别整张表重写</code></p>
+            <p><strong>Step 3：跑完给变更小结</strong><br><code>每次跑完给我一句变更小结——新上线几台、下线几台、哪几台对不上台账；对不上的我复核后再改</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>台账不再过期：网段里有什么设备随时能查、还剩哪些地址空着心里有数，换设备当晚就补进记录。人工只负责复核对不上的那几条，不再靠手写维护整张表。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">⚙️</div>
+        <div class="case-title">「团队六小时没找到的故障件，它当场点出来」— 上门维修技术员用AI知识库查手册与服务通告</div>
+        <div class="case-subtitle">手册通告散在几百份文件里、现场靠经验硬猜→按机型建索引，逐单比对处置方案并附出处页码</div>
+        <div class="tags">
+          <span class="tag industry">设备现场服务</span>
+          <span class="tag role">上门维修技术员</span>
+          <span class="tag">现场维修</span>
+          <span class="tag">本地知识库</span>
+          <span class="tag">故障诊断</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个人上门修多个品牌的设备，厂商的用户手册、维修指南、服务通告、已知问题散在几百份文件里。现场排查基本靠经验和临时翻资料，最难的那一次，他和工程团队折腾了六个小时，仍然没定位到到底是哪个部件出了问题。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>把手头全部手册、维修指南、服务通告和已知问题灌进本地知识库，按机型建索引，问哪台就只查那台；每接一单，先把厂商给的处置方案过一遍，指出漏掉的步骤、最可疑的部件和能对上号的已知问题，结论必须附原文出处与页码，手册里没写就直说没写。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：手册按机型建索引</strong><br><code>把这些产品说明书、维修指南和服务通告都读进本地知识库，按机型建索引，以后我问哪台就只查那台</code></p>
+            <p><strong>Step 2：逐单比对处置方案</strong><br><code>这单的处置方案我发你，对着知识库过一遍：哪一步跳过了、哪个部件最可疑、有没有已知问题对得上</code></p>
+            <p><strong>Step 3：结论必须附出处</strong><br><code>给建议时附上原文出处和页码；手册里没写的就直说没写，别替我猜</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>他照着 Hermes 指向的另一个部件换了件，问题当场解决——而那个部件，正是团队排查六个小时都没找到的点。现场排查从“翻资料靠运气”变成“按出处逐条核对”。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 134 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
