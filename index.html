@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">135</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">136</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>296</strong> 个案例</span>
+    <span>📋 累计 <strong>298</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">213</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">215</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -13666,6 +13666,86 @@
   </div>
 </div>
 <!-- END Day 135 -->
+
+<!-- 📅 2026-11-14 (Day 136) -->
+<div class="day-section" id="day-136">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 136</h2>
+    <span class="date-badge">2026.11.14</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">💊</div>
+        <div class="case-title">「近效期排查从半天变每天一张清单」— 社区药店店长用 vision＋台账＋每日推送管住 3000 个品规</div>
+        <div class="case-subtitle">翻货架找临期药、处方散在微信→照片自动入账、每天推临期与续药清单</div>
+        <div class="tags">
+          <span class="tag industry">社区药店</span>
+          <span class="tag role">店长</span>
+          <span class="tag">效期管理</span>
+          <span class="tag">慢病随访</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>3000 多个品规全靠店员每月翻一遍货架找临期药，翻不完也翻不细，过期只能报损；顾客发来的处方照片堆在微信聊天记录里，谁该续药、上次开到哪天，全靠店长脑袋记；慢病老客一断药就流失到隔壁连锁店。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>用 vision 读随货单和处方照片自动建档，用 file 维护一份效期台账和顾客用药档案，用 cron 每天早上把「三个月内到期」和「该续药」两类活干完，按货架位置排好送到店长手上，店长只做核对和用药交代。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：随货单照片自动进效期台账</strong><br><code>把“随货单/1114”里今天的进货单照片读一遍，按品名、规格、批号、生产日期、有效期录进效期台账，180 天内到期的单独标出来</code></p>
+            <p><strong>Step 2：处方照片按人归档并算续药日</strong><br><code>这周顾客发来的处方照片按人归档：提取姓名、药名、用法用量和开方日期，算出下次续药日，和他们的慢病档案对上</code></p>
+            <p><strong>Step 3：每天两张清单推给店长</strong><br><code>每天早 8 点给我两张清单——三个月内到期的药按货架位置排好、该提醒续药的老客附一句交代话术，我确认后再发</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>近效期排查从每月翻半天货架变成每天一张按货架排的清单，店员进店就知道今天先查哪几排；过期报损明显下降。慢病老客的续药不再靠顾客自己想起来，店长早上一看清单就知道今天该给谁打个电话。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📮</div>
+        <div class="case-title">「几百条取件通知一键生成」— 快递驿站站长用导出入表＋滞留件提醒＋月底逐单对账</div>
+        <div class="case-subtitle">手打通知、滞留件没人盯、月结才发现赔钱单→通知自动合并、每天盯滞留、月底出差异表</div>
+        <div class="tags">
+          <span class="tag industry">快递驿站</span>
+          <span class="tag role">站长</span>
+          <span class="tag">批量通知</span>
+          <span class="tag">对账</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>日均入库 400 多件，取件通知靠店员照着单号一个一个敲，敲到晚上还发不完；超过三天没取的件堆在角落没人管，真丢了才去翻监控对时间；寄件的价格和快递公司的月结账单要到月底才核，哪几单少收多收，往往结完账才发现，赔的钱追不回来。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>用 file 读每日入库导出表，按手机号后四位合并同户多件，一键生成取件通知；cron 每天早上挑出滞留件并按货架号排序，附上催取话术；月底把寄件单和月结账单逐单比对，出一张差异表，赔钱单子和多收单子当场能揪出来。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：入库表生成取件通知</strong><br><code>读“入库/1114”的导出表，按手机号后四位生成今天的取件通知，同一户多件合并成一条，别让店员一条条复制</code></p>
+            <p><strong>Step 2：每天挑出滞留件并生成话术</strong><br><code>每天早上把超过 3 天没取的件单独列出来，按货架号排好并生成催取话术，发到群里之前先给我看</code></p>
+            <p><strong>Step 3：月底逐单对账出差异表</strong><br><code>月底把寄件单和快递公司的月结账单逐单比对重量、目的地和价格，标出多收少收的单子，出一张差异表</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>取件通知从手打几百条变成一键生成，店员下班时间提前一个多小时；滞留件天天有人盯，货架空出来也能多放新件。月底对账从熬夜逐张翻单变成看一张差异表，赔钱的单子和多收的单子当场就能找快递公司核对。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 136 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
