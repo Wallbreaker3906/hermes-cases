@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">136</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">137</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>298</strong> 个案例</span>
+    <span>📋 累计 <strong>300</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">215</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">217</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -13746,6 +13746,86 @@
   </div>
 </div>
 <!-- END Day 136 -->
+
+<!-- 📅 2026-11-15 (Day 137) -->
+<div class="day-section" id="day-137">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 137</h2>
+    <span class="date-badge">2026.11.15</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🦷</div>
+        <div class="case-title">「下班后和占线的来电不再丢单」— 口腔门诊前台主管用四类分诊＋查空档再确认接住每一通来电</div>
+        <div class="case-subtitle">三成新患者来电落进语音信箱、护士手记写错时间→四类分诊、查空档再回写系统、夜间来电次日成表</div>
+        <div class="tags">
+          <span class="tag industry">口腔诊所</span>
+          <span class="tag role">前台主管</span>
+          <span class="tag">来电接待</span>
+          <span class="tag">预约挂号</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一家 1 名医生、3 台椅位、月接 200 多通来电的社区口腔门诊，新患者来电约三成落在语音信箱和下班后的无人接听里，而一个流失的新患者值 300–900 元；前台一忙连复诊提醒都顾不上，护士边接电话边手记，时间写错还得回头改约。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 接门诊对外号码，按知识库把来电分成四类处理——新患者挂号、老患者复诊洗牙、医保核对、临床问题一律转值班医生；先查排班空档再确认，最后通过 webhook 回写门诊管理系统并发短信，下班后的来电第二天早上整理成表。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：读知识库，先跑通一通洗牙预约</strong><br><code>把营业时间、地址、可接的医保计划、医生排班和洗牙、初诊的时长读进知识库，接上对外那个号码，先跑通“我打进来约洗牙，你查空档再确认”</code></p>
+            <p><strong>Step 2：给出诊电话定三条规矩</strong><br><code>给这通电话定规矩：只记姓名、回电号码和就诊事由，不问身份证号和完整生日；只要提到疼、肿、出血、牙磕坏，先问两句再立刻转值班医生，不许自己判断</code></p>
+            <p><strong>Step 3：约好就回写系统，夜间来电次日成表</strong><br><code>约好就通过 webhook 写进门诊管理系统并给患者发短信确认；下班后的来电第二天早上八点整理成一张表发我，标出没约上的和需要回电的</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>下班后和占线时段的来电不再直接丢单，前台从“接电话＋手记”里解放出来，只管到店患者。方案方称这类来电 80–90% 可自动处理，并按其 10 台椅位门诊测算每月可捞回 4–6 个新患者（本案例门诊为 3 台椅位，请按自身规模折算）。<br><span style="opacity:.65;font-size:.9em">来源：buildwithhermes.com 口腔诊所接听方案（2026-06），通话流程为方案方公开做法，数字为方案方测算，非实测。</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">❄️</div>
+        <div class="case-title">「旺季漏掉的电话一周捞回 8–14 单」— 空调维修老板用邮编分服务区＋紧急词表给来电做分诊</div>
+        <div class="case-subtitle">三到六成来电进语音信箱、紧急单和保养单抢同一条线→按区返回上门时段、紧急词直接转技师、每天一张经营表</div>
+        <div class="tags">
+          <span class="tag industry">暖通空调</span>
+          <span class="tag role">维修公司老板</span>
+          <span class="tag">电话分诊</span>
+          <span class="tag">派工</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>4 台车的家用空调维修公司，首个高温天一天涌进 80–150 通电话，旺季高峰有三成到六成掉进语音信箱；一单维修值 150–400 元、整套换机 4500–12000 元，漏一通就等于送给隔壁。夜里没冷气、闻到燃气味的电话没人接，风险更大。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 接公司热线做分诊：按邮编和服务区返回可选上门时段，保养与报价单直接排进派工系统，紧急关键词命中的立刻转值班技师并同步发短信；每天收工后出一张通话与派工的经营表。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：读服务区与价目，先跑通一通没冷气</strong><br><code>把服务区邮编、各区上门时段、保养和检修价目读进知识库，接上公司热线，先跑通“我说没冷气了，你问两句就给我两个时段选”</code></p>
+            <p><strong>Step 2：定一份紧急词表</strong><br><code>定一份紧急词表：没冷气、没暖气、漏水、燃气味、一氧化碳报警、管道冻裂——命中就直接转值班技师并给他发短信，别先排期</code></p>
+            <p><strong>Step 3：普通单进派工系统，收工出一张表</strong><br><code>普通单通过 webhook 写进派工系统并短信确认；每天收工后给我一张表——今天接了多少通、几单没排上、几个紧急转出，第二天先补哪几单</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>高峰和夜里的电话不再掉进语音信箱，紧急单不再和保养单抢同一条线；按方案方测算，接住 25% 的溢出来电，一周就多 8–14 单。老板第二天先补哪几单，看表就知道。<br><span style="opacity:.65;font-size:.9em">来源：buildwithhermes.com 暖通空调接听方案（2026-06），通话流程为方案方公开做法，数字为方案方测算，非实测。</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 137 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
