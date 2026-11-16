@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">137</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">138</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>300</strong> 个案例</span>
+    <span>📋 累计 <strong>302</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">217</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">218</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -13826,6 +13826,86 @@
   </div>
 </div>
 <!-- END Day 137 -->
+
+<!-- 📅 2026-11-16 (Day 138) -->
+<div class="day-section" id="day-138">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 138</h2>
+    <span class="date-badge">2026.11.16</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🍄</div>
+        <div class="case-title">「夜里不用再爬起来调设备」— 家庭猴头菇棚主用树莓派＋半小时一轮的阈值判断守住温湿度</div>
+        <div class="case-subtitle">温湿度、CO₂ 和通风窗口每半小时盯一次、夜里起床调设备→传感器与执行器接成一项技能、按生长期阈值自动开关继电器、动作后回读确认</div>
+        <div class="tags">
+          <span class="tag industry">食用菌种植</span>
+          <span class="tag role">种植棚主</span>
+          <span class="tag">智能温室</span>
+          <span class="tag">物联网控制</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>家庭猴头菇棚的温湿度、CO₂ 浓度和通风窗口每半小时就得看一次，夜里起床调设备是常态。不同菌种、不同生长期阈值不一样，凭手感调很容易闷坏或吹干，一棚损失就是几个月的活。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 把棚里的传感器和执行器接成一项技能，按半小时一轮读数据、对照该菌种各生长期的阈值，该开的继电器自己开，动作完再回读一遍确认真的生效，读数与动作全部进日志。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先接设备，跑通一句话报读数</strong><br><code>把这个棚的温湿度、CO₂ 传感器和加湿器、风机、补光这些继电器都接进来，先跑通“我问一句，你报出当前各项读数和设备状态”</code></p>
+            <p><strong>Step 2：按生长期写判断规则</strong><br><code>按猴头菇各生长期的阈值写一套判断规则：什么时候该加湿、什么时候必须通风降 CO₂、什么时候只保温不动风，每条都说清触发条件</code></p>
+            <p><strong>Step 3：半小时自己跑一轮，动作要回读确认</strong><br><code>做成每 30 分钟自己跑一轮：读数据→按规则决定→驱动继电器→再读一次确认生效；动作和读数都记进日志，异常单独提醒我</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>整套流程在两轮完整的猴头菇栽培（发菌到采收）里跑通，夜里不用再爬起来调设备，人从“盯表”退到只看异常日志。<br><span style="opacity:.65;font-size:.9em">来源：Hermes 官方 User Stories 收录的树莓派菇棚案例，作者按两轮实种总结了 21 条经验。</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🪠</div>
+        <div class="case-title">「报价开票库存一次口述做完」— 下水管道疏通老板用 Telegram 把整个店搬到工地和车里</div>
+        <div class="case-subtitle">单据全留在店里那台电脑上、在车上想查历史工单只能打电话→客户档案与管件库存接进来、现场口述直接出 PDF 报价单、设备保养提前一周提醒</div>
+        <div class="tags">
+          <span class="tag industry">排水管道疏浚</span>
+          <span class="tag role">疏通公司老板</span>
+          <span class="tag">现场报价</span>
+          <span class="tag">库存管理</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>活都在客户家里干，报价单、发票、客户记录和配件库存却全留在店里那台电脑上。人在车上想查“这户上次换了什么管件”“这个型号还剩几个”，只能打电话回店里问；单据常常要攒到晚上回去补，补着补着就漏了。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>Hermes 把报价、开票、客户档案、工程跟踪、客户沟通和管件库存、设备保养记录统一管起来，全程只用 Telegram 一个入口：在工地或车里口述，报价单、发票和库存扣减同时完成。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：接客户档案与库存，先跑通查历史</strong><br><code>把客户档案、报价模板、管件库存和每台设备的保养记录接进来，先跑通“我说一户人家的名字，你报出历史工单和上次用的管件”</code></p>
+            <p><strong>Step 2：现场口述一单，出 PDF 并扣库存</strong><br><code>我在现场口述这一单——什么问题、怎么处理、用了哪些管件、报价多少，你直接出 PDF 报价单，同时扣减库存并建档</code></p>
+            <p><strong>Step 3：转发票、排跟进、提前提醒保养</strong><br><code>干完活把报价转成发票、排好跟进提醒；快到保养期的设备提前一周提醒我，所有记录只从 Telegram 这一个入口走</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>老板在梯子上、在卡车里就能把报价、开票、库存和跟进一次做完，单据不用等回店里补，备件也不会到现场才发现没货。<br><span style="opacity:.65;font-size:.9em">来源：Hermes 官方 User Stories 收录的排水管道公司老板案例。</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 138 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
