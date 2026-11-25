@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">146</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">147</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>318</strong> 个案例</span>
+    <span>📋 累计 <strong>320</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">229</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">231</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -14540,6 +14540,84 @@
   </div>
 </div>
 <!-- END Day 146 -->
+
+<!-- 📅 2026-11-25 (Day 147) -->
+<div class="day-section" id="day-147">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 147</h2>
+    <span class="date-badge">2026.11.25</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">👓</div>
+        <div class="case-title">「双手占着也能开口就问」— 独立开发者把 Hermes 接进 AR 眼镜做语音前端</div>
+        <div class="case-subtitle">人在路上、手上拎着东西，掏手机解锁打字的成本太高→Hermes 接进 Even Hub，戴上眼镜直接说、答案念在耳边</div>
+        <div class="tags">
+          <span class="tag industry">可穿戴设备</span>
+          <span class="tag role">独立开发者</span>
+          <span class="tag">免手操作</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>手上占着东西、人还在路上时，想问一句得先掏手机、解锁、找应用、打字，这一串动作的成本比问题本身还高。结果很多本来想查一下、记一下的事，干脆就不问了，事后全忘。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>他把自建的 Hermes 接进 Even Realities G2 的 Even Hub，做成语音前端：戴上眼镜开口说话，Hermes 在耳边把结果念出来。最常做的三件事写成技能，双手不离开正在做的事也能照常调用。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：把语音链路接进眼镜，先跑通一句话</strong><br><code>把 Hermes 网关和语音接进 Even Hub，先跑通「戴眼镜说一句，它在耳边把结果念出来」，别急着加功能</code></p>
+            <p><strong>Step 2：把最常做的三件事固化成技能</strong><br><code>把最常做的三件事写成技能：查今天的安排、给对方回一句话、把刚想到的事记进笔记；我说一句话就能触发，不用报全名</code></p>
+            <p><strong>Step 3：长任务用语音触发，跑完主动播报</strong><br><code>出门用语音触发长任务，跑完主动播报一句结论；没听清就让它重说一遍，别让我掏手机看屏幕</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从「想查一下但懒得掏手机」变成开口就问，双手始终不离开正在做的事。作者自用几乎每天。什么该问、什么该让它自己跑，仍由他自己判断，眼镜只是把入口挪到了嘴边。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">📊</div>
+        <div class="case-title">「一份本地简报全自动出图」— 土耳其财经运营者用一套 locale 技能包替代翻网站和排版</div>
+        <div class="case-subtitle">每天在里拉行情和三家媒体间来回翻、配图还要另开设计工具→Hermes 抓数据排卡片、定时出 PNG 推 Telegram</div>
+        <div class="tags">
+          <span class="tag industry">区域财经资讯</span>
+          <span class="tag role">内容运营</span>
+          <span class="tag">本地化简报</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>每天要出一份面向本国读者的财经简报，得在里拉计价行情和 Hürriyet、Bloomberg HT、NTV 几家媒体之间来回翻找，凑完内容还要另开设计工具配图排版。日更变成体力活，越忙越容易断更。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>他把本地行情接口、三个土语新闻源和固定的卡片版式写成一整套 locale 技能包，由定时任务每天抓取、生成当日的 PNG 简报卡、推到 Telegram 频道，全程不依赖外部 API key。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先把本地数据源接成技能，跑通一次问答</strong><br><code>把里拉计价行情接口和 Hürriyet、Bloomberg HT、NTV 三个新闻源写成技能，先跑通「今天里拉和主要指数怎么样，给出数字和三条要闻」</code></p>
+            <p><strong>Step 2：按固定版式排成一张手机能看清的卡</strong><br><code>按我固定的版式把当天内容排成一张 PNG 简报卡——标题、关键数字、三条要闻，字够大，手机上不用放大</code></p>
+            <p><strong>Step 3：挂定时任务推送，抓不到就标出来</strong><br><code>挂成每天早上定时跑，跑完推到 Telegram 频道；哪条数据抓取失败就标出来，别拿旧数凑</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>每天一份本地化简报自动生成并推送，翻网站和做图的时间全省掉，每个数字都能追到出处。哪条要闻值得上、版式怎么调仍由他定，AI 只负责把日更的重复动作做完。</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 147 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
