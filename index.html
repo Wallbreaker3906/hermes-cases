@@ -266,12 +266,12 @@
   <p>每天 2–3 个真实场景 · 跨行业 · 跨职业 · 点击展开详细操作</p>
   <div class="stats">
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">149</strong> 天 <span class="arrow-down">▾</span></span>
+      <span class="stat-btn" id="days-stat-btn">📅 累计 <strong id="days-count">150</strong> 天 <span class="arrow-down">▾</span></span>
       <div class="dropdown" id="days-dropdown"></div>
     </span>
-    <span>📋 累计 <strong>324</strong> 个案例</span>
+    <span>📋 累计 <strong>326</strong> 个案例</span>
     <span class="stat-btn-wrap">
-      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">234</strong> 个行业</span>
+      <span class="stat-btn" id="industry-stat-btn">🏭 覆盖 <strong id="industry-count">235</strong> 个行业</span>
       <div class="dropdown" id="industry-dropdown"></div>
     </span>
   </div>
@@ -14774,6 +14774,84 @@
   </div>
 </div>
 <!-- END Day 149 -->
+
+<!-- 📅 2026-11-28 (Day 150) -->
+<div class="day-section" id="day-150">
+  <div class="day-header">
+    <div class="dot"></div>
+    <h2>Day 150</h2>
+    <span class="date-badge">2026.11.28</span>
+  </div>
+  <div class="cases-row">
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🍄</div>
+        <div class="case-title">「菌菇房自己会调温调湿了」— 家庭菇农用树莓派接 Hermes，半小时一轮闭环盯着猴头菇</div>
+        <div class="case-subtitle">温湿度、CO₂ 全靠人一天进出十几趟看表，夜里掉湿度要等菇盖开裂才发现→传感器与继电器接进 Hermes，每半小时读数据、对阈值、开关设备、回读确认</div>
+        <div class="tags">
+          <span class="tag industry">食用菌种植</span>
+          <span class="tag role">家庭菌菇房主</span>
+          <span class="tag">闭环控制</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>一个人守一个棚、猴头菇轮着种，温湿度、CO₂ 浓度这些事原本全凭人盯着：一天进出十几趟看表，手动开风机、手动喷雾。麻烦的是夜里——湿度掉下去，人睡着了没人管，等到第二天发现菇盖已经开裂，这一茬的品相就废了。看表这件事本身不难，难的是它必须不间断地做。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>他把棚里的温湿度、CO₂、光照传感器和风机、喷雾的继电器都接进跑在树莓派上的 Hermes，然后把这套动作写成技能：每半小时自动跑一轮，读一遍数据，和这个品种的安全区间比对，超了就开设备，动作做完再回读一次传感器确认真的生效——不是发个指令就算了，是要看到数值确实回来了。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：先把「看得见」跑通</strong><br><code>把菌菇房的温湿度、CO₂ 和光照传感器接进来，先跑通「我问一句，你报出当前数值和这个品种的安全区间」</code></p>
+            <p><strong>Step 2：写成半小时一轮的闭环</strong><br><code>每 30 分钟自动跑一轮：数值超出阈值就开风机或喷雾，动作做完再回读一次确认真的生效</code></p>
+            <p><strong>Step 3：让经验留在技能里</strong><br><code>每轮结果记进日志，每周给我一份曲线和偏差清单；踩过的坑写进技能说明，下批照改过的参数跑</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从「一天跑十几趟看表」变成半小时自动纠偏一轮，两个完整生长周期都跑通了，现场踩过的 21 条经验写回技能说明，下一批照着改过的参数跑。（来源：GitHub setasoma/mycodo-hermes-skill，2026-05-24）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+    <div class="case-card" onclick="this.classList.toggle('active')">
+      <div class="case-card-inner">
+        <div class="emoji">🎟️</div>
+        <div class="case-title">「全售罄的场次，它替我蹲到了两个连座」— 票务代订者让 Hermes 定时盯余票</div>
+        <div class="case-subtitle">热门场次一开票就空，人只能不停刷页面等退票，一天几十次也未必撞上→Hermes 按客户要的连座、区域、价格上限定时筛，只有符合才推送</div>
+        <div class="tags">
+          <span class="tag industry">演出票务</span>
+          <span class="tag role">票务代订者</span>
+          <span class="tag">定时盯票</span>
+        </div>
+        <div class="case-section">
+          <h4>💡 痛点</h4>
+          <p>帮客户盯影展、演唱会、话剧的余票，最难受的是热门场次：开票那一秒就售罄，之后只能靠退票捡漏。退票什么时候放出来完全没规律，人就得不停地刷页面，一天刷几十次，眼睛盯着座位图发酸，也不一定撞得上那一张。而且光有票还不行——客户要的是连座、指定区域、价格不超上限，一个人守三个条件，比守一个更难。</p>
+        </div>
+        <div class="case-section">
+          <h4>🛠️ 解决方案</h4>
+          <p>他把客户的需求一次性交代给 Hermes：哪几场、要几张连座、能接受哪片区域、价格上限多少。然后让 Hermes 每隔十分钟去查这些场次的余票和座位图，按条件筛，只有真的出现符合的连座才推消息给他。不符合的情况一律不提醒——这一点很关键，否则一天几十条噪音，等于没提醒。推送里写清场次、排号、价格和入口，下单还是他自己确认。</p>
+        </div>
+        <div class="case-detail">
+          <div class="case-detail-inner">
+            <h3>📋 详细操作步骤</h3>
+            <p><strong>Step 1：把客户的硬条件说清一次</strong><br><code>把这几个客户要的场次记下来：日期、场次、要几张连座、能接受的区域和价格上限，我说一次你就存住</code></p>
+            <p><strong>Step 2：定时查，只报符合的</strong><br><code>每 10 分钟查一次这些场次的余票和座位图，只有出现符合客户条件的连座才推我，别的情况不要提醒</code></p>
+            <p><strong>Step 3：推送给信息，决定留给人</strong><br><code>推送里写清场次、排号、价格和购票入口；我确认后再下单，别自己替我买</code></p>
+            <div class="case-section">
+              <h4>🎯 效果</h4>
+              <p>从「人一天刷几十次」变成只在真有票时被叫醒——当事人就靠这样，在一场全售罄的 70mm IMAX 场次里等到了两个连座。（来源：X @tborges77，2026-08-09）</p>
+            </div>
+          </div>
+        </div>
+        <div class="click-hint"><span class="arrow">▼</span> 点击展开详细步骤</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Day 150 -->
 <!-- DAILY_CASES_END -->
 </main>
 <footer>
